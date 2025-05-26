@@ -47,23 +47,23 @@ export default function ProjectsPage() {
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Otkrijte kako smo transformirali različite prostore kroz naš namještaj i dizajn.
             Svaki projekat je jedinstvena priča o stilu, funkcionalnosti i kvalitetu.
-          </p>
-        </div>
+              </p>
+            </div>
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <div
-              key={project.id}
+                <div
+                  key={project.id}
               className="group relative overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:shadow-xl"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
+                    <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+                      />
+                    </div>
               <div className="p-6">
                 <h2 className="mb-2 text-2xl font-light tracking-tight text-foreground">
                   {project.title}
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
                 <div className="mb-4 space-y-2 text-sm text-muted-foreground">
                   <p><span className="font-medium">Klijent:</span> {project.client}</p>
                   <p><span className="font-medium">Lokacija:</span> {project.location}</p>
-                </div>
+                  </div>
                 <div className="mb-6">
                   <h3 className="mb-2 text-sm font-medium text-foreground">Korišteni proizvodi:</h3>
                   <ul className="list-inside list-disc text-sm text-muted-foreground">
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
               Započnite Vaš Projekt
             </Link>
           </Button>
-        </div>
+          </div>
       </main>
 
       <Footer />

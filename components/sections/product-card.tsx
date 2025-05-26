@@ -48,16 +48,16 @@ export default function ProductCard({ product }: ProductCardProps) {
         <CardContent className="flex h-full flex-col justify-between p-4">
           <div>
             <h3 className="mb-1 text-lg font-medium line-clamp-1">{product.name}</h3>
-            <p className="mb-2 line-clamp-2 text-sm text-muted-foreground">{product.description}</p>
+          <p className="mb-2 line-clamp-2 text-sm text-muted-foreground">{product.description}</p>
           </div>
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-lg font-medium">${product.price.toLocaleString()}</span>
-              {product.oldPrice && (
-                <span className="text-sm text-muted-foreground line-through">
-                  ${product.oldPrice.toLocaleString()}
-                </span>
-              )}
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-medium">${product.price.toLocaleString()}</span>
+            {product.oldPrice && (
+              <span className="text-sm text-muted-foreground line-through">
+                ${product.oldPrice.toLocaleString()}
+              </span>
+            )}
             </div>
             <div className="opacity-0 transition-opacity duration-200 group-hover:opacity-100">
               <AddToCartButton 

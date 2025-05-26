@@ -15,11 +15,7 @@ interface AddToCartButtonProps {
     image: string
     color?: string
     material?: string
-    dimensions?: {
-      width?: number
-      height?: number
-      depth?: number
-    }
+    dimensions?: string
   }
   variant?: "default" | "secondary" | "outline" | "ghost"
   size?: "default" | "sm" | "lg"
@@ -30,22 +26,24 @@ export function AddToCartButton({
   variant = "default",
   size = "default",
 }: AddToCartButtonProps) {
-  const { addItem } = useCart()
+  const { addToCart } = useCart()
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
 
   const handleAddToCart = async () => {
     setIsLoading(true)
     try {
-      addItem({
+      addToCart({
         id: product.id,
         name: product.name,
         price: product.price,
         image: product.image,
         quantity: 1,
-        color: product.color,
-        material: product.material,
-        dimensions: product.dimensions,
+        customizations: {
+          color: product.color,
+          material: product.material,
+          dimensions: product.dimensions,
+        },
       })
       toast({
         title: "Proizvod dodan u korpu",

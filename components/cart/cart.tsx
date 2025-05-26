@@ -87,19 +87,11 @@ export default function Cart() {
                           </div>
 
                           {/* Customizations */}
-                          {(item.color || item.material || item.dimensions) && (
+                          {item.customizations && (
                             <div className="mt-1 text-sm text-muted-foreground">
-                              {item.color && <p>Color: {item.color}</p>}
-                              {item.material && <p>Material: {item.material}</p>}
-                              {item.dimensions && (
-                                <p>
-                                  Dimensions:{" "}
-                                  {Object.entries(item.dimensions)
-                                    .filter(([_, value]) => value !== undefined)
-                                    .map(([key, value]) => `${key}: ${value}cm`)
-                                    .join(", ")}
-                                </p>
-                              )}
+                              {item.customizations.color && <p>Color: {item.customizations.color}</p>}
+                              {item.customizations.material && <p>Material: {item.customizations.material}</p>}
+                              {item.customizations.dimensions && <p>Dimensions: {item.customizations.dimensions}</p>}
                             </div>
                           )}
 

@@ -99,7 +99,7 @@ export default function AddToCartWithOptions({
               ))}
             </SelectContent>
           </Select>
-        </div>
+          </div>
 
         <div className="space-y-2">
           <Label>Dimenzije</Label>
@@ -118,14 +118,14 @@ export default function AddToCartWithOptions({
         </div>
       </div>
 
-      <Button
-        onClick={handleAddToCart}
+        <Button 
+          onClick={handleAddToCart}
         disabled={isLoading}
         className="w-full"
-      >
+        >
         <ShoppingBag className="mr-2 h-4 w-4" />
         {isLoading ? "Dodavanje..." : "Dodaj u Korpu"}
-      </Button>
+        </Button>
     </div>
   )
 }

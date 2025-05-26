@@ -9,7 +9,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useCart } from "@/lib/contexts/cart-context"
 import { useToast } from "@/components/ui/use-toast"
-import { formatPrice } from "@/lib/utils"
 
 interface CheckoutFormProps {
   onBack: () => void
@@ -26,10 +25,6 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
     lastName: "",
     email: "",
     phone: "",
-    address: "",
-    city: "",
-    postalCode: "",
-    country: "Bosna i Hercegovina",
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,22 +32,66 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
     setIsLoading(true)
 
     try {
-      // Simulacija procesa plaćanja
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Create order summary
+      const orderSummary = items.map(item => ({
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price,
+        customizations: item.customizations
+      }))
 
-      // Očisti korpu i prikaži poruku o uspjehu
-      clearCart()
-      toast({
-        title: "Narudžba uspješna!",
-        description: "Vaša narudžba je uspješno procesirana. Hvala vam na kupovini!",
+      // Prepare email content
+      const emailContent = {
+        from: formData.email,
+        subject: `Nova narudžba od ${formData.firstName} ${formData.lastName}`,
+        text: `
+          Nova narudžba:
+          
+          Kupac:
+          Ime: ${formData.firstName}
+          Prezime: ${formData.lastName}
+          Email: ${formData.email}
+          Telefon: ${formData.phone}
+          
+          Naručeni proizvodi:
+          ${orderSummary.map(item => `
+            - ${item.name} x ${item.quantity}
+            ${item.customizations ? `
+              Boja: ${item.customizations.color || 'N/A'}
+              Materijal: ${item.customizations.material || 'N/A'}
+              Dimenzije: ${item.customizations.dimensions || 'N/A'}
+            ` : ''}
+            Cijena: ${item.price} KM
+          `).join('\n')}
+          
+          Ukupna cijena: ${total} KM
+        `
+      }
+
+      // Send email using your email service
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailContent),
       })
 
-      // Preusmjeri na stranicu potvrde
-      router.push("/order-confirmation")
+      if (!response.ok) {
+        throw new Error('Failed to send email')
+      }
+
+      toast({
+        title: "Narudžba uspješna!",
+        description: "Hvala vam na narudžbi. Uskoro ćemo vas kontaktirati.",
+      })
+
+      clearCart()
+      router.push("/")
     } catch (error) {
       toast({
         title: "Greška",
-        description: "Došlo je do greške prilikom procesiranja vaše narudžbe. Molimo pokušajte ponovo.",
+        description: "Došlo je do greške prilikom obrade narudžbe. Molimo pokušajte ponovo.",
         variant: "destructive",
       })
     } finally {
@@ -69,35 +108,62 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
     <div className="space-y-6">
       <Button variant="ghost" onClick={onBack} className="mb-4">
         <ArrowLeft className="mr-2 h-4 w-4" />
-        Nazad na Korpu
+        Nazad na korpu
       </Button>
 
-        <div className="space-y-4">
-        <h2 className="text-2xl font-semibold">Detalji Dostave</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-              <Label htmlFor="firstName">Ime</Label>
-            <Input
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-              required
-              />
+      <div className="space-y-4">
+        <h2 className="text-lg font-medium">Detalji narudžbe</h2>
+        <div className="space-y-2">
+          {items.map((item) => (
+            <div key={item.id} className="flex justify-between text-sm">
+              <span>
+                {item.name} x {item.quantity}
+                {item.customizations && (
+                  <span className="text-muted-foreground">
+                    {" "}
+                    ({item.customizations.color && `Boja: ${item.customizations.color}, `}
+                    {item.customizations.material && `Materijal: ${item.customizations.material}, `}
+                    {item.customizations.dimensions && `Dimenzije: ${item.customizations.dimensions}`})
+                  </span>
+                )}
+              </span>
+              <span>${(item.price * item.quantity).toLocaleString()}</span>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Prezime</Label>
-              <Input
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-              onChange={handleChange}
-                required
-            />
+          ))}
+          <div className="border-t pt-2 font-medium">
+            <div className="flex justify-between">
+              <span>Ukupno</span>
+              <span>${total.toLocaleString()}</span>
             </div>
           </div>
+        </div>
+      </div>
 
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="space-y-2">
+            <Label htmlFor="firstName">Ime</Label>
+            <Input
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="lastName">Prezime</Label>
+            <Input
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
@@ -109,7 +175,6 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
               required
             />
           </div>
-
           <div className="space-y-2">
             <Label htmlFor="phone">Telefon</Label>
             <Input
@@ -121,65 +186,12 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
               required
             />
           </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="address">Adresa</Label>
-            <Input
-              id="address"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              required
-            />
         </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="city">Grad</Label>
-              <Input
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                required
-              />
-              </div>
-            <div className="space-y-2">
-              <Label htmlFor="postalCode">Poštanski Broj</Label>
-              <Input
-                id="postalCode"
-                name="postalCode"
-                value={formData.postalCode}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="country">Država</Label>
-            <Input
-              id="country"
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-              required
-              disabled
-            />
-          </div>
-
-          <div className="mt-6 space-y-4">
-            <div className="flex items-center justify-between border-t pt-4">
-              <span className="text-lg font-medium">Ukupno</span>
-              <span className="text-lg font-semibold">{formatPrice(total)} KM</span>
-        </div>
-
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Procesiranje..." : "Potvrdi Narudžbu"}
-          </Button>
-        </div>
+        <Button type="submit" className="w-full" disabled={isLoading}>
+          {isLoading ? "Slanje narudžbe..." : "Pošalji narudžbu"}
+        </Button>
       </form>
-      </div>
     </div>
   )
 }
