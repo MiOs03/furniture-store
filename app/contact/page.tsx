@@ -1,4 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,6 +10,20 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import Footer from "@/components/layout/footer"
 import Navbar from "@/components/layout/navbar"
+import FeaturedProducts from "@/components/sections/featured-products"
+import BrandIntro from "@/components/sections/brand-intro"
+import NewProducts from "@/components/sections/new-products"
+import AboutUsPreview from "@/components/sections/about-us-preview"
+
+// Constants for better maintainability
+const HERO_CONTENT = {
+  sale: {
+    title: "Ljetnja Akcija",
+    subtitle: "Do 30% popusta na odabrane proizvode"
+  },
+  heading: "V Sistem",
+  subheading: "Namještaj po mjeri"
+}
 
 export default function ContactPage() {
   return (
@@ -18,7 +35,7 @@ export default function ContactPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-3xl font-light tracking-tight sm:text-4xl md:text-5xl">Kontaktirajte Nas</h1>
               <p className="mt-4 text-muted-foreground md:text-xl">
-                Imamo pitanja? Javite nam se. Naš tim je tu da vam pomogne.
+                Imate pitanja? Javite nam se. Naš tim je tu da Vam pomogne.
               </p>
             </div>
             <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
@@ -62,15 +79,15 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
                           <MapPin className="h-5 w-5 text-muted-foreground" />
-                          <span>V Sistem salon namještaja, mebl štof i eko koža</span>
+                          <span>Pilanska bb, Banja Luka 78000</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Phone className="h-5 w-5 text-muted-foreground" />
-                          <span>+387 33 123 456</span>
+                          <span>+387 66 802 219</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Mail className="h-5 w-5 text-muted-foreground" />
-                          <span>info@nordichaven.ba</span>
+                          <span>vsistemdoo@gmail.com</span>
                         </div>
                       </div>
                     </div>
@@ -83,11 +100,11 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span>Ponedjeljak - Petak</span>
-                          <span>9:00 - 18:00</span>
+                          <span>8:00 - 20:00</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Subota</span>
-                          <span>10:00 - 16:00</span>
+                          <span>8:00 - 16:00</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Nedjelja</span>

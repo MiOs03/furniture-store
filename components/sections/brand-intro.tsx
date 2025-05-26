@@ -13,7 +13,7 @@ export default function BrandIntro() {
             <div className="space-y-2">
               <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Izrađeno s Ljubavlju</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                U Nordic Haven vjerujemo da namještaj treba biti i lijep i funkcionalan, dizajniran da traje generacijama.
+                U V Sistem vjerujemo da namještaj treba biti i lijep i funkcionalan, dizajniran da traje generacijama.
               </p>
             </div>
             <div className="space-y-4">

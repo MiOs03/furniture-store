@@ -29,23 +29,26 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
             <div className="mb-6 rounded-md bg-black/60 px-6 py-3 backdrop-blur-sm">
-              <p className="text-lg font-medium uppercase tracking-wider md:text-xl">Summer Sale</p>
-              <p className="text-2xl font-light md:text-3xl">Up to 30% off selected items</p>
+              <p className="text-lg font-medium uppercase tracking-wider md:text-xl">Ljetnja Akcija</p>
+              <p className="text-2xl font-light md:text-3xl">Do 30% popusta na odabrane proizvode</p>
             </div>
             <h1 className="mb-4 max-w-3xl text-4xl font-light tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Timeless Furniture, Modern Comfort
+              V Sistem
             </h1>
             <p className="mb-8 max-w-xl text-lg font-light md:text-xl">
-              Crafted with precision, designed for living
+              Namještaj po mjeri
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <Button 
                 asChild 
                 size="lg" 
-                className="rounded-none bg-white text-black hover:bg-white/90 transition-colors duration-200"
+                className="group relative overflow-hidden rounded-none border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all duration-300"
               >
                 <Link href="/products" className="flex items-center">
-                  Shop Now <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  <span className="relative z-10 flex items-center">
+                    Pogledaj proizvode
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
                 </Link>
               </Button>
             </div>

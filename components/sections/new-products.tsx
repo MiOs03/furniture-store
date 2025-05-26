@@ -47,12 +47,12 @@ export default function NewProducts() {
       <div className="container px-4 md:px-6">
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <h2 className="text-3xl font-light tracking-tight sm:text-4xl">New Arrivals</h2>
-            <p className="text-muted-foreground">Explore our latest designs</p>
+            <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Novi proizvodi</h2>
+            <p className="text-muted-foreground">Pogledajte naše najnovije proizvode</p>
           </div>
           <Button asChild variant="ghost" className="group">
             <Link href="/products?category=new">
-              View All New Arrivals{" "}
+              Pogledajte nove proizvode {" "}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

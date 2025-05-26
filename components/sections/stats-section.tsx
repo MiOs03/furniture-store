@@ -20,18 +20,18 @@ export default function StatsSection() {
   const stats = [
     {
       number: 2000,
-      label: "Satisfied Customers",
-      prefix: "Over",
+      label: "Zadovoljnih kupaca",
+      prefix: "Preko",
     },
     {
       number: 500,
-      label: "Products Manufactured Annually",
-      prefix: "More than",
+      label: "Proizvoda proizvedeno godišnje",
+      prefix: "Više od",
     },
     {
       number: 300,
-      label: "Successful Deliveries",
-      prefix: "Over",
+      label: "Uspješnih dostava",
+      prefix: "Preko",
     },
   ]
 

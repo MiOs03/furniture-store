@@ -139,8 +139,8 @@ export default function ProductsPage() {
           <div className="container px-4 md:px-6">
             <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center">
               <div>
-                <h1 className="text-3xl font-light tracking-tight sm:text-4xl">Our Collection</h1>
-                <p className="text-muted-foreground">Discover furniture that combines beauty and functionality</p>
+                <h1 className="text-3xl font-light tracking-tight sm:text-4xl">Naša kolekcija</h1>
+                <p className="text-muted-foreground">Pogledajte našu kolekciju proizvoda</p>
               </div>
               <div className="flex flex-col gap-2 sm:flex-row">
                 {/* Sort Dropdown */}
@@ -148,35 +148,35 @@ export default function ProductsPage() {
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" className="w-full justify-between sm:w-auto">
                       <ArrowUpDown className="mr-2 h-4 w-4" />
-                      Sort
+                      Sortiraj
                       <ChevronDown className="ml-2 h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuLabel>Sort By</DropdownMenuLabel>
+                    <DropdownMenuLabel>Sortiraj po</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                       <DropdownMenuItem onClick={() => setSortOption("newest")}>
-                        Newest
+                        Najnoviji
                         {sortOption === "newest" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setSortOption("featured")}>
-                        Featured
+                        Najpopularniji
                         {sortOption === "featured" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setSortOption("price-low-high")}>
-                        Price: Low to High
+                        Cena: Niska do visoka
                         {sortOption === "price-low-high" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setSortOption("price-high-low")}>
-                        Price: High to Low
+                        Cena: Visoka do niska
                         {sortOption === "price-high-low" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setSortOption("name-a-z")}>
-                        Name: A to Z{sortOption === "name-a-z" && <Check className="ml-auto h-4 w-4" />}
+                        Naziv: A do Z{sortOption === "name-a-z" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                       <DropdownMenuItem onClick={() => setSortOption("name-z-a")}>
-                        Name: Z to A{sortOption === "name-z-a" && <Check className="ml-auto h-4 w-4" />}
+                        Naziv: Z do A{sortOption === "name-z-a" && <Check className="ml-auto h-4 w-4" />}
                       </DropdownMenuItem>
                     </DropdownMenuGroup>
                   </DropdownMenuContent>
@@ -187,18 +187,18 @@ export default function ProductsPage() {
                   <SheetTrigger asChild>
                     <Button variant="outline" className="w-full sm:w-auto">
                       <Filter className="mr-2 h-4 w-4" />
-                      Filter
+                      Filtriraj
                     </Button>
                   </SheetTrigger>
                   <SheetContent className="overflow-y-auto sm:max-w-md">
                     <SheetHeader>
-                      <SheetTitle>Filter Products</SheetTitle>
-                      <SheetDescription>Refine your search with the following filters.</SheetDescription>
+                      <SheetTitle>Filtriraj proizvode</SheetTitle>
+                      <SheetDescription>Filtrirajte proizvode prema vašim željama.</SheetDescription>
                     </SheetHeader>
                     <div className="mt-6 space-y-6">
                       {/* Price Range Filter */}
                       <div className="space-y-4">
-                        <h3 className="font-medium">Price Range</h3>
+                        <h3 className="font-medium">Cena</h3>
                         <div className="space-y-2">
                           <Slider
                             defaultValue={[0, 5000]}
@@ -216,7 +216,7 @@ export default function ProductsPage() {
 
                       {/* Materials Filter */}
                       <div className="space-y-4">
-                        <h3 className="font-medium">Materials</h3>
+                        <h3 className="font-medium">Materijali</h3>
                         <div className="grid grid-cols-2 gap-2">
                           {allMaterials.map((material) => (
                             <div key={material} className="flex items-center space-x-2">
@@ -233,7 +233,7 @@ export default function ProductsPage() {
 
                       {/* Colors Filter */}
                       <div className="space-y-4">
-                        <h3 className="font-medium">Colors</h3>
+                        <h3 className="font-medium">Boje</h3>
                         <div className="grid grid-cols-2 gap-2">
                           {allColors.map((color) => (
                             <div key={color} className="flex items-center space-x-2">
@@ -250,10 +250,10 @@ export default function ProductsPage() {
                     </div>
                     <SheetFooter className="mt-6 flex-row justify-between">
                       <Button variant="outline" onClick={resetFilters}>
-                        Reset Filters
+                        Resetuj filtre
                       </Button>
                       <SheetClose asChild>
-                        <Button>Apply Filters</Button>
+                        <Button>Primijeni filtre</Button>
                       </SheetClose>
                     </SheetFooter>
                   </SheetContent>
@@ -265,13 +265,13 @@ export default function ProductsPage() {
             <Tabs defaultValue={activeCategory} value={activeCategory} onValueChange={setActiveCategory} className="mb-8">
               <div className="mb-6 overflow-x-auto">
                 <TabsList className="inline-flex w-auto">
-                  <TabsTrigger value="all">All</TabsTrigger>
-                  <TabsTrigger value="sofa">Sofas</TabsTrigger>
-                  <TabsTrigger value="bed">Beds</TabsTrigger>
-                  <TabsTrigger value="chair">Chairs</TabsTrigger>
-                  <TabsTrigger value="table">Tables</TabsTrigger>
-                  <TabsTrigger value="panel">Panel Furniture</TabsTrigger>
-                  <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Sale</TabsTrigger>
+                  <TabsTrigger value="all">Sve</TabsTrigger>
+                  <TabsTrigger value="sofa">Sofe</TabsTrigger>
+                  <TabsTrigger value="bed">Kreveti</TabsTrigger>
+                  <TabsTrigger value="chair">Stolice</TabsTrigger>
+                  <TabsTrigger value="table">Stolovi</TabsTrigger>
+                  <TabsTrigger value="panel">Panel namještaj</TabsTrigger>
+                  <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Akcija</TabsTrigger>
                 </TabsList>
               </div>
 
@@ -281,7 +281,7 @@ export default function ProductsPage() {
                 priceRange[0] > 0 ||
                 priceRange[1] < 5000) && (
                 <div className="mb-6 flex flex-wrap gap-2">
-                  <span className="text-sm font-medium">Active Filters:</span>
+                  <span className="text-sm font-medium">Aktivni filtri:</span>
                   {priceRange[0] > 0 || priceRange[1] < 5000 ? (
                     <div className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
                       ${priceRange[0]} - ${priceRange[1]}
@@ -316,7 +316,7 @@ export default function ProductsPage() {
                     onClick={resetFilters}
                     className="text-xs text-muted-foreground underline hover:text-foreground"
                   >
-                    Clear All
+                    Očisti sve
                   </button>
                 </div>
               )}
@@ -327,11 +327,11 @@ export default function ProductsPage() {
                   filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
                 ) : (
                   <div className="col-span-full py-12 text-center">
-                    <p className="mb-4 text-lg font-medium">No products match your filters</p>
+                    <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
                     <p className="mb-6 text-muted-foreground">
-                      Try adjusting your filters or browse our categories for more options.
+                      Podesite filtre ili pregledajte naše kategorije za više opcija.
                     </p>
-                    <Button onClick={resetFilters}>Reset Filters</Button>
+                    <Button onClick={resetFilters}>Resetuj filtre</Button>
                   </div>
                 )}
               </TabsContent>

@@ -11,23 +11,23 @@ export default function AboutUsPreview() {
         <div className="grid gap-12 md:grid-cols-2">
           <div className="order-2 flex flex-col justify-center space-y-4 md:order-1">
             <div className="space-y-2">
-              <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Our Story</h2>
+              <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Naša priča</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Founded in 2010, Nordic Haven began with a simple vision: to create furniture that combines timeless
-                design with modern comfort.
+                V Sistem je osnovan 2010. godine, sa jednostavnom vizijom: stvaranje namještaja koja kombiniraju vremensku
+                ljepotu i moderni komfor.
               </p>
             </div>
             <div className="space-y-4">
               <p>
-                Our journey started in a small workshop in Stockholm, where our founder, Emma Lindström, crafted her
-                first chair. Today, we've grown into a team of passionate artisans and designers, but our commitment to
-                quality craftsmanship remains unchanged.
+                Naša putanja započela je u malom radionici u Stockholmu, gdje je naša osnivačica, Emma Lindström, stvorila
+                svoj prvi stol. Danas, mi smo porastali u tim od strastvenih umjetnika i dizajnera, ali naša obaveza
+                kvalitetnog umjetničkog rada ostaje ista.
               </p>
             </div>
             <div className="pt-4">
               <Button asChild variant="outline" className="group">
                 <Link href="/about">
-                  Learn More About Us{" "}
+                  Saznaj više o nama{" "}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

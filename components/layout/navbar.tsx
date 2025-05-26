@@ -27,7 +27,7 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="/" className="text-xl font-light tracking-wide hover:text-accent-purple">
-            NORDIC HAVEN
+            V Sistem
           </Link>
 
           <nav className="hidden md:flex md:items-center md:gap-8">
@@ -72,7 +72,7 @@ export default function Navbar() {
                 className="text-xl font-light tracking-wide hover:text-accent-purple"
                 onClick={() => setIsMenuOpen(false)}
               >
-                NORDIC HAVEN
+                V Sistem
               </Link>
               <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                 <X className="h-6 w-6" />

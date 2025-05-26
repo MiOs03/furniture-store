@@ -14,23 +14,23 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Nordic Haven | Timeless Furniture, Modern Comfort",
-  description: "Discover beautifully crafted, sustainable furniture for modern living at Nordic Haven.",
+  title: "V Sistem | Timeless Furniture, Modern Comfort",
+  description: "Discover beautifully crafted, sustainable furniture for modern living at V Sistem.",
   generator: 'v0.dev',
   keywords: ['furniture', 'modern furniture', 'sustainable furniture', 'home decor', 'interior design'],
-  authors: [{ name: 'Nordic Haven' }],
+  authors: [{ name: 'V Sistem' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://nordichaven.com',
-    title: 'Nordic Haven | Timeless Furniture, Modern Comfort',
-    description: 'Discover beautifully crafted, sustainable furniture for modern living at Nordic Haven.',
-    siteName: 'Nordic Haven',
+    title: 'V Sistem | Timeless Furniture, Modern Comfort',
+    description: 'Discover beautifully crafted, sustainable furniture for modern living at V Sistem.',
+    siteName: 'V Sistem',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nordic Haven | Timeless Furniture, Modern Comfort',
-    description: 'Discover beautifully crafted, sustainable furniture for modern living at Nordic Haven.',
+    title: 'V Sistem | Timeless Furniture, Modern Comfort',
+    description: 'Discover beautifully crafted, sustainable furniture for modern living at V Sistem.',
   },
 }
 

@@ -14,6 +14,7 @@ import AddToCartWithOptions from "@/components/cart/add-to-cart-with-options"
 import { getProductById, getRelatedProducts } from "@/lib/products"
 import { Toaster } from "@/components/ui/toaster"
 import { Product, CustomizationType } from "@/lib/types"
+import Navbar from "@/components/layout/navbar"
 
 interface ProductPageProps {
   params: Promise<{
@@ -29,6 +30,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   if (!product) {
     return (
       <div className="flex min-h-screen flex-col">
+        <Navbar />
         <main className="container flex-1 px-4 py-12 md:px-6">
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <h1 className="mb-4 text-2xl font-medium">Proizvod Nije Pronađen</h1>
@@ -60,6 +62,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <Navbar />
       <main className="flex-1">
         {/* Breadcrumb */}
         <div className="container px-4 py-4 md:px-6">

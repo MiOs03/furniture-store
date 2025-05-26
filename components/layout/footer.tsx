@@ -9,27 +9,27 @@ export default function Footer() {
   const { setActiveCategory } = useCategory()
 
   const mainLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/products", label: "Products" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Početna" },
+    { href: "/about", label: "O nama" },
+    { href: "/products", label: "Proizvodi" },
+    { href: "/projects", label: "Projekti" },
+    { href: "/contact", label: "Kontakt" },
   ]
 
   const productCategories = [
-    { value: "all", label: "All" },
-    { value: "sofa", label: "Sofas" },
-    { value: "bed", label: "Beds" },
-    { value: "chair", label: "Chairs" },
-    { value: "table", label: "Tables" },
-    { value: "panel", label: "Panel Furniture" },
+    { value: "all", label: "Sve" },
+    { value: "sofa", label: "Sofe" },
+    { value: "bed", label: "Kreveti" },
+    { value: "chair", label: "Stolice" },
+    { value: "table", label: "Stolovi" },
+    { value: "panel", label: "Panel namještaj" },
   ]
 
   const companyInfo = [
-    { href: "/about#our-story", label: "Our Story" },
-    { href: "/about#our-mission", label: "Our Mission" },
-    { href: "/projects", label: "Our Projects" },
-    { href: "/contact", label: "Get in Touch" },
+    { href: "/about#our-story", label: "Naša priča" },
+    { href: "/about#our-mission", label: "Naša misija" },
+    { href: "/projects", label: "Naši projekti" },
+    { href: "/contact", label: "Kontaktirajte nas" },
   ]
 
   const handleProductClick = (category: string) => {
@@ -43,26 +43,37 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <Link href="/" className="mb-4 block text-xl font-light tracking-wide hover:text-accent-purple">
-              NORDIC HAVEN
+              V Sistem
             </Link>
             <p className="mb-6 text-sm text-muted-foreground">
-              Crafting timeless furniture for modern living since 2010.
+            Proizvodnja tapaciranog namještaja. Veliki izbor modela, materijala i boja. Mogućnost izrade namještaja po mjeri.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground transition-colors hover:text-accent">
+              <Link href="https://www.instagram.com/v.sistem_/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-muted-foreground transition-colors hover:text-accent">
                 Instagram
               </Link>
-              <Link href="#" className="text-muted-foreground transition-colors hover:text-accent">
-                Pinterest
+              <Link href="https://www.tiktok.com/@vsistem" 
+              target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground transition-colors hover:text-accent">
+                TikTok
               </Link>
-              <Link href="#" className="text-muted-foreground transition-colors hover:text-accent">
+              <Link 
+                href="https://www.facebook.com/VSistemNamjestaj" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground transition-colors hover:text-accent"
+              >
                 Facebook
               </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-medium text-accent-purple">Products</h3>
+            <h3 className="mb-4 text-lg font-medium text-accent-purple">Proizvodi</h3>
             <ul className="space-y-2 text-sm">
               {productCategories.map((link) => (
                 <li key={link.value}>
@@ -78,7 +89,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-medium text-accent-purple">Company</h3>
+            <h3 className="mb-4 text-lg font-medium text-accent-purple">V Sistem</h3>
             <ul className="space-y-2 text-sm">
               {companyInfo.map((link) => (
                 <li key={link.href}>
@@ -93,7 +104,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-surface-hover pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Nordic Haven. All rights reserved.
+            © {new Date().getFullYear()} V Sistem. Sva prava zadržana.
           </p>
         </div>
       </div>
