@@ -34,7 +34,6 @@ export default function AddToCartWithOptions({
   const [isLoading, setIsLoading] = useState(false)
   const [selectedColor, setSelectedColor] = useState(colors[0])
   const [selectedMaterial, setSelectedMaterial] = useState(materials[0])
-  const [selectedDimensions, setSelectedDimensions] = useState(dimensions[0])
 
   const handleAddToCart = async () => {
     setIsLoading(true)
@@ -48,7 +47,6 @@ export default function AddToCartWithOptions({
         customizations: {
           color: selectedColor,
           material: selectedMaterial,
-          dimensions: selectedDimensions,
         },
       })
       toast({
@@ -95,22 +93,6 @@ export default function AddToCartWithOptions({
               {materials.map((material) => (
                 <SelectItem key={material} value={material}>
                   {material}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          </div>
-
-        <div className="space-y-2">
-          <Label>Dimenzije</Label>
-          <Select value={selectedDimensions} onValueChange={setSelectedDimensions}>
-            <SelectTrigger>
-              <SelectValue placeholder="Odaberite dimenzije" />
-            </SelectTrigger>
-            <SelectContent>
-              {dimensions.map((dimension) => (
-                <SelectItem key={dimension} value={dimension}>
-                  {dimension}
                 </SelectItem>
               ))}
             </SelectContent>

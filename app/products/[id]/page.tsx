@@ -138,13 +138,24 @@ export default function ProductPage({ params }: ProductPageProps) {
               {/* Standard Dimensions Display */}
               <div className="rounded-md border p-4">
                 <h3 className="mb-3 text-sm font-medium">Standardne Dimenzije</h3>
-                <div className="grid grid-cols-3 gap-2 text-sm">
-                  {product?.dimensions?.slice(0, 3)?.map((dimension, index) => (
-                    <div key={index}>
-                      <span className="text-muted-foreground">{dimension.name}:</span> {dimension.value}
-                    </div>
-                  )) || null}
-                </div>
+                {(() => {
+                  const width = product?.dimensions?.find(d => d.name.toLowerCase().includes('širina'))?.value;
+                  const depth = product?.dimensions?.find(d => d.name.toLowerCase().includes('dubina'))?.value;
+                  const height = product?.dimensions?.find(d => d.name.toLowerCase().includes('visina'))?.value;
+                  if (width && depth && height) {
+                    return (
+                      <div className="text-sm font-medium mb-2">
+                        {`Širina: ${width} x Dubina: ${depth} x Visina: ${height}`}
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div className="text-sm text-muted-foreground mb-2">
+                        Dimenzije nisu dostupne.
+                      </div>
+                    );
+                  }
+                })()}
 
                 {/* CustomDimensionsForm without onCustomizationChange */}
                 <CustomDimensionsForm
@@ -205,19 +216,16 @@ export default function ProductPage({ params }: ProductPageProps) {
             </TabsContent>
             <TabsContent value="dimensions" className="mt-6 space-y-4">
               <h3 className="text-lg font-medium">Dimenzije</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <tbody>
-                    {product.dimensions.map((dimension, index) => (
-                      <tr key={index} className="border-b">
-                        <td className="py-3 pr-4 font-medium">{dimension.name}</td>
-                        <td className="py-3 text-muted-foreground">{dimension.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
+              {(() => {
+                const width = product?.dimensions?.find(d => d.name.toLowerCase().includes('širina'))?.value || '—';
+                const depth = product?.dimensions?.find(d => d.name.toLowerCase().includes('dubina'))?.value || '—';
+                const height = product?.dimensions?.find(d => d.name.toLowerCase().includes('visina'))?.value || '—';
+                return (
+                  <div className="text-base font-medium mb-2">
+                    {`Širina: ${width} x Dubina: ${depth} x Visina: ${height}`}
+                  </div>
+                );
+              })()}
               <div className="mt-6 rounded-md bg-stone-50 p-4">
                 <h4 className="mb-2 text-lg font-medium">Dostupne Prilagođene Dimenzije</h4>
                 <p className="mb-4">
