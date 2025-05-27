@@ -68,10 +68,10 @@ const products: Product[] = [
       { name: "Težina", value: "18 kg" },
     ],
     colors: [
-      { name: "Drvena osnova - svijetla siva", hex: "#D3D3D3" },
-      { name: "Drvena osnova - tamna siva", hex: "#696969" },
-      { name: "Drvena osnova - plava", hex: "#000080" },
-      { name: "Dobro drvo/Bež", hex: "#F5F5DC" },
+      { name: "Svijetlo siva", hex: "#D3D3D3" },
+      { name: "Tamna siva", hex: "#696969" },
+      { name: "Plava", hex: "#000080" },
+      { name: "Bež", hex: "#F5F5DC" },
     ],
     materials: ["Drvena osnova", "Kožni materijal", "Visoka gustoća pene"],
     careInstructions:
@@ -139,10 +139,10 @@ const products: Product[] = [
       { name: "Težina", value: "15 kg" },
     ],
     colors: [
-      { name: "Linijski materijal", hex: "#F0E9E0" },
-      { name: "Tamna siva", hex: "#36454F" },
-      { name: "Svijetla siva", hex: "#8DA9C4" },
-      { name: "Svijetla siva", hex: "#708238" },
+      { name: "Krem", hex: "#F0E9E0" },
+      { name: "Tamno siva", hex: "#36454F" },
+      { name: "Svijetlo plava", hex: "#8DA9C4" },
+      { name: "Maslinasto zelena", hex: "#708238" },
     ],
     materials: ["Drvena osnova", "Premium Linijski materijal", "Visoka gustoća pene", "Okvir"],
     careInstructions:
@@ -213,9 +213,9 @@ const products: Product[] = [
       { name: "Prošireni list", value: "50 cm" },
     ],
     colors: [
-      { name: "Drvena osnova - svijetla", hex: "#D2B48C" },
-      { name: "Drvena osnova - tamna", hex: "#8B4513" },
-      { name: "Drvena osnova - bijela", hex: "#F5F5F5" },
+      { name: "Svijetlo smeđa", hex: "#D2B48C" },
+      { name: "Tamno smeđa", hex: "#8B4513" },
+      { name: "Bijela", hex: "#F5F5F5" },
     ],
     materials: ["Drvena osnova", "Drvena osnova (za prošireni list)"],
     careInstructions:
@@ -281,9 +281,9 @@ const products: Product[] = [
       { name: "Težina", value: "35 kg" },
     ],
     colors: [
-      { name: "Drvena osnova - svijetla", hex: "#FFFFFF" },
-      { name: "Drvena osnova - tamna", hex: "#000000" },
-      { name: "Drvena osnova - tamna", hex: "#000000" },
+      { name: "Bijela", hex: "#FFFFFF" },
+      { name: "Crna", hex: "#000000" },
+      { name: "Tamno smeđa", hex: "#000000" },
     ],
     materials: ["Drvena osnova", "Čelični okvir", "Premium elektronika"],
     careInstructions:
@@ -352,9 +352,9 @@ const products: Product[] = [
       { name: "Visina platforme", value: "35 cm" },
     ],
     colors: [
-      { name: "Drvena osnova - svijetla", hex: "#5C4033" },
-      { name: "Drvena osnova - tamna", hex: "#D2B48C" },
-      { name: "Drvena osnova - tamna", hex: "#292929" },
+      { name: "Srednje smeđa", hex: "#5C4033" },
+      { name: "Svijetlo smeđa", hex: "#D2B48C" },
+      { name: "Antracit", hex: "#292929" },
     ],
     materials: ["Solid Oak", "Oak Veneer", "Premium Hardware"],
     careInstructions:
@@ -426,11 +426,11 @@ const products: Product[] = [
       { name: "Visina noge", value: "15 cm" },
     ],
     colors: [
-      { name: "Svetlo siva", hex: "#D3D3D3" },
+      { name: "Svijetlo siva", hex: "#D3D3D3" },
       { name: "Tamna siva", hex: "#696969" },
       { name: "Navy plava", hex: "#000080" },
       { name: "Bež", hex: "#F5F5DC" },
-      { name: "Siva", hex: "#9CAF88" }, 
+      { name: "Maslinasto zelena", hex: "#9CAF88" },
     ],
     materials: ["Drvena osnova", "Pufna osnova", "Pufna kancelija", "Premium tkanina"],
     careInstructions:
@@ -501,7 +501,7 @@ const products: Product[] = [
     ],
     colors: [
       { name: "Bijela", hex: "#F5F5F5" },
-      { name: "Prirodna drvena osnova - svijetla", hex: "#D2B48C" },
+      { name: "Prirodno drvo", hex: "#D2B48C" },
       { name: "Crna", hex: "#000000" },
     ],
     materials: ["Solid Oak", "Oak Veneer", "Premium Hardware"],
@@ -628,8 +628,8 @@ const products: Product[] = [
       { name: "Težina", value: "35 kg" }
     ],
     colors: [
-      { name: "White Marble/Natural Oak", hex: "#FFFFFF" },
-      { name: "Black Marble/Natural Oak", hex: "#000000" }
+      { name: "Bijeli mramor / Prirodno drvo", hex: "#FFFFFF" },
+      { name: "Crni mramor / Prirodno drvo", hex: "#000000" },
     ],
     materials: ["Marble", "Solid Oak"],
     careInstructions: "Očistite maram površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
@@ -679,8 +679,8 @@ const products: Product[] = [
       { name: "Dužina kabela", value: "200 cm" }
     ],
     colors: [
-      { name: "Prirodna boja drveta/Brončani", hex: "#F5F5DC" },
-      { name: "Siva boja drveta/Brončani", hex: "#808080" }
+      { name: "Bež / Zlatna", hex: "#F5F5DC" },
+      { name: "Siva / Zlatna", hex: "#808080" },
     ],
     materials: ["Brončani", "Drvena osnova", "Čelična osnova"],
     careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
@@ -730,9 +730,9 @@ const products: Product[] = [
       { name: "Težina", value: "8 kg" }
     ],
     colors: [
-      { name: "Bijela/Prirodna drvena osnova", hex: "#FFFFFF" },
-      { name: "Crna/Prirodna drvena osnova", hex: "#000000" },
-      { name: "Siva/Prirodna drvena osnova", hex: "#9CAF88" }
+      { name: "Bijela / Prirodno drvo", hex: "#FFFFFF" },
+      { name: "Crna / Prirodno drvo", hex: "#000000" },
+      { name: "Siva / Prirodno drvo", hex: "#9CAF88" }
     ],
     materials: ["Drvena osnova", "Površinsko obojena čelična osnova", "Felt"],
     careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
