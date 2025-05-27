@@ -417,7 +417,7 @@ const products: Product[] = [
       "Podignute noge za lako čišćenje ispod",
     ],
     dimensions: [
-      { name: "Width", value: "220 cm" },
+      { name: "Širina", value: "220 cm" },
       { name: "Dubina", value: "95 cm" },
       { name: "Visina", value: "85 cm" },
       { name: "Visina sjedala", value: "45 cm" },
