@@ -32,6 +32,9 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
     setIsLoading(true)
 
     try {
+      console.log('Starting order submission...');
+      console.log('Cart items:', items);
+
       // Create order summary
       const orderSummary = items.map(item => ({
         name: item.name,
@@ -39,6 +42,8 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
         price: item.price,
         customizations: item.customizations
       }))
+
+      console.log('Order summary:', orderSummary);
 
       // Prepare email content
       const emailContent = {
@@ -68,8 +73,10 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
         `
       }
 
+      console.log('Sending email with content:', emailContent);
+
       // Send email using your email service
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(`${window.location.origin}/api/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,8 +85,13 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to send email')
+        const errorData = await response.text();
+        console.error('Error response:', errorData);
+        throw new Error('Failed to send email');
       }
+
+      const responseData = await response.json();
+      console.log('Email API response:', responseData);
 
       toast({
         title: "Narudžba uspješna!",
@@ -88,10 +100,11 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
 
       clearCart()
       router.push("/")
-    } catch (error) {
+    } catch (error: any) {
+      console.error('Error submitting order:', error);
       toast({
         title: "Greška",
-        description: "Došlo je do greške prilikom obrade narudžbe. Molimo pokušajte ponovo.",
+        description: error.message || "Došlo je do greške prilikom obrade narudžbe. Molimo pokušajte ponovo.",
         variant: "destructive",
       })
     } finally {

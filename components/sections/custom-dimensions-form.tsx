@@ -49,6 +49,7 @@ export default function CustomDimensionsForm({
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleDimensionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -88,27 +89,75 @@ export default function CustomDimensionsForm({
     setContactInfo((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
 
-    // In a real application, this would send the data to your backend
-    // For now, we'll simulate a successful submission
-    setTimeout(() => {
-      setIsSubmitted(true)
+    try {
+      // Prepare email content
+      const emailContent = {
+        from: contactInfo.email,
+        subject: `Zahtjev za prilagođene dimenzije - ${productName}`,
+        text: `
+          Novi zahtjev za prilagođene dimenzije:
+
+          Proizvod: ${productName}
+          
+          Kontakt informacije:
+          Ime: ${contactInfo.name}
+          Email: ${contactInfo.email}
+          Telefon: ${contactInfo.phone || 'Nije naveden'}
+          
+          Prilagođene dimenzije:
+          Širina: ${dimensions.width || 'Nije navedena'} cm
+          Dubina: ${dimensions.depth || 'Nije navedena'} cm
+          Visina: ${dimensions.height || 'Nije navedena'} cm
+          
+          Boja: ${selectedColor || 'Nije navedena'}
+          Materijal: ${selectedMaterial || 'Nije naveden'}
+          
+          Dodatne napomene:
+          ${contactInfo.message || 'Nema dodatnih napomena'}
+        `
+      };
+
+      // Send email
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailContent),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send request');
+      }
+
+      setIsSubmitted(true);
       toast({
-        title: "Request Submitted",
-        description: "We've received your custom dimensions request. Our team will contact you shortly.",
-      })
+        title: "Zahtjev Poslan",
+        description: "Hvala vam na zahtjevu. Naš tim će vas kontaktirati uskoro.",
+      });
 
       // Reset form after submission
       setTimeout(() => {
-        setIsDialogOpen(false)
-        setIsSubmitted(false)
-        setDimensions({ width: "", depth: "", height: "" })
-        setContactInfo({ name: "", email: "", phone: "", message: "" })
-      }, 2000)
-    }, 1000)
-  }
+        setIsDialogOpen(false);
+        setIsSubmitted(false);
+        setDimensions({ width: "", depth: "", height: "" });
+        setContactInfo({ name: "", email: "", phone: "", message: "" });
+      }, 2000);
+    } catch (error: any) {
+      toast({
+        title: "Greška",
+        description: error.message || "Došlo je do greške. Molimo pokušajte ponovo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="mt-6">
