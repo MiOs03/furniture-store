@@ -16,10 +16,10 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section with Sales Banner */}
-        <section className="relative h-[90vh] w-full" aria-label="Hero section">
+        <section className="relative h-[70vh] w-full" aria-label="Hero section">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Elegant living room with minimalist furniture"
+            src="/proba1.jpeg?height=1080&width=1920"
+            alt="Elegantna dnevna soba sa minimalističkim namještajem"
             fill
             priority
             sizes="100vw"
@@ -33,7 +33,7 @@ export default function Home() {
               <p className="text-2xl font-light md:text-3xl">Do 30% popusta na odabrane proizvode</p>
             </div>
             <h1 className="mb-4 max-w-3xl text-4xl font-light tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              V Sistem
+              VSistem
             </h1>
             <p className="mb-8 max-w-xl text-lg font-light md:text-xl">
               Namještaj po mjeri

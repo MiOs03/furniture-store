@@ -210,7 +210,7 @@ export default function ContactPage() {
               <h2 className="mb-8 text-2xl font-light text-center">Pronađite Nas</h2>
               <div className="aspect-[4/3] w-full overflow-hidden rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.0000000000005!2d17.000000000000004!3d44.00000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDAwJzAwLjAiTiAxN8KwMDAnMDAuMCJF!5e0!3m2!1sen!2sba!4v1622000000000!5m2!1sen!2sba" // Replace with your actual Google Maps embed URL
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.8327291829833!2d17.20410237631497!3d44.784215378550805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e03a70aad9949%3A0x4549d7722d3ec220!2sV%20Sistem%20salon%20namje%C5%A1taja%2C%20mebl%20%C5%A1tof%20i%20eko%20ko%C5%BEa!5e0!3m2!1sen!2sba!4v1748340215158!5m2!1sen!2sba" // Replace with your actual Google Maps embed URL
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

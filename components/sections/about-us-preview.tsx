@@ -13,15 +13,13 @@ export default function AboutUsPreview() {
             <div className="space-y-2">
               <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Naša priča</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                V Sistem je osnovan 2010. godine, sa jednostavnom vizijom: stvaranje namještaja koja kombiniraju vremensku
+                VSistem je osnovan 2010. godine, sa jednostavnom vizijom: stvaranje namještaja koja kombiniraju vremensku
                 ljepotu i moderni komfor.
               </p>
             </div>
             <div className="space-y-4">
               <p>
-                Naša putanja započela je u malom radionici u Stockholmu, gdje je naša osnivačica, Emma Lindström, stvorila
-                svoj prvi stol. Danas, mi smo porastali u tim od strastvenih umjetnika i dizajnera, ali naša obaveza
-                kvalitetnog umjetničkog rada ostaje ista.
+              Naš rad ne završava kada se posljednji vijak učvrsti – on tada tek počinje da živi u domovima i prostorima koje opremamo. Svaki komad koji stvorimo nosi potpis preciznosti, strasti i vrhunske izrade. Bez obzira na to da li je riječ o jedinstvenom komadu po mjeri ili kompletnom enterijeru, VSistem ostaje vjeran svojoj misiji: stvarati namještaj koji traje, inspiriše i priča priču.
               </p>
             </div>
             <div className="pt-4">

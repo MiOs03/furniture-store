@@ -51,17 +51,18 @@ export default function ProductsPage() {
 
   // Category mapping
   const categoryMap = {
-    all: "All Products",
-    sofa: "Sofas",
-    bed: "Beds",
-    chair: "Chairs",
-    table: "Tables",
-    panel: "Panel Furniture",
-    "living-room": "Living Room",
+    all: "Svi proizvode",
+    "ugaona-garnitura": "Ugaone garniture",
+    "krevet": "Kreveti",
+    "stolica": "Stolice",
+    "stol": "Stolovi",
+    "pločasti-namještaj": "Pločasti namještaj",
+    "living-room": "Dining",
     dining: "Dining",
-    bedroom: "Bedroom",
-    office: "Office",
+    bedroom: "Kreveti",
+    office: "Kancelarijski namještaj",
     outdoor: "Outdoor",
+    sale: "Akcija",
   }
 
   // Apply filters and sorting
@@ -266,11 +267,11 @@ export default function ProductsPage() {
               <div className="mb-6 overflow-x-auto">
                 <TabsList className="inline-flex w-auto">
                   <TabsTrigger value="all">Sve</TabsTrigger>
-                  <TabsTrigger value="sofa">Sofe</TabsTrigger>
-                  <TabsTrigger value="bed">Kreveti</TabsTrigger>
-                  <TabsTrigger value="chair">Stolice</TabsTrigger>
-                  <TabsTrigger value="table">Stolovi</TabsTrigger>
-                  <TabsTrigger value="panel">Panel namještaj</TabsTrigger>
+                  <TabsTrigger value="ugaona-garnitura">Ugaone garniture</TabsTrigger>
+                  <TabsTrigger value="krevet">Kreveti</TabsTrigger>
+                  <TabsTrigger value="stolica">Stolice</TabsTrigger>
+                  <TabsTrigger value="stol">Stolovi</TabsTrigger>
+                  <TabsTrigger value="pločasti-namještaj">Pločasti namještaj</TabsTrigger>
                   <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Akcija</TabsTrigger>
                 </TabsList>
               </div>

@@ -29,20 +29,20 @@ export interface Product {
 // Sample product data
 const products: Product[] = [
   // ----------------------------------------
-  // CHAIRS
+  // Stolice
   // ----------------------------------------
 
   // Oslo Lounge Chair
   {
     id: 1,
-    name: "Oslo Lounge Chair",
+    name: "Oslo Stolica",
     price: 1299,
     oldPrice: 1499,
-    description: "Comfortable lounge chair with solid oak frame and wool upholstery.",
+    description: "Udobna stolica sa drvenom osnovom i kožnim materijalom.",
     fullDescription:
-      "The Oslo Lounge Chair combines comfort with Scandinavian design principles. The solid oak frame provides durability and stability, while the premium wool upholstery offers both comfort and style. The chair's ergonomic design ensures proper support for extended periods of sitting, making it perfect for reading, conversation, or simply relaxing.",
-    category: "chair",
-    categoryName: "Chairs",
+      "Oslo Stolica kombinira udobnost sa skandinavskim dizajnerskim principima. Drvena osnova pruža trajnost i stabilnost, dok kožni materijal pruža udobnost i stil. Stolica ima ergonomski dizajn koji osigurava pravilnu podršku za duže vremena sjedenja, čini je savršenom za čitanje, razgovor ili jednostavno odmor.",
+    category: "stolica",
+    categoryName: "Stolice",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -53,50 +53,50 @@ const products: Product[] = [
     rating: 4.8,
     reviewCount: 124,
     features: [
-      "Solid oak frame for durability",
-      "Premium wool upholstery",
-      "Ergonomic design for proper support",
-      "Removable cushions for easy cleaning",
-      "Available in multiple colors",
+      "Drvena osnova za trajnost",
+      "Premium kožni materijal",
+      "Ergonomski dizajn za pravilnu podršku",
+      "Mogućnost uklanjanja krovnih materijala za lako čišćenje",
+      "Dostupna u više boja",
     ],
     dimensions: [
-      { name: "Width", value: "75 cm" },
-      { name: "Depth", value: "82 cm" },
-      { name: "Height", value: "86 cm" },
-      { name: "Seat Height", value: "42 cm" },
-      { name: "Arm Height", value: "60 cm" },
-      { name: "Weight", value: "18 kg" },
+      { name: "Širina", value: "75 cm" },
+      { name: "Dubina", value: "82 cm" },
+      { name: "Visina", value: "86 cm" },
+      { name: "Visina sjedala", value: "42 cm" },
+      { name: "Visina ruku", value: "60 cm" },
+      { name: "Težina", value: "18 kg" },
     ],
     colors: [
-      { name: "Natural Oak/Light Grey", hex: "#D3D3D3" },
-      { name: "Natural Oak/Dark Grey", hex: "#696969" },
-      { name: "Natural Oak/Navy Blue", hex: "#000080" },
-      { name: "Walnut/Beige", hex: "#F5F5DC" },
+      { name: "Drvena osnova - svijetla siva", hex: "#D3D3D3" },
+      { name: "Drvena osnova - tamna siva", hex: "#696969" },
+      { name: "Drvena osnova - plava", hex: "#000080" },
+      { name: "Dobro drvo/Bež", hex: "#F5F5DC" },
     ],
-    materials: ["Oak", "Wool", "High-density foam"],
+    materials: ["Drvena osnova", "Kožni materijal", "Visoka gustoća pene"],
     careInstructions:
-      "Vacuum regularly using low suction. Spot clean with a mild, water-free solvent or dry cleaning product. Avoid placing in direct sunlight to prevent fading. Fluff cushions regularly to maintain shape.",
+      "Vakuumirajte redovito koristeći nizak vakuum. Lokalno čistite s malim, vodotopivim rješenjem ili suhim čišćenjem. Izbjegavajte postavljanje u direktnu sunčevu svjetlost kako bi se spriječio pucanje. Fluff cushions regularly to maintain shape.",
     reviews: [
       {
-        author: "Emma L.",
+        author: "Ema.",
         rating: 5,
         date: "March 15, 2025",
         content:
-          "This chair is absolutely perfect! The quality is exceptional, and it's even more comfortable than I expected. It fits perfectly in my living room and has quickly become everyone's favorite spot.",
+          "Ova stolica je apsolutno savršena! Kvaliteta je izvanredna, i još je udobnija od očekivanja. Savršeno se uklapa u moju dnevnu sobu i već brzo postala najdraža mjesta za sjedenje.",
       },
       {
-        author: "Michael T.",
+        author: "Mihajlo",
         rating: 4,
         date: "February 28, 2025",
         content:
-          "Great chair with excellent build quality. The wool fabric is beautiful and feels durable. Only giving 4 stars because assembly was a bit tricky, but the end result is worth it.",
+          "Odlična stolica sa izvrsnom kvalitetom. Kožni materijal je prekrasan i osjeća se trajnim. Samo 4 zvjezdice jer je sastavljanje bilo malo komplicirano, ali rezultat je vrijedan.",
       },
       {
-        author: "Sarah J.",
+        author: "Sara.",
         rating: 5,
         date: "January 10, 2025",
         content:
-          "I've had this chair for about a month now and I'm in love with it. The design is timeless and the comfort level is amazing. Highly recommend!",
+          "Imam ovo stolice već mjesec dana i volim je. Dizajn je vremenski nepromijenjen i udobnost je izvanredna. Preporučam!",
       },
     ],
     featured: true
@@ -105,13 +105,13 @@ const products: Product[] = [
   // Copenhagen Armchair
   {
     id: 7,
-    name: "Copenhagen Armchair",
+    name: "Kopenhagen Stolica",
     price: 1099,
-    description: "Elegant armchair with walnut legs and premium linen upholstery.",
+    description: "Elegant stolica sa drvenim nogu i premium linijem materijalom.",
     fullDescription:
-      "The Copenhagen Armchair embodies Scandinavian design principles with its clean lines, organic forms, and focus on both beauty and functionality. The gracefully curved silhouette creates a striking profile from every angle, while the premium linen upholstery adds texture and warmth. Supported by solid walnut legs that provide both stability and visual lightness, this armchair offers exceptional comfort without compromising on style. Perfect as an accent piece or paired with the Malmo Sofa, the Copenhagen Armchair brings sophisticated elegance to any space.",
-    category: "chair",
-    categoryName: "Chairs",
+      "Kopenhagen Stolica predstavlja skandinavski dizajn sa svojim čistim linijama, organičnim oblicima i fokusom na obožavanje i funkcionalnost. Elegantno zakrivljeni oblik stolice stvara impresivan profil iz svakog kuta, dok premium linijski materijal dodaje teksturu i toplinu. Podržan solidnim drvenim nogu koje pružaju stabilnost i vizualnu lakost, ova stolica pruža izvanrednu udobnost bez kompromisa sa stilom. Savršena kao dodirna komada ili u paru sa Malmo Sofa, Kopenhagen Stolica donosi elegantnu eleganciju u bilo koji prostor.",
+    category: "stolica",
+    categoryName: "Stolice",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -122,72 +122,72 @@ const products: Product[] = [
     rating: 4.7,
     reviewCount: 83,
     features: [
-      "Ergonomic curved design for optimal comfort",
-      "Premium linen upholstery",
-      "Solid walnut legs with natural finish",
-      "High-density foam cushioning",
-      "Reinforced frame for durability",
-      "Non-marking foot pads to protect floors",
+      "Ergonomski zakrivljeni dizajn za maksimalnu udobnost",
+      "Premium linijski materijal",
+      "Solid drvene nogu sa prirodnim finish",
+      "Visoka gustoća pene za udobnost",
+      "Okvir za trajnost",
+      "Neoznačiva podna ploča za zaštitu podova",
     ],
     dimensions: [
-      { name: "Width", value: "75 cm" },
-      { name: "Depth", value: "80 cm" },
-      { name: "Height", value: "85 cm" },
-      { name: "Seat Height", value: "45 cm" },
-      { name: "Seat Depth", value: "55 cm" },
-      { name: "Arm Height", value: "65 cm" },
-      { name: "Weight", value: "15 kg" },
+      { name: "Širina", value: "75 cm" },
+      { name: "Dubina", value: "80 cm" },
+      { name: "Visina", value: "85 cm" },
+      { name: "Visina sjedala", value: "45 cm" },
+      { name: "Dubina sjedala", value: "55 cm" },
+      { name: "Visina ruku", value: "65 cm" },
+      { name: "Težina", value: "15 kg" },
     ],
     colors: [
-      { name: "Natural Linen", hex: "#F0E9E0" },
-      { name: "Charcoal Linen", hex: "#36454F" },
-      { name: "Dusty Blue Linen", hex: "#8DA9C4" },
-      { name: "Olive Linen", hex: "#708238" },
+      { name: "Linijski materijal", hex: "#F0E9E0" },
+      { name: "Tamna siva", hex: "#36454F" },
+      { name: "Svijetla siva", hex: "#8DA9C4" },
+      { name: "Svijetla siva", hex: "#708238" },
     ],
-    materials: ["Solid Walnut", "Premium Linen", "High-density Foam", "Engineered Hardwood Frame"],
+    materials: ["Drvena osnova", "Premium Linijski materijal", "Visoka gustoća pene", "Okvir"],
     careInstructions:
-      "Vacuum regularly using low suction. Spot clean with a water-free solvent or dry cleaning product. Professional cleaning recommended for overall soiling. Avoid placing in direct sunlight to prevent fabric fading. Treat any spills immediately by blotting (not rubbing) with a clean, dry cloth.",
+      "Vakuumirajte redovito koristeći nizak vakuum. Lokalno čistite s malim, vodotopivim rješenjem ili suhim čišćenjem. Professional cleaning recommended for overall soiling. Avoid placing in direct sunlight to prevent fabric fading. Treat any spills immediately by blotting (not rubbing) with a clean, dry cloth.",
     reviews: [
       {
-        author: "Natalie K.",
+        author: "Natalija.",
         rating: 5,
         date: "March 20, 2025",
         content:
-          "This armchair is a work of art! It's incredibly comfortable and the linen fabric is beautiful. The walnut legs add such a nice touch of warmth. It's become my favorite reading spot in the house.",
+          "Ova stolica je umjetnički rad! Vrlo udobna i linijski materijal je prekrasan. Drvena noga dodaje toplinu. Postala je moja omiljena mjesta za čitanje u kući.",
       },
       {
-        author: "Jonathan L.",
+        author: "Jovan.",
         rating: 4,
         date: "February 15, 2025",
         content:
-          "Very well-made chair with excellent attention to detail. The curved design provides great back support. The only reason I'm not giving 5 stars is that assembly was a bit challenging.",
+          "Odlična stolica sa izvrsnom pažnjom za detalje. Zakrivljeni dizajn pruža odličnu podršku za natrag. Jedina razloga za 5 zvjezdice je da je sastavljanje bilo malo komplicirano.",
       },
       {
-        author: "Emily R.",
+        author: "Emilija.",
         rating: 5,
         date: "January 28, 2025",
         content:
-          "Absolutely love this chair! The linen fabric is gorgeous and feels very high-quality. It's the perfect size - substantial enough to be comfortable but not so large that it overwhelms the room.",
+          "Apsolutno volim ovu stolicu! Linijski materijal je prekrasan i osjeća se vrlo visoke kvalitete. Savršena veličina - dovoljno velika da bude udobna, ali ne i prevelika da preoptereti prostor.",
       },
     ],
     isNew: true
   },
 
   // ----------------------------------------
-  // TABLES
+  // Stolovi
   // ----------------------------------------
 
   // Bergen Dining Table
   {
     id: 2,
-    name: "Bergen Dining Table",
+    name: "Bergen Stol",
     price: 1899,
     oldPrice: 2199,
-    description: "Extendable dining table in solid oak with smooth edges and natural finish.",
+    description: "Prošireni stol sa drvenom osnovom i prirodnim finishom.",
     fullDescription:
-      "The Bergen Dining Table is crafted from solid oak and features a natural finish that highlights the wood's beautiful grain. The table's smooth edges and minimalist design make it a versatile piece that complements various interior styles. The extendable feature allows you to accommodate extra guests when needed, making it perfect for both everyday dining and special occasions.",
-    category: "table",
-    categoryName: "Tables",
+      "Bergen Stolovl je izrađen od drvene osnove i ima prirodni finish koji istakne lepinu drveta. Stol ima glatke rubove i minimalistički dizajn koji ga čini fleksibilnim komadom koji se uklapa u različite interijske stile. Proširena funkcija omogućuje vam da primijenite dodatne goste kada je potrebno, čini ga savršenim za svakodnevnu jelovnicu i posebne prilike.",
+    category: "stol",
+    categoryName: "Stolovi",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -198,49 +198,49 @@ const products: Product[] = [
     rating: 4.7,
     reviewCount: 89,
     features: [
-      "Solid oak construction",
-      "Extendable design - adds 50cm when fully extended",
-      "Smooth, rounded edges for safety",
-      "Natural oil finish that enhances the wood grain",
-      "Seats 6-8 people (8-10 when extended)",
-      "Easy-to-use extension mechanism",
+      "Drvena osnova",
+      "Prošireni dizajn - dodaje 50 cm kada je potpuno prošireno",
+      "Glatki, zaobljeni rubovi za sigurnost",
+      "Prirodni uljni finish koji povećava lepinu drveta",
+      "Sjedićih mjesta za 6-8 ljudi (8-10 kada je prošireno)",
+      "Lako koristivi mehanizam proširenja",
     ],
     dimensions: [
-      { name: "Length", value: "180 cm (230 cm when extended)" },
-      { name: "Width", value: "90 cm" },
-      { name: "Height", value: "75 cm" },
-      { name: "Weight", value: "45 kg" },
-      { name: "Extension Leaf", value: "50 cm" },
+      { name: "Dužina", value: "180 cm (230 cm kada je prošireno)" },
+      { name: "Širina", value: "90 cm" },
+      { name: "Visina", value: "75 cm" },
+      { name: "Težina", value: "45 kg" },
+      { name: "Prošireni list", value: "50 cm" },
     ],
     colors: [
-      { name: "Natural Oak", hex: "#D2B48C" },
-      { name: "Smoked Oak", hex: "#8B4513" },
-      { name: "White Oak", hex: "#F5F5F5" },
+      { name: "Drvena osnova - svijetla", hex: "#D2B48C" },
+      { name: "Drvena osnova - tamna", hex: "#8B4513" },
+      { name: "Drvena osnova - bijela", hex: "#F5F5F5" },
     ],
-    materials: ["Solid Oak", "Oak Veneer (for extension leaf)"],
+    materials: ["Drvena osnova", "Drvena osnova (za prošireni list)"],
     careInstructions:
-      "Clean with a damp cloth and mild soap if necessary. Dry immediately with a soft cloth. Apply furniture oil specifically designed for oak every 6-12 months to maintain the finish. Avoid placing hot items directly on the surface; use coasters and placemats.",
+      "Čistite s malim, vodotopivim rješenjem ili suhim čišćenjem. Sušite odmah s malim, tvrdim čističem. Primijenite namještajski ulj za drvo svakih 6-12 mjeseci kako bi se održao finish. Izbjegavajte postavljanje toplih predmeta direktno na površinu; koristite koverte i pločice.",
     reviews: [
       {
-        author: "Thomas K.",
+        author: "Tomaš.",
         rating: 5,
         date: "April 2, 2025",
         content:
-          "This table is a masterpiece! The craftsmanship is exceptional, and the extension mechanism works smoothly. It's become the centerpiece of our dining room.",
+          "Ovaj stol je umjetnički rad! Izvrsnost je izvanredna, i mehanizam proširenja radi glatko. Postao je centar naše jelovnice.",
       },
       {
-        author: "Lisa M.",
+        author: "Ljiljana.",
         rating: 4,
         date: "March 18, 2025",
         content:
-          "Beautiful table that feels very solid. The natural finish is gorgeous and shows off the wood grain nicely. The only reason for 4 stars is that it was delivered with a small scratch, but customer service was excellent in resolving the issue.",
+          "Prekrasan stol koji se osjeća vrlo solidan. Prirodni finish je prekrasan i ističe lepinu drveta. Jedina razloga za 4 zvjezdice je da je dostavljen s malim pucavim, ali klijentska podrška je izvrsna u rješavanju problema.",
       },
       {
-        author: "Robert J.",
+        author: "Rajko",
         rating: 5,
         date: "February 5, 2025",
         content:
-          "Worth every penny! This table is not only beautiful but incredibly well-made. The extension feature is easy to use and has come in handy multiple times when hosting dinner parties.",
+          "Vrijedan svake marke! Ovaj stol nije samo prekrasan, već je izvrsno izrađen. Funkcija proširenja je lahko koristiva i ima koristila mnogo puta kada smo imali večeru.",
       },
     ],
     featured: true
@@ -249,13 +249,13 @@ const products: Product[] = [
   // Fjord Desk
   {
     id: 4,
-    name: "Fjord Desk",
+    name: "Fjord Stol",
     price: 1199,
-    description: "Minimalist desk with cable management and adjustable height.",
+    description: "Minimalistički stol sa kabelskim upravljanjem i prilagodljivom visinom.",
     fullDescription:
-      "The Fjord Desk combines functionality with elegant design, making it the perfect workspace for the modern home or office. Its minimalist aesthetic features clean lines and a sleek profile, while the thoughtful design includes practical elements like an integrated cable management system to keep your workspace tidy. The adjustable height feature allows you to customize the desk to your perfect working position, promoting better posture and comfort during long work sessions.",
-    category: "table",
-    categoryName: "Tables",
+      "Fjord Stol kombinira funkcionalnost sa elegantnim dizajnom, čini ga savršenim radnim prostorom za modernu kuću ili uređaj. Minimalistički estetski dizajn ima čiste linije i elegantan profil, dok je pažljivi dizajn uključuje praktične elemente kao što je integrirani kabelski upravljački sistem kako bi se održao vaš radni prostor uređen. Funkcija prilagodljive visine omogućuje vam da prilagodite stol na svoju savršenu radnu poziciju, promovirajući bolju podršku i udobnost tijekom dugih radnih sesija.",
+    category: "stol",
+    categoryName: "Stolovi",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -266,49 +266,49 @@ const products: Product[] = [
     rating: 4.6,
     reviewCount: 58,
     features: [
-      "Electric height adjustment (70-120 cm)",
-      "Integrated cable management system",
-      "Solid oak top with natural finish",
+      "Električna prilagodljiva visina (70-120 cm)",
+      "Integrirani kabelski upravljački sistem",
+      "Drvena osnova sa prirodnim finish",
       "Memory settings for preferred heights",
-      "Hidden drawer for small items",
-      "Anti-collision technology",
+      "Skrivena skočna ploča za male stavke",
+      "Anti-collision tehnologija",
     ],
     dimensions: [
-      { name: "Width", value: "140 cm" },
-      { name: "Depth", value: "70 cm" },
-      { name: "Height", value: "70-120 cm (adjustable)" },
-      { name: "Drawer Dimensions", value: "30 cm x 40 cm x 5 cm" },
-      { name: "Weight", value: "35 kg" },
+      { name: "Širina", value: "140 cm" },
+      { name: "Dubina", value: "70 cm" },
+      { name: "Visina", value: "70-120 cm (prilagodljiva)" },
+      { name: "Dimenzije skočne ploče", value: "30 cm x 40 cm x 5 cm" },
+      { name: "Težina", value: "35 kg" },
     ],
     colors: [
-      { name: "Oak/White", hex: "#FFFFFF" },
-      { name: "Oak/Black", hex: "#000000" },
-      { name: "Walnut/Black", hex: "#000000" },
+      { name: "Drvena osnova - svijetla", hex: "#FFFFFF" },
+      { name: "Drvena osnova - tamna", hex: "#000000" },
+      { name: "Drvena osnova - tamna", hex: "#000000" },
     ],
-    materials: ["Solid Oak", "Steel", "Premium Electronics"],
+    materials: ["Drvena osnova", "Čelični okvir", "Premium elektronika"],
     careInstructions:
-      "Wipe the wooden surface with a slightly damp cloth and mild cleaner if necessary. Dry immediately with a soft cloth. For the metal frame, use a soft cloth with a small amount of glass cleaner. Keep electronics away from water and check cable connections periodically.",
+      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Za čelični okvir, koristite mali količinu staklenog čističa. Izbjegavajte vodu i provjerite kabelske veze redovito.",
     reviews: [
       {
-        author: "Mark T.",
+        author: "Marko.",
         rating: 5,
         date: "April 10, 2025",
         content:
-          "This desk has completely transformed my home office. The height adjustment is smooth and quiet, and the cable management system keeps everything tidy. Worth every penny!",
+          "Ovaj stol je potpuno transformirao moj kućni uređaj. Prilagodljiva visina je glatka i tiha, i kabelski upravljački sistem čuva sve uređene. Vrijedan svake marke!",
       },
       {
-        author: "Laura S.",
+        author: "Lara.",
         rating: 4,
         date: "March 5, 2025",
         content:
-          "Beautiful desk with excellent functionality. The oak top is gorgeous and the height adjustment works perfectly. Only giving 4 stars because assembly was quite challenging.",
+          "Prekrasan stol sa izvrsnom funkcionalnošću. Drvena osnova je prekrasna i prilagodljiva visina radi savršeno. Jedina razloga za 4 zvjezdice je da je sastavljanje bilo malo komplicirano.",
       },
       {
-        author: "James K.",
+        author: "Jovan.",
         rating: 5,
         date: "February 20, 2025",
         content:
-          "After using this desk for a month, I can confidently say it's one of the best purchases I've made. The ability to switch between sitting and standing has helped my back pain tremendously.",
+          "Nakon korištenja ovog stola mjesec dana, mogu sigurno reći da je jedan od najboljih kupnji koje sam napravila. Mogućnost prebacivanja između sjedenja i stojećeg položaja pomoći mi je mnogo u smanjenju bolova u leđima.",
       },
     ],
   },
@@ -320,13 +320,13 @@ const products: Product[] = [
   // Stockholm Bed Frame
   {
     id: 3,
-    name: "Stockholm Bed Frame",
+    name: "Stockholm Krevet",
     price: 2499,
-    description: "King-size bed frame with integrated nightstands and LED lighting.",
+    description: "King-size krevet sa integriranim noćnim stolovima i LED osvjetljenjem.",
     fullDescription:
-      "The Stockholm Bed Frame redefines bedroom luxury with its sleek design and thoughtful features. Crafted from premium materials, this king-size bed frame includes integrated nightstands that provide convenient storage while maintaining a clean, cohesive look. The subtle LED lighting creates a warm ambiance, perfect for evening reading or a calming atmosphere. The platform design eliminates the need for a box spring, supporting your mattress directly for optimal comfort.",
-    category: "bed",
-    categoryName: "Beds",
+      "Stockholm krevet redefiniše luksuz spavaće sobe svojim elegantnim dizajnom i pažljivo osmišljenim detaljima. Izrađen od vrhunskih materijala, ovaj bračni krevet sadrži integrisane noćne ormariće koji nude praktičan prostor za odlaganje, a istovremeno održavaju čist i skladan izgled. Suptilna LED rasvjeta stvara toplu atmosferu, idealnu za večernje čitanje ili opuštanje. Platformska konstrukcija eliminiše potrebu za boks oprugom, pružajući direktnu podršku dušeku za maksimalnu udobnost.",
+    category: "krevet",
+    categoryName: "Kreveti",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -337,49 +337,49 @@ const products: Product[] = [
     rating: 4.9,
     reviewCount: 76,
     features: [
-      "Integrated nightstands with soft-close drawers",
-      "Built-in LED lighting with dimmer control",
-      "Solid wood frame with veneer finish",
-      "Platform design - no box spring needed",
-      "Cable management system for charging devices",
-      "Adjustable headboard height",
+      "Integrirani noćni stolovi sa soft-close skočnim pločama",
+      "Integrirano LED osvjetljenje sa dimmer upravljanjem",
+      "Drvena osnova sa veneer finish",
+      "Platforma dizajn - nema potrebe za boks oprugom",
+      "Kabelski upravljački sistem za punjenje uređaja",
+      "Prilagodljiva glava visina",
     ],
     dimensions: [
-      { name: "Width", value: "200 cm" },
-      { name: "Length", value: "220 cm" },
-      { name: "Height", value: "100 cm (headboard)" },
-      { name: "Nightstand Width", value: "40 cm (each)" },
-      { name: "Mattress Platform Height", value: "35 cm" },
+      { name: "Širina", value: "200 cm" },
+      { name: "Dužina", value: "220 cm" },
+      { name: "Visina", value: "100 cm (glava)" },
+      { name: "Širina noćnog stola", value: "40 cm (svaki)" },
+      { name: "Visina platforme", value: "35 cm" },
     ],
     colors: [
-      { name: "Walnut", hex: "#5C4033" },
-      { name: "Oak", hex: "#D2B48C" },
-      { name: "Black Oak", hex: "#292929" },
+      { name: "Drvena osnova - svijetla", hex: "#5C4033" },
+      { name: "Drvena osnova - tamna", hex: "#D2B48C" },
+      { name: "Drvena osnova - tamna", hex: "#292929" },
     ],
     materials: ["Solid Oak", "Oak Veneer", "Premium Hardware"],
     careInstructions:
-      "Dust regularly with a soft, dry cloth. Clean wood surfaces with a damp cloth and mild furniture cleaner if needed, then dry immediately. Avoid placing the bed in direct sunlight to prevent fading. Check and tighten hardware periodically.",
+      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Jennifer P.",
+        author: "Jelena.",
         rating: 5,
         date: "March 30, 2025",
         content:
-          "This bed frame transformed our entire bedroom! The integrated nightstands save so much space, and the LED lighting creates the perfect ambiance for reading at night. Extremely satisfied with this purchase.",
+          "Ovaj krevet je potpuno transformirao našu cijelu spavaću sobu! Integrirani noćni stolovi spašavaju mnogo prostora, i LED osvjetljenje stvara savršenu atmosferu za čitanje noću. Izvrsno zadovoljni sa ovom kupnjom.",
       },
       {
-        author: "David L.",
+        author: "Jovan.",
         rating: 5,
         date: "February 12, 2025",
         content:
-          "Exceptional quality and design. Assembly took some time but the instructions were clear. The built-in lighting is such a smart feature, and the nightstands are spacious enough for all my bedside essentials.",
+          "Izvrsna kvaliteta i dizajn. Sastavljanje je trajalo neko vrijeme, ali instrukcije su bile jasne. Integrirano osvjetljenje je tako pametan detalj, i noćni stolovi su dovoljno prostori za sve moje noćne potrebe.",
       },
       {
-        author: "Sophia R.",
+        author: "Lara.",
         rating: 4,
         date: "January 25, 2025",
         content:
-          "Beautiful bed frame that feels very luxurious. The only reason I'm not giving 5 stars is that one of the LED lights had an issue, but customer service sent a replacement part quickly.",
+          "Elegantan krevet koji se osjeća vrlo luksuzan. Jedina razloga za 4 zvjezdice je da je jedan od LED osvjetljenja imao problem, ali klijentska podrška je poslala zamjenski dio brzo.",
       },
     ],
   },
@@ -391,13 +391,13 @@ const products: Product[] = [
   // Malmo Sofa
   {
     id: 6,
-    name: "Malmo Sofa",
+    name: "Malmo Ugaona garnitura",
     price: 2999,
-    description: "Three-seater sofa with deep seats and plush cushions for ultimate comfort.",
+    description: "Tri-seater ugaona garnitura sa dubokim sjedalima i pufnim kancelijama za maksimalnu udobnost.",
     fullDescription:
-      "The Malmo Sofa combines contemporary design with exceptional comfort, creating the perfect centerpiece for your living space. Its generous proportions and deep seats invite relaxation, while the plush cushions provide the perfect balance of support and softness. The clean lines and elevated legs give this sofa a light, airy appearance despite its substantial size. Upholstered in premium fabric, the Malmo is both beautiful and durable, designed to maintain its appearance and comfort for years to come.",
-    category: "sofa",
-    categoryName: "Sofas",
+      "Malmo Ugaona garnitura kombinira savremeni dizajn sa izvrsnom udobnošću, stvarajući savršeni centar za vaš životni prostor. Njegove generozne proporcije i duboke sjedala pozivaju na odmor, dok pufne kancelije nude savršenu ravnotežu između podrške i mekšine. Čiste linije i podignute noge daju ovom ugaonici svjetlu, vazdušnu izgled iako je velika. Obojena u premium materijal, Malmo je i lep i trajna, dizajnirana da održava svoj izgled i udobnost godinama.",
+    category: "ugaona-garnitura",
+    categoryName: "Ugaone garniture",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -408,54 +408,54 @@ const products: Product[] = [
     rating: 4.8,
     reviewCount: 115,
     features: [
-      "Three-seater design with generous proportions",
-      "Deep seats (65 cm) for maximum comfort",
-      "High-resilience foam cushions with feather topping",
-      "Solid wood frame for durability",
-      "Removable and reversible seat cushions",
-      "Stain-resistant fabric treatment",
-      "Elevated legs for easy cleaning underneath",
+      "Ugaona garnitura sa generoznim proporcijama",
+      "Duboka sjedala (65 cm) za maksimalnu udobnost",
+      "Pufne kancelije sa visokom elastičnošću",
+      "Drvena osnova za trajnost",
+      "Mijenjajuća i obrnuta sjedala",
+      "Stain-resistant tkanina",
+      "Podignute noge za lako čišćenje ispod",
     ],
     dimensions: [
       { name: "Width", value: "220 cm" },
-      { name: "Depth", value: "95 cm" },
-      { name: "Height", value: "85 cm" },
-      { name: "Seat Height", value: "45 cm" },
-      { name: "Seat Depth", value: "65 cm" },
-      { name: "Arm Height", value: "65 cm" },
-      { name: "Leg Height", value: "15 cm" },
+      { name: "Dubina", value: "95 cm" },
+      { name: "Visina", value: "85 cm" },
+      { name: "Visina sjedala", value: "45 cm" },
+      { name: "Dubina sjedala", value: "65 cm" },
+      { name: "Visina ruku", value: "65 cm" },
+      { name: "Visina noge", value: "15 cm" },
     ],
     colors: [
-      { name: "Light Grey", hex: "#D3D3D3" },
-      { name: "Dark Grey", hex: "#696969" },
-      { name: "Navy Blue", hex: "#000080" },
-      { name: "Beige", hex: "#F5F5DC" },
-      { name: "Sage Green", hex: "#9CAF88" },
+      { name: "Svetlo siva", hex: "#D3D3D3" },
+      { name: "Tamna siva", hex: "#696969" },
+      { name: "Navy plava", hex: "#000080" },
+      { name: "Bež", hex: "#F5F5DC" },
+      { name: "Siva", hex: "#9CAF88" }, 
     ],
-    materials: ["Solid Wood Frame", "High-resilience Foam", "Feather Topping", "Premium Upholstery Fabric"],
+    materials: ["Drvena osnova", "Pufna osnova", "Pufna kancelija", "Premium tkanina"],
     careInstructions:
-      "Vacuum regularly using low suction. Rotate and fluff cushions weekly to maintain shape and even wear. Spot clean with a water-free solvent or dry cleaning product. Professional cleaning recommended for overall soiling. Keep away from direct sunlight to prevent fabric fading.",
+      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Rebecca T.",
+        author: "Tomaš.",
         rating: 5,
         date: "April 5, 2025",
         content:
-          "This sofa is absolutely amazing! It's the perfect combination of style and comfort. The deep seats are perfect for curling up with a book, and the fabric feels luxurious and durable. Everyone who visits comments on how beautiful it is.",
+          "Ova ugaona garnitura je apsolutno izvrsna! Savršena je kombinacija stila i udobnosti. Duboka sjedala su savršena za odmor s knjigom, i tkanina se osjeća luksuzna i trajna. Svi koji posjećuju komentiraju kako je lep.",
       },
       {
-        author: "Daniel M.",
+        author: "Lara.",
         rating: 4,
         date: "March 12, 2025",
         content:
-          "Very comfortable sofa with excellent build quality. The cushions are the perfect balance of soft and supportive. The only reason for 4 stars instead of 5 is that the color is slightly different than it appeared online.",
+          "Vrlo udobna ugaona garnitura sa izvrsnom kvalitetom. Pufne kancelije su savršena ravnoteža između mekšine i podrške. Jedina razloga za 4 zvjezdice umjesto 5 je da je boja malo drugačija nego što je bila na slikama.",
       },
       {
-        author: "Olivia P.",
+        author: "Jovan.",
         rating: 5,
         date: "February 28, 2025",
         content:
-          "Worth every penny! This sofa transformed our living room and has become everyone's favorite spot. The fabric is holding up beautifully even with kids and a dog. Couldn't be happier with this purchase.",
+          "Vrijedan svake marke! Ova ugaona garnitura je potpuno transformirala naš životni prostor i postala svima najdraži mjesto. Tkanina je održava lep i čak i sa dječjima i psima. Nije moguće bolje zadovoljstvo sa ovom kupnjom.",
       },
     ],
   },
@@ -467,13 +467,13 @@ const products: Product[] = [
   // Aalto Bookshelf
   {
     id: 5,
-    name: "Aalto Bookshelf",
+    name: "Aalto Pločasti namještaj",
     price: 899,
-    description: "Modular bookshelf system that can be customized to fit your space.",
+    description: "Modular pločasti namještaj koji se može prilagoditi vašem prostoru.",
     fullDescription:
-      "The Aalto Bookshelf is a versatile storage solution that adapts to your needs and space. Its modular design allows you to create a configuration that works perfectly for your home, whether you need a small bookcase or a full wall unit. Crafted from high-quality materials, the Aalto combines durability with elegant design, featuring clean lines and a contemporary aesthetic that complements any interior style. The thoughtful construction includes adjustable shelves to accommodate items of various sizes.",
-    category: "panel-furniture",
-    categoryName: "Panel Furniture",
+      "Aalto Pločasti namještaj je fleksibilan rješenje za skladištenje koje se prilagođava vašim potrebama i prostoru. Njegov modularni dizajn omogućuje vam da stvorite konfiguraciju koja savršeno odgovara vašoj kući, bez obzira da li trebate mali knjižnički stol ili cijeli zidni namještaj. Izrađen od visokokvalitetnih materijala, Aalto kombinira trajnost sa elegantnim dizajnom, imajući čiste linije i savremeni estetski dizajn koji se uklapa u bilo koji interijer. Pažljivi dizajn uključuje prilagodljive poluge za prihvatanje stavki različitih veličina.",
+    category: "pločasti-namještaj",
+    categoryName: "Pločasti namještaj",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -485,61 +485,61 @@ const products: Product[] = [
     reviewCount: 92,
     features: [
       "Modular design for custom configurations",
-      "Adjustable shelves for flexible storage",
-      "Solid wood construction with veneer finish",
-      "Wall-mounting hardware included for stability",
-      "Optional cabinet doors available separately",
-      "Can be expanded with additional modules",
+      "Prilagodljive poluge za fleksibilno skladištenje",
+      "Drvena osnova sa veneer finish",
+      "Zidni montirani hardware za stabilnost",
+      "Opcijonalne kabine za vrata dostupne odvojeno",
+      "Može se proširiti sa dodatnim modulima",
     ],
     dimensions: [
-      { name: "Width (per module)", value: "80 cm" },
-      { name: "Depth", value: "35 cm" },
-      { name: "Height", value: "200 cm" },
-      { name: "Shelf Thickness", value: "2.5 cm" },
-      { name: "Adjustable Shelf Positions", value: "5 positions per section" },
-      { name: "Weight (per module)", value: "30 kg" },
+      { name: "Širina (po modulu)", value: "80 cm" },
+      { name: "Dubina", value: "35 cm" },
+      { name: "Visina", value: "200 cm" },
+      { name: "Debljina poluge", value: "2.5 cm" },
+      { name: "Prilagodljive poluge", value: "5 pozicija po sekciji" },
+      { name: "Težina (po modulu)", value: "30 kg" },
     ],
     colors: [
-      { name: "White Oak", hex: "#F5F5F5" },
-      { name: "Natural Oak", hex: "#D2B48C" },
-      { name: "Black", hex: "#000000" },
+      { name: "Bijela", hex: "#F5F5F5" },
+      { name: "Prirodna drvena osnova - svijetla", hex: "#D2B48C" },
+      { name: "Crna", hex: "#000000" },
     ],
     materials: ["Solid Oak", "Oak Veneer", "Premium Hardware"],
     careInstructions:
-      "Dust regularly with a soft, dry cloth. Clean with a damp cloth and mild furniture cleaner if needed, then dry immediately. Avoid placing heavy items on shelves beyond the recommended weight capacity. Check and tighten hardware periodically.",
+      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Catherine L.",
+        author: "Tomaš.",
         rating: 5,
         date: "March 25, 2025",
         content:
-          "This bookshelf is exactly what I was looking for! The modular design allowed me to create the perfect configuration for my living room, and the quality is exceptional. Assembly was straightforward and the result looks very high-end.",
+          "Ovaj pločasti namještaj je upravo ono što sam tražio! Modularni dizajn mi je omogućio da stvorim savršenu konfiguraciju za moj životni prostor, i kvaliteta je izvrsna. Sastavljanje je bilo jednostavno i rezultat izgleda vrlo visokokvalitetan.",
       },
       {
-        author: "Peter M.",
+        author: "Jovan.",
         rating: 4,
         date: "February 18, 2025",
         content:
-          "Great quality bookshelf with a beautiful finish. The adjustable shelves are a nice feature. Assembly took longer than expected, but the end result was worth it.",
+          "Izvrsna kvaliteta pločastog namještaja sa lepom završnom obradom. Prilagodljive poluge su pametan detalj. Sastavljanje je trajalo duže nego što sam očekivao, ali rezultat je vrijedan.",
       },
       {
-        author: "Anna K.",
+        author: "Lara.",
         rating: 5,
         date: "January 30, 2025",
         content:
-          "I've purchased multiple modules to create a full wall unit, and I couldn't be happier. The system is incredibly versatile, and the craftsmanship is excellent. Highly recommend!",
+          "Kupio sam više modula da stvorim cijeli zidni namještaj, i nije moguće bolje zadovoljstvo. Sistem je nevjerojatno fleksibilan, i kvaliteta je izvrsna. Visoko preporučam!",
       },
     ],
   },
   {
     id: 8,
-    name: "Gothenburg Outdoor Set",
+    name: "Gothenburg Ugaona garnitura",
     price: 3499,
-    description: "Weather-resistant dining set for outdoor entertaining.",
+    description: "Vremenski otporni ugaoni namještaj za vanjski odmor.",
     fullDescription:
-      "The Gothenburg Outdoor Set brings the elegance and quality of indoor furniture to your outdoor space. This comprehensive dining set includes a table and six chairs, all crafted from weather-resistant materials designed to withstand the elements while maintaining their beauty. The minimalist Scandinavian design features clean lines and a neutral color palette that complements any outdoor setting. Perfect for alfresco dining, entertaining, or simply enjoying your morning coffee in the fresh air, this set combines style, comfort, and durability.",
-    category: "table",
-    categoryName: "Tables",
+      "Gothenburg Ugaona garnitura donosi eleganciju i kvalitetu unutarnjeg namještaja na vaš vanjski prostor. Ovaj kompletan ugaoni namještaj uključuje stol, i šest stolica, sve izrađene od vremenski otpornih materijala dizajniranih da izdrže elemente dok održavaju svoju ljepotu. Minimalistički skandinavski dizajn ima čiste linije i neutralnu paletu boja koja se uklapa u bilo koji vanjski prostor. Savršen za alfresco jelo, zabavu, ili jednostavno uživanje u jutarnjem kafiću u svježem zraku, ova garnitura kombinira stil, udobnost i trajnost.",
+    category: "ugaona-garnitura",
+    categoryName: "Ugaone garniture",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -550,61 +550,61 @@ const products: Product[] = [
     rating: 4.5,
     reviewCount: 67,
     features: [
-      "Weather-resistant materials",
-      "Comprehensive set includes table and six chairs",
-      "Minimalist Scandinavian design",
-      "Clean lines and neutral color palette",
-      "Perfect for outdoor entertaining",
+      "Vremenski otporni materijali",
+      "Kompletan set uključuje stol i šest stolica",
+      "Minimalistički skandinavski dizajn",
+      "Čiste linije i neutralna paleta boja",
+      "Savršen za vanjski odmor",
     ],
     dimensions: [
-      { name: "Table Width", value: "180 cm" },
-      { name: "Table Depth", value: "90 cm" },
-      { name: "Table Height", value: "75 cm" },
-      { name: "Chair Width", value: "75 cm" },
-      { name: "Chair Depth", value: "80 cm" },
-      { name: "Chair Height", value: "85 cm" },
-      { name: "Weight", value: "120 kg" },
+      { name: "Širina garniture", value: "180 cm" },
+      { name: "Dubina garniture", value: "90 cm" },
+      { name: "Visina garniture", value: "75 cm" },
+      { name: "Širina garniture", value: "75 cm" },
+      { name: "Dubina garniture", value: "80 cm" },
+      { name: "Visina garniture", value: "85 cm" },
+      { name: "Težina", value: "120 kg" },
     ],
     colors: [
       { name: "Natural Oak", hex: "#D2B48C" },
       { name: "Smoked Oak", hex: "#8B4513" },
       { name: "White Oak", hex: "#F5F5F5" },
     ],
-    materials: ["Weather-resistant Wood", "Weather-resistant Fabric"],
+    materials: ["Vremenski otporni drvo", "Vremenski otporni tkanina"],
     careInstructions:
-      "Clean with a damp cloth and mild soap if necessary. Dry immediately with a soft cloth. Avoid placing hot items directly on the surface; use coasters and placemats. Keep away from direct sunlight to prevent fading.",
+      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Chris H.",
+        author: "Tomaš.",
         rating: 5,
         date: "April 15, 2025",
         content:
-          "This outdoor set is a game-changer! It's incredibly comfortable and the materials are top-notch. Perfect for our summer gatherings.",
+          "Ova vanjska garnitura je promjena! Izvrsna je udobnost i materijali su izvrsni. Savršen za naše ljetne sastanke.",
       },
       {
-        author: "Amy W.",
+        author: "Jovan.",
         rating: 4,
         date: "March 22, 2025",
         content:
-          "Beautiful set with excellent build quality. The weather-resistant materials are a huge plus. Only giving 4 stars because assembly was a bit tricky.",
+          "Lep garnitura sa izvrsnom kvalitetom. Vremenski otporni materijali su ogroman plus. Samo 4 zvjezdice jer sastavljanje nije bilo baš jednostavno.",
       },
       {
-        author: "Kevin B.",
+        author: "Lara.",
         rating: 5,
         date: "February 17, 2025",
         content:
-          "Worth every penny! This outdoor set has become our favorite spot for summer barbecues. The design is elegant and the materials are durable.",
+          "Vrijedan svake marke! Ova vanjska garnitura je postala naša najdraža mjesta za ljetne barbecue. Dizajn je elegantan i materijali su trajni.",
       },
     ],
   },
   {
     id: 9,
-    name: "Helsingborg Coffee Table",
+    name: "Helsingborg Kafe stol",
     price: 799,
-    description: "Minimalist coffee table with marble top and solid oak legs.",
-    fullDescription: "The Helsingborg Coffee Table combines luxury and minimalism with its stunning marble top and solid oak legs. The table's clean lines and mixed materials create a sophisticated centerpiece for any living space. The carefully selected marble top features unique natural patterns, while the solid oak legs provide stable support and warm contrast.",
-    category: "table",
-    categoryName: "Tables",
+    description: "Minimalistički kafe stol sa maram površinom i drvenim nogu.",
+    fullDescription: "Helsingborg Kafe stol kombinira luksuz i minimalizam sa svojom stolovnom površinom od marama i drvenim nogu. Stolovi su čisti i kombiniraju različite materijale, stvarajući sofisticirani centar za bilo koju dnevnu sobu. Posebno odabrana marama površina ima jedinstvene prirodne uzorke, dok drvene nogu pružaju stabilnu podršku i topli kontrast.",
+    category: "stol",
+    categoryName: "Stolovi",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -615,48 +615,48 @@ const products: Product[] = [
     rating: 4.6,
     reviewCount: 45,
     features: [
-      "Natural marble top",
-      "Solid oak legs",
-      "Protective felt pads included",
-      "Easy assembly",
+      "Prirodna maram površina",
+      "Drvena osnova",
+      "Zaštitni felt pads",
+      "Jednostavan sastavljanje",
       "Stain-resistant marble coating"
     ],
     dimensions: [
-      { name: "Length", value: "120 cm" },
-      { name: "Width", value: "60 cm" },
-      { name: "Height", value: "45 cm" },
-      { name: "Weight", value: "35 kg" }
+      { name: "Širina", value: "120 cm" },
+      { name: "Dubina", value: "60 cm" },
+      { name: "Visina", value: "45 cm" },
+      { name: "Težina", value: "35 kg" }
     ],
     colors: [
       { name: "White Marble/Natural Oak", hex: "#FFFFFF" },
       { name: "Black Marble/Natural Oak", hex: "#000000" }
     ],
     materials: ["Marble", "Solid Oak"],
-    careInstructions: "Clean marble surface with a soft, damp cloth and mild soap. Avoid acidic cleaners. Use coasters to prevent stains. Dust oak legs regularly and treat with wood oil every 6 months.",
+    careInstructions: "Očistite maram površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Sophie M.",
+        author: "Sofija N.",
         rating: 5,
         date: "March 28, 2025",
-        content: "Beautiful table! The marble top is stunning and the oak legs complement it perfectly. Very sturdy and well-made."
+        content: "Lep kafe stol! Maram površina je impresivan i drvena osnova ga savršeno dopunjuje. Vrlo stabilan i dobro izrađen."
       },
       {
-        author: "Marcus P.",
+        author: "Jovan.",
         rating: 4,
         date: "February 15, 2025",
-        content: "Great quality and looks exactly as pictured. Assembly was straightforward. Only giving 4 stars because it was heavier than expected."
+        content: "Izvrsna kvaliteta i izgleda upravo kao na slici. Sastavljanje je bilo jednostavno. Samo 4 zvjezdice jer je teži nego što sam očekivao."
       }
     ]
   },
   {
     id: 10,
-    name: "Kiruna Floor Lamp",
+    name: "Kiruna stol s lampom",
     price: 349,
     oldPrice: 449,
-    description: "Adjustable floor lamp with brass details and linen shade.",
-    fullDescription: "The Kiruna Floor Lamp combines functionality with elegant design. The adjustable arm and height allow for perfect positioning, while the brass details add a touch of luxury. The natural linen shade diffuses light beautifully, creating a warm and inviting atmosphere in any room.",
-    category: "lighting",
-    categoryName: "Lighting",
+    description: "Prilagodljivi stol sa lampom sa brončanim detaljima i tkanom šeširom.",
+    fullDescription: "Kiruna stol s lampom kombinira funkcionalnost sa elegantnim dizajnom. Prilagodljiva ruka i visina omogućuju savršenu poziciju, dok su brončani detalji dodaju dodir luksuzu. Prirodna tkanina šešira raspršuje svjetlost savršeno, stvarajući topli i upijajući atmosferu u bilo kojoj sobi.",
+    category: "stol",
+    categoryName: "Stolovi",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -667,47 +667,46 @@ const products: Product[] = [
     rating: 4.8,
     reviewCount: 56,
     features: [
-      "Adjustable arm and height",
-      "Premium linen shade",
-      "Brass details",
-      "LED compatible",
-      "Integrated dimmer switch"
+      "Prilagodljiva ruka i visina",
+      "Brončani detalji",
+      "LED kompatibilan",
+      "Integrirana dimmerska sklopka"
     ],
     dimensions: [
-      { name: "Base Diameter", value: "30 cm" },
-      { name: "Shade Diameter", value: "45 cm" },
-      { name: "Maximum Height", value: "180 cm" },
-      { name: "Cord Length", value: "200 cm" }
+      { name: "Širina osnove", value: "30 cm" },
+      { name: "Širina šešira", value: "45 cm" },
+      { name: "Maksimalna visina", value: "180 cm" },
+      { name: "Dužina kabela", value: "200 cm" }
     ],
     colors: [
-      { name: "Natural Linen/Brass", hex: "#F5F5DC" },
-      { name: "Grey Linen/Brass", hex: "#808080" }
+      { name: "Prirodna boja drveta/Brončani", hex: "#F5F5DC" },
+      { name: "Siva boja drveta/Brončani", hex: "#808080" }
     ],
-    materials: ["Brass", "Linen", "Steel"],
-    careInstructions: "Dust regularly with a soft, dry cloth. Clean brass parts with a specialized brass cleaner. Vacuum shade gently to remove dust. Keep away from moisture.",
+    materials: ["Brončani", "Drvena osnova", "Čelična osnova"],
+    careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Linda K.",
+        author: "Sofija N.",
         rating: 5,
         date: "April 1, 2025",
-        content: "This lamp is both beautiful and functional. The adjustable arm is perfect for reading, and the dimmer adds great ambiance."
+        content: "Ova lampa je i lepa i funkcionalna. Prilagodljiva ruka je savršena za čitanje, i dimmerska sklopka dodaje odličnu atmosferu."
       },
       {
-        author: "James R.",
+        author: "Jovan.",
         rating: 4,
         date: "March 10, 2025",
-        content: "Excellent quality and design. The brass details are stunning. Assembly was a bit tricky but worth it."
+        content: "Izvrsna kvaliteta i dizajn. Brončani detalji su impresivan. Sastavljanje je bilo malo komplicirano, ali vrijedno."
       }
     ]
   },
   {
     id: 11,
-    name: "Luleå Side Table",
+    name: "Luleå strana stol",
     price: 399,
-    description: "Versatile side table with hidden storage compartment.",
-    fullDescription: "The Luleå Side Table is a smart solution for modern living, combining style with functionality. The hidden storage compartment is perfect for keeping living spaces tidy, while the clean lines and mixed material construction create a contemporary aesthetic that works in any room.",
-    category: "table",
-    categoryName: "Tables",
+    description: "Stol sa skrivenim skladištenjem",
+    fullDescription: "Luleå strana stol je pametan rješenje za modernu život, kombinirajući stil sa funkcionalnošću. Skriveni prostor za skladištenje je savršen za održavanje uređaja u životnom prostoru, dok su čiste linije i kombinacija materijala stvaraju kontemporistični dizajn koji radi u bilo kojoj sobi.",
+    category: "stol",
+    categoryName: "Stolovi",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -718,48 +717,48 @@ const products: Product[] = [
     rating: 4.7,
     reviewCount: 38,
     features: [
-      "Hidden storage compartment",
-      "Soft-close mechanism",
-      "Anti-tip design",
+      "Skriveni prostor za skladištenje",
+      "Mehanički zatvori",
+      "Anti-tip dizajn",
       "Felt-lined storage",
-      "Non-marking feet"
+      "Ne-markirajuće noge"
     ],
     dimensions: [
-      { name: "Diameter", value: "45 cm" },
-      { name: "Height", value: "55 cm" },
-      { name: "Storage Depth", value: "15 cm" },
-      { name: "Weight", value: "8 kg" }
+      { name: "Širina", value: "45 cm" },
+      { name: "Visina", value: "55 cm" },
+      { name: "Dubina skladištenja", value: "15 cm" },
+      { name: "Težina", value: "8 kg" }
     ],
     colors: [
-      { name: "White/Natural Oak", hex: "#FFFFFF" },
-      { name: "Black/Natural Oak", hex: "#000000" },
-      { name: "Sage Green/Natural Oak", hex: "#9CAF88" }
+      { name: "Bijela/Prirodna drvena osnova", hex: "#FFFFFF" },
+      { name: "Crna/Prirodna drvena osnova", hex: "#000000" },
+      { name: "Siva/Prirodna drvena osnova", hex: "#9CAF88" }
     ],
-    materials: ["Oak", "Powder-coated Steel", "Felt"],
-    careInstructions: "Wipe clean with a damp cloth. For wooden parts, use appropriate wood cleaner. Check and tighten hardware periodically. Avoid placing hot items directly on surface.",
+    materials: ["Drvena osnova", "Površinsko obojena čelična osnova", "Felt"],
+    careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Rachel T.",
+        author: "Sofija N.",
         rating: 5,
         date: "March 20, 2025",
-        content: "Perfect size and the hidden storage is so useful! The soft-close mechanism is a nice touch. Very happy with this purchase."
+        content: "Savršena veličina i skriveni prostor je super koristan! Soft-close mehanizam je lijep dodir. Veoma zadovoljan sa ovom kupnjom."
       },
       {
-        author: "David L.",
+        author: "Jovan.",
         rating: 4,
         date: "February 5, 2025",
-        content: "Great little table with clever storage. Assembly was easy and the quality is excellent."
+        content: "Odličan mali stol sa pametnim skladištenjem. Sastavljanje je bilo jednostavno i kvaliteta je izvrsna."
       }
     ]
   },
   {
     id: 12,
-    name: "Umeå Wall Shelf",
+    name: "Umeå zidni polica",
     price: 249,
-    description: "Floating wall shelf with integrated wireless charging.",
-    fullDescription: "The Umeå Wall Shelf is a modern solution for today's tech-savvy homes. This innovative floating shelf features an integrated wireless charging pad, perfect for keeping devices powered while maintaining a clean, organized space. The minimalist design and hidden mounting system create a sleek, floating appearance.",
-    category: "storage",
-    categoryName: "Storage",
+    description: "Plovući zidni polica sa integriranim bežičnim punjenjem.",
+    fullDescription: "Umeå zidni polica je moderno rješenje za današnje tehnološke domove. Ovaj inovativni plovući polica ima integrirani bežični punjač, savršen za održavanje uređaja napajanih dok održavaju čist i organiziran prostor. Minimalistički dizajn i skriveni montažni sistem stvaraju elegantan, plovući izgled.",
+    category: "pločasti-namještaj",
+    categoryName: "Pločasti namještaj",
     image: "/placeholder.svg?height=600&width=600",
     images: [
       "/placeholder.svg?height=800&width=800",
@@ -770,37 +769,35 @@ const products: Product[] = [
     rating: 4.5,
     reviewCount: 42,
     features: [
-      "Integrated wireless charging",
-      "Hidden mounting system",
-      "Cable management solution",
-      "LED charging indicator",
-      "15W fast charging capability"
+      "Skriveni montažni sistem",
+      "Rješenje za upravljanje kabelima",
+      "LED punjački indikator",
     ],
     dimensions: [
-      { name: "Length", value: "60 cm" },
-      { name: "Depth", value: "20 cm" },
-      { name: "Height", value: "5 cm" },
-      { name: "Weight Capacity", value: "5 kg" }
+      { name: "Dužina", value: "60 cm" },
+      { name: "Dubina", value: "20 cm" },
+      { name: "Visina", value: "5 cm" },
+      { name: "Težina", value: "5 kg" }
     ],
     colors: [
-      { name: "White", hex: "#FFFFFF" },
-      { name: "Black", hex: "#000000" },
-      { name: "Oak", hex: "#D2B48C" }
+      { name: "Bijela", hex: "#FFFFFF" },
+      { name: "Crna", hex: "#000000" },
+      { name: "Drvena osnova", hex: "#D2B48C" }
     ],
-    materials: ["MDF", "Oak Veneer", "Electronics"],
-    careInstructions: "Dust regularly with a soft, dry cloth. Keep charging surface clean for optimal performance. Do not exceed weight capacity. Avoid water contact with electronic components.",
+    materials: ["MDF", "Drvena osnova", "Elektronika"],
+    careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
     reviews: [
       {
-        author: "Michael P.",
+        author: "Sofija N.",
         rating: 5,
         date: "March 15, 2025",
-        content: "Love the wireless charging feature! It's perfect for my bedside setup and looks very sleek on the wall."
+        content: "Odlično!!!"
       },
       {
-        author: "Sarah K.",
+        author: "Jovan.",
         rating: 4,
         date: "February 20, 2025",
-        content: "Great concept and execution. Installation was straightforward and the charging works perfectly."
+        content: "Odličan koncept i izvedba. Montaža je bila jednostavna i punjenje radi savršeno."
       }
     ]
   }

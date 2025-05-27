@@ -32,12 +32,12 @@ export default function Cart() {
               {totalItems}
             </span>
           )}
-          <span className="sr-only">Open cart</span>
+          <span className="sr-only">Otvori korpu</span>
         </Button>
       </SheetTrigger>
       <SheetContent className="flex w-full flex-col sm:max-w-md">
         <SheetHeader>
-          <SheetTitle>Your Cart ({totalItems})</SheetTitle>
+            <SheetTitle>Vaša korpa ({totalItems})</SheetTitle>
         </SheetHeader>
 
         {isCheckingOut ? (
@@ -48,13 +48,13 @@ export default function Cart() {
               <div className="flex flex-1 flex-col items-center justify-center space-y-4">
                 <ShoppingBag className="h-16 w-16 text-muted-foreground" />
                 <div className="text-center">
-                  <h3 className="text-lg font-medium">Your cart is empty</h3>
+                  <h3 className="text-lg font-medium">Vaša korpa je prazna</h3>
                   <p className="text-sm text-muted-foreground">
-                    Looks like you haven't added any products to your cart yet.
+                    Izgleda da niste dodali nijedan proizvod u vašu korpu još.
                   </p>
                 </div>
                 <Button asChild onClick={() => setIsOpen(false)}>
-                  <Link href="/products">Continue Shopping</Link>
+                  <Link href="/products">Nastavi kupovati</Link>
                 </Button>
               </div>
             ) : (
@@ -89,9 +89,9 @@ export default function Cart() {
                           {/* Customizations */}
                           {item.customizations && (
                             <div className="mt-1 text-sm text-muted-foreground">
-                              {item.customizations.color && <p>Color: {item.customizations.color}</p>}
-                              {item.customizations.material && <p>Material: {item.customizations.material}</p>}
-                              {item.customizations.dimensions && <p>Dimensions: {item.customizations.dimensions}</p>}
+                              {item.customizations.color && <p>Boja: {item.customizations.color}</p>}
+                              {item.customizations.material && <p>Materijal: {item.customizations.material}</p>}
+                              {item.customizations.dimensions && <p>Dimenzije: {item.customizations.dimensions}</p>}
                             </div>
                           )}
 
@@ -104,7 +104,7 @@ export default function Cart() {
                                 onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
                               >
                                 <Minus className="h-3 w-3" />
-                                <span className="sr-only">Decrease quantity</span>
+                                <span className="sr-only">Smanji količinu</span>
                               </Button>
                               <span className="w-8 text-center text-sm">{item.quantity}</span>
                               <Button
@@ -114,7 +114,7 @@ export default function Cart() {
                                 onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
                               >
                                 <Plus className="h-3 w-3" />
-                                <span className="sr-only">Increase quantity</span>
+                                <span className="sr-only">Povećaj količinu</span>
                               </Button>
                             </div>
                             <Button
@@ -135,20 +135,20 @@ export default function Cart() {
 
                 <div className="border-t pt-6">
                   <div className="flex justify-between text-base font-medium">
-                    <p>Subtotal</p>
+                    <p>Ukupno</p>
                     <p>${total.toLocaleString()}</p>
                   </div>
-                  <p className="mt-0.5 text-sm text-muted-foreground">Shipping and taxes calculated at checkout.</p>
+                  <p className="mt-0.5 text-sm text-muted-foreground">Za detalje narudžbe kontaktirat će vas naše osoblje.</p>
                   <div className="mt-6">
                     <Button className="w-full" onClick={() => setIsCheckingOut(true)}>
-                      Checkout
+                      Kupi
                     </Button>
                   </div>
                   <div className="mt-6 flex justify-center text-center text-sm text-muted-foreground">
                     <p>
                       or{" "}
                       <Button variant="link" className="p-0 text-sm font-medium" onClick={() => setIsOpen(false)}>
-                        Continue Shopping
+                        Nastavi kupovati
                         <span aria-hidden="true"> &rarr;</span>
                       </Button>
                     </p>

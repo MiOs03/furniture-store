@@ -17,7 +17,7 @@ export default function AboutPage() {
               <div className="space-y-2">
                 <h1 className="text-3xl font-light tracking-tight sm:text-4xl md:text-5xl">Naša Priča</h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Prije više od deset godina, odlučili smo da spojimo porodične vrijednosti, zanatsku tradiciju i savremeni dizajn – i tako je nastao V Sistem. Danas smo ponosna firma iz Banje Luke koja se bavi proizvodnjom namještaja po mjeri, ali naša suština je ostala ista: stvaramo prostor koji govori vašu priču.
+                Prije više od deset godina, odlučili smo da spojimo porodične vrijednosti, zanatsku tradiciju i savremeni dizajn – i tako je nastao VSistem. Danas smo ponosna firma iz Banje Luke koja se bavi proizvodnjom namještaja po mjeri, ali naša suština je ostala ista: stvaramo prostor koji govori vašu priču.
                 </p>
               </div>
               <div className="space-y-4">
@@ -25,7 +25,7 @@ export default function AboutPage() {
                 Svaki projekat za nas je jedinstven. Bilo da izrađujemo kuhinju koja okuplja porodicu, ormar koji čuva uspomene, ili radni sto za vaše ideje, u svaki detalj ugrađujemo znanje, osjećaj za prostor i strast prema onome što radimo.
                 </p>
                 <p>
-                V Sistem nije samo proizvodnja namještaja. To je priča o prostoru koji postaje dom, o ideji koja postaje stvarnost i o svakodnevici koja postaje ljepša – kada je oblikovana po mjeri vas.
+                VSistem nije samo proizvodnja namještaja. To je priča o prostoru koji postaje dom, o ideji koja postaje stvarnost i o svakodnevici koja postaje ljepša – kada je oblikovana po mjeri vas.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
               <p className="mb-6 text-xl text-muted-foreground">
               “U svakom komadu drveta vidimo mogućnost da stvorimo nečiji dom, nečiju svakodnevicu, nečiju priču.”              </p>
               <p className="text-muted-foreground">
-              U V Sistemu, naša misija je da svaki komad namještaja bude više od proizvoda – da bude osjećaj doma, izraz identiteta i odraz kvaliteta. Ne pravimo serijske komade bez duše; mi stvaramo namještaj po mjeri, izrađen precizno, s razlogom i za konkretan prostor – vaš prostor.
+              U VSistemu, naša misija je da svaki komad namještaja bude više od proizvoda – da bude osjećaj doma, izraz identiteta i odraz kvaliteta. Ne pravimo serijske komade bez duše; mi stvaramo namještaj po mjeri, izrađen precizno, s razlogom i za konkretan prostor – vaš prostor.
               </p>
             </div>
           </div>

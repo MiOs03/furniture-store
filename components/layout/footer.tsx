@@ -18,11 +18,11 @@ export default function Footer() {
 
   const productCategories = [
     { value: "all", label: "Sve" },
-    { value: "sofa", label: "Sofe" },
-    { value: "bed", label: "Kreveti" },
-    { value: "chair", label: "Stolice" },
-    { value: "table", label: "Stolovi" },
-    { value: "panel", label: "Panel namještaj" },
+    { value: "ugaona-garnitura", label: "Ugaone garniture" },
+    { value: "krevet", label: "Kreveti" },
+    { value: "stolica", label: "Stolice" },
+    { value: "stol", label: "Stolovi" },
+    { value: "pločasti-namještaj", label: "Pločasti namještaj" },
   ]
 
   const companyInfo = [
@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <Link href="/" className="mb-4 block text-xl font-light tracking-wide hover:text-accent-purple">
-              V Sistem
+              VSistem
             </Link>
             <p className="mb-6 text-sm text-muted-foreground">
             Proizvodnja tapaciranog namještaja. Veliki izbor modela, materijala i boja. Mogućnost izrade namještaja po mjeri.
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-medium text-accent-purple">V Sistem</h3>
+            <h3 className="mb-4 text-lg font-medium text-accent-purple">VSistem</h3>
             <ul className="space-y-2 text-sm">
               {companyInfo.map((link) => (
                 <li key={link.href}>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-surface-hover pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} V Sistem. Sva prava zadržana.
+            © {new Date().getFullYear()} VSistem. Sva prava zadržana.
           </p>
         </div>
       </div>

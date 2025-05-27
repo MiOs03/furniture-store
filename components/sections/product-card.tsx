@@ -39,9 +39,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.oldPrice && (
             <span 
               className="absolute right-2 top-2 rounded bg-accent px-2 py-1 text-xs font-medium text-white"
-              aria-label={`${discount}% off`}
+              aria-label={`${discount} %`}
             >
-              {discount}% OFF
+              {discount} %
             </span>
           )}
         </div>

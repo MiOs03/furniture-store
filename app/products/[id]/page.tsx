@@ -50,16 +50,6 @@ export default function ProductPage({ params }: ProductPageProps) {
     )
   }
 
-  const [customizations, setCustomizations] = useState<CustomizationType>({
-    color: "",
-    material: product.materials?.[0] || "",
-    dimensions: undefined
-  })
-
-  const handleCustomizationChange = (newCustomizations: CustomizationType) => {
-    setCustomizations(newCustomizations)
-  }
-
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -156,11 +146,10 @@ export default function ProductPage({ params }: ProductPageProps) {
                   )) || null}
                 </div>
 
-                {/* Pass the state handler to CustomDimensionsForm */}
+                {/* CustomDimensionsForm without onCustomizationChange */}
                 <CustomDimensionsForm
                   productName={product?.name || ""}
                   product={product || { id: 0, name: "", price: 0, description: "", category: "", categoryName: "", image: "", images: [], rating: 0, reviewCount: 0, dimensions: [] }}
-                  onCustomizationChange={handleCustomizationChange}
                 />
               </div>
 

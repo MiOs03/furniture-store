@@ -14,23 +14,23 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "V Sistem | Timeless Furniture, Modern Comfort",
-  description: "Discover beautifully crafted, sustainable furniture for modern living at V Sistem.",
-  generator: 'v0.dev',
-  keywords: ['furniture', 'modern furniture', 'sustainable furniture', 'home decor', 'interior design'],
-  authors: [{ name: 'V Sistem' }],
+  title: "VSistem | Namještaj po mjeri",
+  description: "Namještaj po mjeri",
+  generator: 'v1.0.0',
+  keywords: ['namještaj', 'namještaj po mjeri', 'namještaj za kuhinju', 'namještaj za dnevnu sobu', 'namještaj za spavacu sobu', 'namještaj za kancelariju', 'namještaj za kuhinju', 'namještaj za dnevnu sobu', 'namještaj za spavacu sobu', 'namještaj za kancelariju'],
+  authors: [{ name: 'VSistem' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://nordichaven.com',
-    title: 'V Sistem | Timeless Furniture, Modern Comfort',
-    description: 'Discover beautifully crafted, sustainable furniture for modern living at V Sistem.',
-    siteName: 'V Sistem',
+    url: 'https://vsistem.ba',
+    title: 'VSistem | Namještaj po mjeri',
+    description: 'Namještaj po mjeri',
+    siteName: 'VSistem',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'V Sistem | Timeless Furniture, Modern Comfort',
-    description: 'Discover beautifully crafted, sustainable furniture for modern living at V Sistem.',
+    title: 'VSistem | Namještaj po mjeri',
+    description: 'Namještaj po mjeri',
   },
 }
 
