@@ -69,7 +69,7 @@ export default function Cart() {
               </div>
             ) : (
               <>
-                <div className="flex-1 overflow-y-auto py-6">
+                <div className="flex-1 overflow-y-auto py-6 min-h-0 max-h-[60vh] sm:max-h-[80vh]">
                   <div className="space-y-6">
                     {items.map((item) => (
                       <div key={`${item.id}-${JSON.stringify(item.customizations)}`} className="flex space-x-4">
@@ -143,7 +143,7 @@ export default function Cart() {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t pt-6 bg-white sticky bottom-0 left-0 right-0 z-10 sm:static sm:z-auto sm:bg-transparent">
                   <div className="flex justify-between text-base font-medium">
                     <p>Ukupno</p>
                     <p>KM {total.toLocaleString()}</p>

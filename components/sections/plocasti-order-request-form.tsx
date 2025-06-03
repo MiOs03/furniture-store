@@ -81,9 +81,9 @@ export default function PlocastiOrderRequestForm() {
         <textarea name="message" rows={3} className="w-full border rounded px-3 py-2" value={form.message} onChange={handleChange} />
       </div>
       {showAlert && (
-        <div className="mb-2 p-2 bg-red-100 text-red-700 rounded text-center text-sm font-medium">Unesite sve podatke</div>
+        <div className="mb-2 p-2 bg-red-100 text-red-700 rounded text-center text-sm font-medium" aria-live="polite">Unesite sve podatke</div>
       )}
-      <button type="submit" className="w-full bg-accent-purple text-white py-2 rounded font-semibold mt-2" disabled={isLoading}>
+      <button type="submit" className="w-full bg-accent-purple text-white py-2 rounded font-semibold mt-2 min-h-[44px]" disabled={isLoading} aria-label="Pošalji zahtjev">
         {isLoading ? 'Slanje...' : 'Pošalji zahtjev'}
       </button>
     </form>

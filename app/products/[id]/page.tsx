@@ -74,11 +74,11 @@ export default function ProductPage({ params }: ProductPageProps) {
         </div>
 
         {/* Product Details */}
-        <section className="container px-4 py-8 md:px-6 md:py-12">
+        <section className="container px-4 py-8 md:px-6 md:py-12 pb-8">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Product Images */}
             <div className="space-y-4">
-              <div className="overflow-hidden rounded-lg">
+              <div className="overflow-hidden rounded-lg min-h-[220px] sm:min-h-[320px]">
                 <Image
                   src={product?.images?.[0] || product?.image || "/placeholder.svg"}
                   alt={product?.name || "Proizvod"}
@@ -88,9 +88,9 @@ export default function ProductPage({ params }: ProductPageProps) {
                   priority
                 />
               </div>
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-4 gap-4 overflow-x-auto flex-nowrap sm:grid-cols-4 sm:overflow-x-visible" style={{ WebkitOverflowScrolling: 'touch' }}>
                 {product?.images?.slice(1)?.map((image, index) => (
-                  <div key={index} className="overflow-hidden rounded-lg">
+                  <div key={index} className="overflow-hidden rounded-lg min-w-[64px]">
                     <Image
                       src={image || "/placeholder.svg"}
                       alt={`${product?.name || "Proizvod"} - pogled ${index + 2}`}
@@ -161,13 +161,15 @@ export default function ProductPage({ params }: ProductPageProps) {
                 materials={product.materials || []}
                 dimensions={product.dimensions?.map(d => d.value) || []}
                 buttonClassName="w-full h-16 rounded-xl bg-black text-white text-lg font-medium flex items-center justify-center shadow-md transition-all duration-200 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-black"
+                aria-label="Dodaj u korpu"
               />
 
-              {/* Personalizuj bez kompromisa (CustomDimensionsForm as accordion) with full card background */}
+              {/* kreiraj po sopstvenoj mjeri(CustomDimensionsForm as accordion) with full card background */}
               <div className="w-full mt-4 rounded-xl bg-white shadow-md p-0">
                 <CustomDimensionsForm
                   productName={product?.name || ""}
                   product={product || { id: 0, name: "", price: 0, description: "", category: "", categoryName: "", image: "", images: [], rating: 0, reviewCount: 0, dimensions: [] }}
+                  aria-label="Personalizuj bez kompromisa"
                 />
               </div>
 

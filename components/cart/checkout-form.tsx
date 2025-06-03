@@ -136,86 +136,87 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col h-full">
       <Button variant="ghost" onClick={onBack} className="mb-4">
         <ArrowLeft className="mr-2 h-4 w-4" />
         Nazad na korpu
       </Button>
 
-      <div className="space-y-4">
-        <h2 className="text-lg font-medium">Detalji narudžbe</h2>
-        <div className="space-y-2">
-          {items.map((item) => (
-            <div key={item.id} className="flex justify-between text-sm">
-              <span>
-                {item.name} x {item.quantity}
-                {item.customizations && (
-                  <span className="text-muted-foreground">
-                    {" "}
-                    ({item.customizations.color && `Boja: ${item.customizations.color}, `}
-                    {item.customizations.material && `Materijal: ${item.customizations.material}, `}
-                    {item.customizations.dimensions && `Dimenzije: ${item.customizations.dimensions}`})
-                  </span>
-                )}
-              </span>
-              <span>{(item.price * item.quantity).toLocaleString()} KM</span>
-            </div>
-          ))}
-          <div className="border-t pt-2 font-medium">
-            <div className="flex justify-between">
-              <span>Ukupno</span>
-              <span>{total.toLocaleString()} KM</span>
-            </div>
-            {needsDelivery && (
-              <div className="mt-2 text-right">
-                {deliveryKm && Number(deliveryKm) > 0 ? (
-                  <>
-                    <div className="text-sm text-muted-foreground">Ukupno proizvodi: {total.toLocaleString()} KM</div>
-                    <div className="text-base font-semibold text-black">Ukupno sa dostavom: {totalWithDelivery.toLocaleString()} KM</div>
-                  </>
-                ) : null}
+      <div className="flex-1 overflow-y-auto min-h-0 max-h-[60vh] sm:max-h-[80vh] space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-lg font-medium">Detalji narudžbe</h2>
+          <div className="space-y-2">
+            {items.map((item) => (
+              <div key={item.id} className="flex justify-between text-sm">
+                <span>
+                  {item.name} x {item.quantity}
+                  {item.customizations && (
+                    <span className="text-muted-foreground">
+                      {" "}
+                      ({item.customizations.color && `Boja: ${item.customizations.color}, `}
+                      {item.customizations.material && `Materijal: ${item.customizations.material}, `}
+                      {item.customizations.dimensions && `Dimenzije: ${item.customizations.dimensions}`})
+                    </span>
+                  )}
+                </span>
+                <span>{(item.price * item.quantity).toLocaleString()} KM</span>
               </div>
-            )}
+            ))}
+            <div className="border-t pt-2 font-medium">
+              <div className="flex justify-between">
+                <span>Ukupno</span>
+                <span>{total.toLocaleString()} KM</span>
+              </div>
+              {needsDelivery && (
+                <div className="mt-2 text-right">
+                  {deliveryKm && Number(deliveryKm) > 0 ? (
+                    <>
+                      <div className="text-sm text-muted-foreground">Ukupno proizvodi: {total.toLocaleString()} KM</div>
+                      <div className="text-base font-semibold text-black">Ukupno sa dostavom: {totalWithDelivery.toLocaleString()} KM</div>
+                    </>
+                  ) : null}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Delivery Option */}
-      <div className="space-y-2 border rounded-md p-4 bg-stone-50">
-        <label className="flex items-center gap-2 font-medium">
-          <input type="checkbox" checked={needsDelivery} onChange={e => setNeedsDelivery(e.target.checked)} />
-          Trebate li dostavu?
-        </label>
-        {needsDelivery && (
-          <div className="mt-2 space-y-2">
-            <label className="flex items-center gap-2">
-              Udaljenost do vaše adrese (km):
-              <input
-                type="number"
-                min="1"
-                className="w-20 rounded border px-2 py-1 text-sm"
-                value={deliveryKm}
-                onChange={e => setDeliveryKm(e.target.value)}
-              />
-            </label>
-            {deliveryKm && Number(deliveryKm) > 0 && Number(deliveryKm) <= 30 && (
-              <div className="text-green-600 font-medium">Dostava je besplatna.</div>
-            )}
-            {deliveryKm && Number(deliveryKm) > 30 && (
-              <>
-                <div className="text-base font-medium">Cijena dostave: {deliveryCost} KM</div>
-                <label className="flex items-center gap-2 mt-2">
-                  <input type="checkbox" checked={acceptDelivery} onChange={e => setAcceptDelivery(e.target.checked)} required />
-                  Prihvatam cijenu dostave i želim dostavu
-                </label>
-              </>
-            )}
-          </div>
-        )}
-      </div>
+        {/* Delivery Option */}
+        <div className="space-y-2 border rounded-md p-4 bg-stone-50">
+          <label className="flex items-center gap-2 font-medium">
+            <input type="checkbox" checked={needsDelivery} onChange={e => setNeedsDelivery(e.target.checked)} />
+            Trebate li dostavu?
+          </label>
+          {needsDelivery && (
+            <div className="mt-2 space-y-2">
+              <label className="flex items-center gap-2">
+                Udaljenost do vaše adrese (km):
+                <input
+                  type="number"
+                  min="1"
+                  className="w-20 rounded border px-2 py-1 text-sm"
+                  value={deliveryKm}
+                  onChange={e => setDeliveryKm(e.target.value)}
+                />
+              </label>
+              {deliveryKm && Number(deliveryKm) > 0 && Number(deliveryKm) <= 30 && (
+                <div className="text-green-600 font-medium">Dostava je besplatna.</div>
+              )}
+              {deliveryKm && Number(deliveryKm) > 30 && (
+                <>
+                  <div className="text-base font-medium">Cijena dostave: {deliveryCost} KM</div>
+                  <label className="flex items-center gap-2 mt-2">
+                    <input type="checkbox" checked={acceptDelivery} onChange={e => setAcceptDelivery(e.target.checked)} required />
+                    Prihvatam cijenu dostave i želim dostavu
+                  </label>
+                </>
+              )}
+            </div>
+          )}
+        </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid gap-4 sm:grid-cols-2">
+        {/* Customer Info Fields */}
+        <div className="grid grid-cols-1 gap-4">
           <div className="space-y-2">
             <Label htmlFor="firstName">Ime</Label>
             <Input
@@ -236,9 +237,6 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
               required
             />
           </div>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
@@ -262,11 +260,13 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
             />
           </div>
         </div>
+      </div>
 
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Slanje narudžbe..." : "Pošalji narudžbu"}
+      <div className="sticky bottom-0 left-0 right-0 z-10 bg-white pt-4 pb-1 sm:pb-4">
+        <Button type="submit" className="w-full min-h-[44px]" disabled={isLoading} aria-label="Pošalji narudžbu">
+          {isLoading ? "Slanje..." : "Pošalji narudžbu"}
         </Button>
-      </form>
+      </div>
     </div>
   )
 }

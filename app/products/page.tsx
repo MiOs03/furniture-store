@@ -34,6 +34,7 @@ import { getAllProducts } from "@/lib/products"
 import { useCategory } from "@/lib/contexts/category-context"
 import { Product } from "@/lib/types"
 import PlocastiOrderRequestForm from '@/components/sections/plocasti-order-request-form'
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select'
 
 export default function ProductsPage() {
   const { activeCategory, setActiveCategory } = useCategory()
@@ -66,6 +67,18 @@ export default function ProductsPage() {
     "outdoor": "Outdoor",
     "sale": "Akcija"
   }
+
+  // Category options for select
+  const categoryOptions = [
+    { value: "all", label: "Sve" },
+    { value: "ugaona-garnitura", label: "Ugaone garniture" },
+    { value: "tdf", label: "TDF" },
+    { value: "krevet", label: "Kreveti" },
+    { value: "stolica", label: "Stolice" },
+    { value: "stol", label: "Stolovi" },
+    { value: "pločasti-namještaj", label: "Pločasti namještaj" },
+    { value: "sale", label: "Akcija" },
+  ]
 
   // Apply filters and sorting
   useEffect(() => {
@@ -145,157 +158,189 @@ export default function ProductsPage() {
                 <h1 className="text-3xl font-light tracking-tight sm:text-4xl">Naša kolekcija</h1>
                 <p className="text-muted-foreground">Pogledajte našu kolekciju proizvoda</p>
               </div>
-              <div className="flex flex-col gap-2 sm:flex-row">
-                {/* Sort Dropdown with optional price range */}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="w-full justify-between sm:w-auto">
-                      <ArrowUpDown className="mr-2 h-4 w-4" />
-                      Sortiraj
-                      <ChevronDown className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuLabel>Sortiraj po</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                      <DropdownMenuItem onClick={() => setSortOption("newest")}>Najnoviji{sortOption === "newest" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("featured")}>Najpopularniji{sortOption === "featured" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("price-low-high")}>Cena: Niska do visoka{sortOption === "price-low-high" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("price-high-low")}>Cena: Visoka do niska{sortOption === "price-high-low" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
-                    </DropdownMenuGroup>
-                    <DropdownMenuSeparator />
-                    {/* Price Range inside sort dropdown */}
-                    <div className="px-4 py-2">
-                      <span className="block text-xs font-medium mb-1">Cijena (KM)</span>
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="number"
-                          min="0"
-                          className="w-16 rounded border px-2 py-1 text-xs"
-                          value={priceRange[0]}
-                          onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-                        />
-                        <span className="text-xs">-</span>
-                        <input
-                          type="number"
-                          min="0"
-                          className="w-16 rounded border px-2 py-1 text-xs"
-                          value={priceRange[1]}
-                          onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-                        />
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4 mb-6">
+                {/* Kategorije as select on mobile, tabs on desktop */}
+                <div className="w-full sm:w-auto">
+                  <div className="block sm:hidden">
+                    <Select value={activeCategory} onValueChange={setActiveCategory} aria-label="Kategorije">
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Kategorije" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {categoryOptions.map(opt => (
+                          <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="hidden sm:block">
+                    <Tabs defaultValue={activeCategory} value={activeCategory} onValueChange={setActiveCategory} className="" aria-label="Kategorije">
+                      <TabsList className="inline-flex w-auto">
+                        {categoryOptions.map(opt => (
+                          <TabsTrigger key={opt.value} value={opt.value}>{opt.label}</TabsTrigger>
+                        ))}
+                      </TabsList>
+                    </Tabs>
+                  </div>
+                </div>
+                {/* Sortiraj Dropdown */}
+                <div className="w-full sm:w-auto">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" className="w-full justify-between sm:w-auto" aria-label="Sortiraj proizvode">
+                        <ArrowUpDown className="mr-2 h-4 w-4" />
+                        Sortiraj
+                        <ChevronDown className="ml-2 h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-56">
+                      <DropdownMenuLabel>Sortiraj po</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuGroup>
+                        <DropdownMenuItem onClick={() => setSortOption("newest")}>Najnoviji{sortOption === "newest" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setSortOption("featured")}>Najpopularniji{sortOption === "featured" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setSortOption("price-low-high")}>Cena: Niska do visoka{sortOption === "price-low-high" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setSortOption("price-high-low")}>Cena: Visoka do niska{sortOption === "price-high-low" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                      </DropdownMenuGroup>
+                      <DropdownMenuSeparator />
+                      {/* Price Range inside sort dropdown */}
+                      <div className="px-4 py-2">
+                        <span className="block text-xs font-medium mb-1">Cijena (KM)</span>
+                        <div className="flex items-center gap-2">
+                          <input
+                            type="number"
+                            min="0"
+                            className="w-16 rounded border px-2 py-1 text-xs"
+                            value={priceRange[0]}
+                            onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
+                          />
+                          <span className="text-xs">-</span>
+                          <input
+                            type="number"
+                            min="0"
+                            className="w-16 rounded border px-2 py-1 text-xs"
+                            value={priceRange[1]}
+                            onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </div>
             </div>
 
-            {/* Category Tabs */}
-            <Tabs defaultValue={activeCategory} value={activeCategory} onValueChange={setActiveCategory} className="mb-8">
-              <div className="mb-6 overflow-x-auto">
-                <TabsList className="inline-flex w-auto">
-                  <TabsTrigger value="all">Sve</TabsTrigger>
-                  <TabsTrigger value="ugaona-garnitura">Ugaone garniture</TabsTrigger>
-                  <TabsTrigger value="tdf">TDF</TabsTrigger>
-                  <TabsTrigger value="krevet">Kreveti</TabsTrigger>
-                  <TabsTrigger value="stolica">Stolice</TabsTrigger>
-                  <TabsTrigger value="stol">Stolovi</TabsTrigger>
-                  <TabsTrigger value="pločasti-namještaj">Pločasti namještaj</TabsTrigger>
-                  <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Akcija</TabsTrigger>
-                </TabsList>
+            {/* Active Filters Display */}
+            {(selectedMaterials.length > 0 ||
+              selectedColors.length > 0 ||
+              priceRange[0] > 0 ||
+              priceRange[1] < 5000) && (
+              <div className="mb-6 flex flex-wrap gap-2">
+                <span className="text-sm font-medium">Aktivni filtri:</span>
+                {priceRange[0] > 0 || priceRange[1] < 5000 ? (
+                  <div className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
+                    KM {priceRange[0]} - KM {priceRange[1]}
+                    <button
+                      onClick={() => setPriceRange([0, 5000])}
+                      className="ml-1 rounded-full p-1 hover:bg-stone-200"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </div>
+                ) : null}
+                {selectedMaterials.map((material) => (
+                  <div key={material} className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
+                    {material}
+                    <button
+                      onClick={() => toggleMaterial(material)}
+                      className="ml-1 rounded-full p-1 hover:bg-stone-200"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </div>
+                ))}
+                {selectedColors.map((color) => (
+                  <div key={color} className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
+                    {color}
+                    <button onClick={() => toggleColor(color)} className="ml-1 rounded-full p-1 hover:bg-stone-200">
+                      <X className="h-3 w-3" />
+                    </button>
+                  </div>
+                ))}
+                <button
+                  onClick={resetFilters}
+                  className="text-xs text-muted-foreground underline hover:text-foreground px-2 py-1 rounded"
+                  aria-label="Očisti sve filtre"
+                >
+                  Očisti sve
+                </button>
               </div>
+            )}
 
-              {/* Active Filters Display */}
-              {(selectedMaterials.length > 0 ||
-                selectedColors.length > 0 ||
-                priceRange[0] > 0 ||
-                priceRange[1] < 5000) && (
-                <div className="mb-6 flex flex-wrap gap-2">
-                  <span className="text-sm font-medium">Aktivni filtri:</span>
-                  {priceRange[0] > 0 || priceRange[1] < 5000 ? (
-                    <div className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
-                      KM {priceRange[0]} - KM {priceRange[1]}
-                      <button
-                        onClick={() => setPriceRange([0, 5000])}
-                        className="ml-1 rounded-full p-1 hover:bg-stone-200"
-                      >
-                        <X className="h-3 w-3" />
-                      </button>
-                    </div>
-                  ) : null}
-                  {selectedMaterials.map((material) => (
-                    <div key={material} className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
-                      {material}
-                      <button
-                        onClick={() => toggleMaterial(material)}
-                        className="ml-1 rounded-full p-1 hover:bg-stone-200"
-                      >
-                        <X className="h-3 w-3" />
-                      </button>
-                    </div>
-                  ))}
-                  {selectedColors.map((color) => (
-                    <div key={color} className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
-                      {color}
-                      <button onClick={() => toggleColor(color)} className="ml-1 rounded-full p-1 hover:bg-stone-200">
-                        <X className="h-3 w-3" />
-                      </button>
-                    </div>
-                  ))}
-                  <button
-                    onClick={resetFilters}
-                    className="text-xs text-muted-foreground underline hover:text-foreground"
-                  >
-                    Očisti sve
-                  </button>
+            {/* Special section for 'Pločasti namještaj' */}
+            {activeCategory === "pločasti-namještaj" && (
+              <div className="my-8 rounded-md border bg-stone-50 p-6">
+                <h2 className="mb-2 text-xl font-bold">Pločasti namještaj</h2>
+                <div className="mb-4">
+                  <a
+                    href="https://dsmtrade.ba/wp-content/uploads/2025/04/DSM-Katalog-April-2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-accent-purple text-white font-semibold shadow hover:bg-accent-purple/90 transition"
+                  ><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4h10V3M9 12h6m-6 4h6" />
+                </svg>
+                
+                    
+                    Pogledajte katalog (PDF)
+                  </a>
                 </div>
-              )}
-
-              {/* Special section for 'Pločasti namještaj' */}
-              {activeCategory === "pločasti-namještaj" && (
-                <div className="my-8 rounded-md border bg-stone-50 p-6">
-                  <h2 className="mb-2 text-xl font-bold">Pločasti namještaj</h2>
-                  <div className="mb-4">
-                    <a
-                      href="https://dsmtrade.ba/wp-content/uploads/2025/04/DSM-Katalog-April-2025.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-accent-purple text-white font-semibold shadow hover:bg-accent-purple/90 transition"
-                    ><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4h10V3M9 12h6m-6 4h6" />
-                  </svg>
-                  
-                      
-                      Pogledajte katalog (PDF)
-                    </a>
-                  </div>
-                  <div className="mb-4 space-y-1 text-base">
-                    <div>Prodaja gotovih proizvoda / Kataloška narudžba</div>
-                    <div>Brza isporuka</div>
-                    <div>Za informaciju o cijeni pošaljite nam šifru proizvoda ili naziv proizvoda.</div>
-                  </div>
-                  <PlocastiOrderRequestForm />
+                <div className="mb-4 space-y-1 text-base">
+                  <div>Prodaja gotovih proizvoda / Kataloška narudžba</div>
+                  <div>Brza isporuka</div>
+                  <div>Za informaciju o cijeni pošaljite nam šifru proizvoda ili naziv proizvoda.</div>
                 </div>
-              )}
+                <PlocastiOrderRequestForm />
+              </div>
+            )}
 
-              {/* Products Grid */}
-              <TabsContent value={activeCategory} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {filteredProducts.length > 0 ? (
-                  filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
-                ) : (
-                  activeCategory !== "pločasti-namještaj" && (
-                    <div className="col-span-full py-12 text-center">
-                      <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
-                      <p className="mb-6 text-muted-foreground">
-                        Podesite filtre ili pregledajte naše kategorije za više opcija.
-                      </p>
-                      <Button onClick={resetFilters}>Resetuj filtre</Button>
-                    </div>
-                  )
-                )}
-              </TabsContent>
-            </Tabs>
+            {/* Products Grid - mobile: direct render, desktop: Tabs/TabsContent */}
+            <div className="block sm:hidden">
+              {filteredProducts.length > 0 ? (
+                <div className="grid gap-6 pb-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)}
+                </div>
+              ) : (
+                activeCategory !== "pločasti-namještaj" && (
+                  <div className="col-span-full py-12 text-center">
+                    <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
+                    <p className="mb-6 text-muted-foreground">
+                      Podesite filtre ili pregledajte naše kategorije za više opcija.
+                    </p>
+                    <Button onClick={resetFilters}>Resetuj filtre</Button>
+                  </div>
+                )
+              )}
+            </div>
+            <div className="hidden sm:block">
+              <Tabs defaultValue={activeCategory} value={activeCategory} onValueChange={setActiveCategory}>
+                <TabsContent value={activeCategory} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
+                  ) : (
+                    activeCategory !== "pločasti-namještaj" && (
+                      <div className="col-span-full py-12 text-center">
+                        <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
+                        <p className="mb-6 text-muted-foreground">
+                          Podesite filtre ili pregledajte naše kategorije za više opcija.
+                        </p>
+                        <Button onClick={resetFilters}>Resetuj filtre</Button>
+                      </div>
+                    )
+                  )}
+                </TabsContent>
+              </Tabs>
+            </div>
           </div>
         </section>
       </main>

@@ -144,7 +144,7 @@ export default function ContactPage() {
                           required
                         />
                       </div>
-                      <Button type="submit" className="w-full" disabled={isLoading || !isContactFormValid}>
+                      <Button type="submit" className="w-full min-h-[44px]" disabled={isLoading || !isContactFormValid} aria-label="Pošalji Poruku">
                         {isLoading ? "Slanje..." : "Pošalji Poruku"}
                       </Button>
                     </form>

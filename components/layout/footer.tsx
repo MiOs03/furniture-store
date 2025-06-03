@@ -41,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-surface">
       <div className="container px-4 py-12 md:px-6 md:py-16">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center sm:text-left">
           <div>
             <Link href="/" className="mb-4 block text-xl font-light tracking-wide hover:text-accent-purple">
               VSistem
@@ -49,7 +49,7 @@ export default function Footer() {
             <p className="mb-6 text-sm text-muted-foreground">
             Proizvodnja tapaciranog namještaja. Veliki izbor modela, materijala i boja. Mogućnost izrade namještaja po mjeri.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center sm:justify-start">
               <Link href="https://www.instagram.com/v.sistem_/" 
               target="_blank" 
               rel="noopener noreferrer" 

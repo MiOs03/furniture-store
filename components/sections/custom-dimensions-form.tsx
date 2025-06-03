@@ -220,7 +220,7 @@ ${extraFields}
         <AccordionItem value="custom-dimensions">
           <AccordionTrigger className="h-16 px-6 text-lg font-medium flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200">
             <Ruler className="h-5 w-5 mr-2" />
-            <span className="flex-1 text-left">Personalizuj bez kompromisa {productName}</span>
+            <span className="flex-1 text-left">Kreiraj po sopstvenoj mjeri {productName}</span>
           </AccordionTrigger>
           <AccordionContent className="bg-white p-6 rounded-b-xl">
             <div className="space-y-6">

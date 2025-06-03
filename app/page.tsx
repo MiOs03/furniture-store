@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section with Sales Banner */}
-        <section className="relative h-[70vh] w-full" aria-label="Hero section">
+        <section className="relative h-[70vh] min-h-[320px] sm:min-h-[400px] w-full" aria-label="Hero section">
           <Image
             src="/proba1.jpeg?height=1080&width=1920"
             alt="Elegantna dnevna soba sa minimalističkim namještajem"
@@ -27,22 +27,22 @@ export default function Home() {
             quality={90}
           />
           <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
-            <div className="mb-6 rounded-md bg-black/60 px-6 py-3 backdrop-blur-sm">
-              <p className="text-lg font-medium uppercase tracking-wider md:text-xl">Ljetnja Akcija</p>
-              <p className="text-2xl font-light md:text-3xl">Do 30% popusta na odabrane proizvode</p>
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white select-none">
+            <div className="mb-6 rounded-md bg-black/60 px-4 py-2 sm:px-6 sm:py-3 backdrop-blur-sm">
+              <p className="text-base font-medium uppercase tracking-wider sm:text-lg md:text-xl">Ljetnja Akcija</p>
+              <p className="text-xl font-light sm:text-2xl md:text-3xl">Do 30% popusta na odabrane proizvode</p>
             </div>
-            <h1 className="mb-4 max-w-3xl text-4xl font-light tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mb-4 max-w-3xl text-3xl font-light tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               VSistem
             </h1>
-            <p className="mb-8 max-w-xl text-lg font-light md:text-xl">
+            <p className="mb-8 max-w-xl text-base font-light sm:text-lg md:text-xl">
               Namještaj po mjeri
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <Button 
                 asChild 
                 size="lg" 
-                className="group relative overflow-hidden rounded-none border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all duration-300"
+                className="group relative overflow-hidden rounded-md border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all duration-300"
               >
                 <Link href="/products" className="flex items-center">
                   <span className="relative z-10 flex items-center">
