@@ -34,7 +34,6 @@ export default function AddToCartWithOptions({
   const { addToCart } = useCart()
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
-  const [selectedMaterial, setSelectedMaterial] = useState(materials[0])
 
   const handleAddToCart = async () => {
     setIsLoading(true)
@@ -47,7 +46,7 @@ export default function AddToCartWithOptions({
         quantity: 1,
         customizations: {
           color: colors[0],
-          material: selectedMaterial,
+          material: materials[0],
         },
       })
       toast({
@@ -67,24 +66,6 @@ export default function AddToCartWithOptions({
 
   return (
     <div className="space-y-6">
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <Label>Materijal</Label>
-          <Select value={selectedMaterial} onValueChange={setSelectedMaterial}>
-            <SelectTrigger>
-              <SelectValue placeholder="Odaberite materijal" />
-            </SelectTrigger>
-            <SelectContent>
-              {materials.map((material) => (
-                <SelectItem key={material} value={material}>
-                  {material}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-
       <Button 
         onClick={handleAddToCart}
         disabled={isLoading}
