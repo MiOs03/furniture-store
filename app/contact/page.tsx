@@ -76,6 +76,8 @@ export default function ContactPage() {
     }
   };
 
+  const isContactFormValid = formData.firstName.trim() && formData.lastName.trim() && formData.email.trim() && formData.message.trim();
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -142,7 +144,7 @@ export default function ContactPage() {
                           required
                         />
                       </div>
-                      <Button type="submit" className="w-full" disabled={isLoading}>
+                      <Button type="submit" className="w-full" disabled={isLoading || !isContactFormValid}>
                         {isLoading ? "Slanje..." : "Pošalji Poruku"}
                       </Button>
                     </form>

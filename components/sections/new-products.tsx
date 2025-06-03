@@ -32,14 +32,7 @@ export default function NewProducts() {
       category: "living-room",
       image: "/placeholder.svg?height=600&width=600",
     },
-    {
-      id: 12,
-      name: "Umeå zidni polica",
-      price: 249,
-      description: "Plovući zidni polica sa integriranim bežičnim punjenjem.",
-      category: "storage",
-      image: "/placeholder.svg?height=600&width=600",
-    },
+    
   ]
 
   return (

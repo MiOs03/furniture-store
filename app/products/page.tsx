@@ -33,6 +33,7 @@ import ProductCard from "@/components/sections/product-card"
 import { getAllProducts } from "@/lib/products"
 import { useCategory } from "@/lib/contexts/category-context"
 import { Product } from "@/lib/types"
+import PlocastiOrderRequestForm from '@/components/sections/plocasti-order-request-form'
 
 export default function ProductsPage() {
   const { activeCategory, setActiveCategory } = useCategory()
@@ -196,11 +197,11 @@ export default function ProductsPage() {
                 <TabsList className="inline-flex w-auto">
                   <TabsTrigger value="all">Sve</TabsTrigger>
                   <TabsTrigger value="ugaona-garnitura">Ugaone garniture</TabsTrigger>
+                  <TabsTrigger value="tdf">TDF</TabsTrigger>
                   <TabsTrigger value="krevet">Kreveti</TabsTrigger>
                   <TabsTrigger value="stolica">Stolice</TabsTrigger>
                   <TabsTrigger value="stol">Stolovi</TabsTrigger>
                   <TabsTrigger value="pločasti-namještaj">Pločasti namještaj</TabsTrigger>
-                  <TabsTrigger value="tdf">TDF</TabsTrigger>
                   <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Akcija</TabsTrigger>
                 </TabsList>
               </div>
@@ -256,18 +257,25 @@ export default function ProductsPage() {
                 <div className="my-8 rounded-md border bg-stone-50 p-6">
                   <h2 className="mb-2 text-xl font-bold">Pločasti namještaj</h2>
                   <div className="mb-4">
-                    <a href="/catalogs/plocasti-namjestaj.pdf" target="_blank" rel="noopener noreferrer" className="text-accent-purple underline">Pogledajte katalog (PDF)</a>
+                    <a
+                      href="https://dsmtrade.ba/wp-content/uploads/2025/04/DSM-Katalog-April-2025.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-accent-purple text-white font-semibold shadow hover:bg-accent-purple/90 transition"
+                    ><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4h10V3M9 12h6m-6 4h6" />
+                  </svg>
+                  
+                      
+                      Pogledajte katalog (PDF)
+                    </a>
                   </div>
                   <div className="mb-4 space-y-1 text-base">
                     <div>Prodaja gotovih proizvoda / Kataloška narudžba</div>
                     <div>Brza isporuka</div>
-                    <div>Za informaciju o cijeni pošaljite nam fotografiju proizvoda ili naziv proizvoda.</div>
+                    <div>Za informaciju o cijeni pošaljite nam šifru proizvoda ili naziv proizvoda.</div>
                   </div>
-                  <div>
-                    <Button asChild className="text-base font-semibold">
-                      <a href="/contact">Pošaljite upit</a>
-                    </Button>
-                  </div>
+                  <PlocastiOrderRequestForm />
                 </div>
               )}
 
@@ -276,13 +284,15 @@ export default function ProductsPage() {
                 {filteredProducts.length > 0 ? (
                   filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
                 ) : (
-                  <div className="col-span-full py-12 text-center">
-                    <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
-                    <p className="mb-6 text-muted-foreground">
-                      Podesite filtre ili pregledajte naše kategorije za više opcija.
-                    </p>
-                    <Button onClick={resetFilters}>Resetuj filtre</Button>
-                  </div>
+                  activeCategory !== "pločasti-namještaj" && (
+                    <div className="col-span-full py-12 text-center">
+                      <p className="mb-4 text-lg font-medium">Nema proizvoda koji odgovaraju vašim filtrom</p>
+                      <p className="mb-6 text-muted-foreground">
+                        Podesite filtre ili pregledajte naše kategorije za više opcija.
+                      </p>
+                      <Button onClick={resetFilters}>Resetuj filtre</Button>
+                    </div>
+                  )
                 )}
               </TabsContent>
             </Tabs>

@@ -69,11 +69,9 @@ const products: Product[] = [
     ],
     colors: [
       { name: "Svijetlo siva", hex: "#D3D3D3" },
-      { name: "Tamna siva", hex: "#696969" },
-      { name: "Plava", hex: "#000080" },
-      { name: "Bež", hex: "#F5F5DC" },
+     
     ],
-    materials: ["Drvena osnova", "Kožni materijal", "Visoka gustoća pene"],
+    materials: ["Drvena osnova"],
     careInstructions:
       "Vakuumirajte redovito koristeći nizak vakuum. Lokalno čistite s malim, vodotopivim rješenjem ili suhim čišćenjem. Izbjegavajte postavljanje u direktnu sunčevu svjetlost kako bi se spriječio pucanje. Fluff cushions regularly to maintain shape.",
     reviews: [
@@ -213,11 +211,9 @@ const products: Product[] = [
       { name: "Prošireni list", value: "50 cm" },
     ],
     colors: [
-      { name: "Drvena osnova - svijetla", hex: "#D2B48C" },
-      { name: "Drvena osnova - tamna", hex: "#8B4513" },
-      { name: "Drvena osnova - bijela", hex: "#F5F5F5" },
+      { name: "Berry 199", hex: "#D2B48C" },
     ],
-    materials: ["Drvena osnova", "Drvena osnova (za prošireni list)"],
+    materials: ["Kuvana bukovina"],
     careInstructions:
       "Čistite s malim, vodotopivim rješenjem ili suhim čišćenjem. Sušite odmah s malim, tvrdim čističem. Primijenite namještajski ulj za drvo svakih 6-12 mjeseci kako bi se održao finish. Izbjegavajte postavljanje toplih predmeta direktno na površinu; koristite koverte i pločice.",
     reviews: [
@@ -464,73 +460,6 @@ const products: Product[] = [
   // PANEL FURNITURE
   // ----------------------------------------
 
-  // Aalto Bookshelf
-  {
-    id: 5,
-    name: "Aalto Pločasti namještaj",
-    price: 899,
-    description: "Modular pločasti namještaj koji se može prilagoditi vašem prostoru.",
-    fullDescription:
-      "Aalto Pločasti namještaj je fleksibilan rješenje za skladištenje koje se prilagođava vašim potrebama i prostoru. Njegov modularni dizajn omogućuje vam da stvorite konfiguraciju koja savršeno odgovara vašoj kući, bez obzira da li trebate mali knjižnički stol ili cijeli zidni namještaj. Izrađen od visokokvalitetnih materijala, Aalto kombinira trajnost sa elegantnim dizajnom, imajući čiste linije i savremeni estetski dizajn koji se uklapa u bilo koji interijer. Pažljivi dizajn uključuje prilagodljive poluge za prihvatanje stavki različitih veličina.",
-    category: "pločasti-namještaj",
-    categoryName: "Pločasti namještaj",
-    image: "/placeholder.svg?height=600&width=600",
-    images: [
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800",
-    ],
-    rating: 4.7,
-    reviewCount: 92,
-    features: [
-      "Modular design for custom configurations",
-      "Prilagodljive poluge za fleksibilno skladištenje",
-      "Drvena osnova sa veneer finish",
-      "Zidni montirani hardware za stabilnost",
-      "Opcijonalne kabine za vrata dostupne odvojeno",
-      "Može se proširiti sa dodatnim modulima",
-    ],
-    dimensions: [
-      { name: "Širina (po modulu)", value: "80 cm" },
-      { name: "Dubina", value: "35 cm" },
-      { name: "Visina", value: "200 cm" },
-      { name: "Debljina poluge", value: "2.5 cm" },
-      { name: "Prilagodljive poluge", value: "5 pozicija po sekciji" },
-      { name: "Težina (po modulu)", value: "30 kg" },
-    ],
-    colors: [
-      { name: "Bijela", hex: "#F5F5F5" },
-      { name: "Prirodna drvena osnova - svijetla", hex: "#D2B48C" },
-      { name: "Crna", hex: "#000000" },
-    ],
-    materials: ["Solid Oak", "Oak Veneer", "Premium Hardware"],
-    careInstructions:
-      "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
-    reviews: [
-      {
-        author: "Tomaš.",
-        rating: 5,
-        date: "March 25, 2025",
-        content:
-          "Ovaj pločasti namještaj je upravo ono što sam tražio! Modularni dizajn mi je omogućio da stvorim savršenu konfiguraciju za moj životni prostor, i kvaliteta je izvrsna. Sastavljanje je bilo jednostavno i rezultat izgleda vrlo visokokvalitetan.",
-      },
-      {
-        author: "Jovan.",
-        rating: 4,
-        date: "February 18, 2025",
-        content:
-          "Izvrsna kvaliteta pločastog namještaja sa lepom završnom obradom. Prilagodljive poluge su pametan detalj. Sastavljanje je trajalo duže nego što sam očekivao, ali rezultat je vrijedan.",
-      },
-      {
-        author: "Lara.",
-        rating: 5,
-        date: "January 30, 2025",
-        content:
-          "Kupio sam više modula da stvorim cijeli zidni namještaj, i nije moguće bolje zadovoljstvo. Sistem je nevjerojatno fleksibilan, i kvaliteta je izvrsna. Visoko preporučam!",
-      },
-    ],
-  },
   {
     id: 8,
     name: "Gothenburg Ugaona garnitura",
@@ -751,56 +680,7 @@ const products: Product[] = [
       }
     ]
   },
-  {
-    id: 12,
-    name: "Umeå zidni polica",
-    price: 249,
-    description: "Plovući zidni polica sa integriranim bežičnim punjenjem.",
-    fullDescription: "Umeå zidni polica je moderno rješenje za današnje tehnološke domove. Ovaj inovativni plovući polica ima integrirani bežični punjač, savršen za održavanje uređaja napajanih dok održavaju čist i organiziran prostor. Minimalistički dizajn i skriveni montažni sistem stvaraju elegantan, plovući izgled.",
-    category: "pločasti-namještaj",
-    categoryName: "Pločasti namještaj",
-    image: "/placeholder.svg?height=600&width=600",
-    images: [
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800",
-      "/placeholder.svg?height=800&width=800"
-    ],
-    rating: 4.5,
-    reviewCount: 42,
-    features: [
-      "Skriveni montažni sistem",
-      "Rješenje za upravljanje kabelima",
-      "LED punjački indikator",
-    ],
-    dimensions: [
-      { name: "Dužina", value: "60 cm" },
-      { name: "Dubina", value: "20 cm" },
-      { name: "Visina", value: "5 cm" },
-      { name: "Težina", value: "5 kg" }
-    ],
-    colors: [
-      { name: "Bijela", hex: "#FFFFFF" },
-      { name: "Crna", hex: "#000000" },
-      { name: "Drvena osnova", hex: "#D2B48C" }
-    ],
-    materials: ["MDF", "Drvena osnova", "Elektronika"],
-    careInstructions: "Očistite drvenu površinu s malim, vodotopivim rješenjem ili suhim čišćenjem ako je potrebno. Sušite odmah s malim, tvrdim čističem. Izbjegavajte postavljanje kreveta direktno na sunce kako bi se spriječio pucavost. Provjerite i zategnite hardware redovito.",
-    reviews: [
-      {
-        author: "Sofija N.",
-        rating: 5,
-        date: "March 15, 2025",
-        content: "Odlično!!!"
-      },
-      {
-        author: "Jovan.",
-        rating: 4,
-        date: "February 20, 2025",
-        content: "Odličan koncept i izvedba. Montaža je bila jednostavna i punjenje radi savršeno."
-      }
-    ]
-  }
+
 ]
 
 export const getAllProducts = (): Product[] => {

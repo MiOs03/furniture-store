@@ -19,11 +19,11 @@ export default function Footer() {
   const productCategories = [
     { value: "all", label: "Sve" },
     { value: "ugaona-garnitura", label: "Ugaone garniture" },
+    { value: "tdf", label: "TDF" },
     { value: "krevet", label: "Kreveti" },
     { value: "stolica", label: "Stolice" },
     { value: "stol", label: "Stolovi" },
     { value: "pločasti-namještaj", label: "Pločasti namještaj" },
-    { value: "tdf", label: "TDF" },
   ]
 
   const companyInfo = [

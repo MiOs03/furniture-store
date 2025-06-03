@@ -140,7 +140,6 @@ export default function ProductPage({ params }: ProductPageProps) {
                 <div>
                   <h3 className="mb-1 text-sm font-medium">Boja</h3>
                   <div className="mb-2 text-base">{product.colors.map(c => c.name).join(", ")}</div>
-                  <a href="https://lion-fabrics.com/collections/all" target="_blank" rel="noopener noreferrer" className="text-accent-purple underline text-base">Kolekcija svih boja</a>
                 </div>
               )}
 
@@ -164,7 +163,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 buttonClassName="w-full h-16 rounded-xl bg-black text-white text-lg font-medium flex items-center justify-center shadow-md transition-all duration-200 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-black"
               />
 
-              {/* Prilagodi dimenzije (CustomDimensionsForm as accordion) with full card background */}
+              {/* Personalizuj bez kompromisa (CustomDimensionsForm as accordion) with full card background */}
               <div className="w-full mt-4 rounded-xl bg-white shadow-md p-0">
                 <CustomDimensionsForm
                   productName={product?.name || ""}
