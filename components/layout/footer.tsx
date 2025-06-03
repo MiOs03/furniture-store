@@ -23,6 +23,7 @@ export default function Footer() {
     { value: "stolica", label: "Stolice" },
     { value: "stol", label: "Stolovi" },
     { value: "pločasti-namještaj", label: "Pločasti namještaj" },
+    { value: "tdf", label: "TDF" },
   ]
 
   const companyInfo = [

@@ -18,6 +18,7 @@ interface AddToCartWithOptionsProps {
   colors: string[]
   materials: string[]
   dimensions: string[]
+  buttonClassName?: string
 }
 
 export default function AddToCartWithOptions({
@@ -28,11 +29,11 @@ export default function AddToCartWithOptions({
   colors,
   materials,
   dimensions,
+  buttonClassName,
 }: AddToCartWithOptionsProps) {
   const { addToCart } = useCart()
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
-  const [selectedColor, setSelectedColor] = useState(colors[0])
   const [selectedMaterial, setSelectedMaterial] = useState(materials[0])
 
   const handleAddToCart = async () => {
@@ -45,7 +46,7 @@ export default function AddToCartWithOptions({
         image,
         quantity: 1,
         customizations: {
-          color: selectedColor,
+          color: colors[0],
           material: selectedMaterial,
         },
       })
@@ -68,22 +69,6 @@ export default function AddToCartWithOptions({
     <div className="space-y-6">
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label>Boja</Label>
-          <RadioGroup
-            value={selectedColor}
-            onValueChange={setSelectedColor}
-            className="flex flex-wrap gap-2"
-          >
-            {colors.map((color) => (
-              <div key={color} className="flex items-center space-x-2">
-                <RadioGroupItem value={color} id={`color-${color}`} />
-                <Label htmlFor={`color-${color}`}>{color}</Label>
-              </div>
-            ))}
-          </RadioGroup>
-        </div>
-
-        <div className="space-y-2">
           <Label>Materijal</Label>
           <Select value={selectedMaterial} onValueChange={setSelectedMaterial}>
             <SelectTrigger>
@@ -100,14 +85,14 @@ export default function AddToCartWithOptions({
         </div>
       </div>
 
-        <Button 
-          onClick={handleAddToCart}
+      <Button 
+        onClick={handleAddToCart}
         disabled={isLoading}
-        className="w-full"
-        >
+        className={buttonClassName || "w-full"}
+      >
         <ShoppingBag className="mr-2 h-4 w-4" />
         {isLoading ? "Dodavanje..." : "Dodaj u Korpu"}
-        </Button>
+      </Button>
     </div>
   )
 }

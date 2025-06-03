@@ -10,10 +10,18 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { useCart } from "@/lib/contexts/cart-context"
 import CheckoutForm from "./checkout-form"
 
+// Helper for delivery cost
+function calculateDeliveryCost(km: string | number) {
+  const num = Number(km)
+  if (isNaN(num) || num <= 0) return 0
+  return Math.round(num * 1.5 * 100) / 100
+}
+
 export default function Cart() {
   const { items, removeItem, updateQuantity, total } = useCart()
   const [isOpen, setIsOpen] = useState(false)
   const [isCheckingOut, setIsCheckingOut] = useState(false)
+  const [deliveryKm, setDeliveryKm] = useState("")
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
@@ -21,6 +29,8 @@ export default function Cart() {
     if (newQuantity < 1) return
     updateQuantity(id, newQuantity)
   }
+
+  const deliveryCost = calculateDeliveryCost(deliveryKm)
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -83,7 +93,7 @@ export default function Cart() {
                                 {item.name}
                               </Link>
                             </h3>
-                            <p className="ml-4">${(item.price * item.quantity).toLocaleString()}</p>
+                            <p className="ml-4">KM {(item.price * item.quantity).toLocaleString()}</p>
                           </div>
 
                           {/* Customizations */}
@@ -136,9 +146,8 @@ export default function Cart() {
                 <div className="border-t pt-6">
                   <div className="flex justify-between text-base font-medium">
                     <p>Ukupno</p>
-                    <p>${total.toLocaleString()}</p>
+                    <p>KM {total.toLocaleString()}</p>
                   </div>
-                  <p className="mt-0.5 text-sm text-muted-foreground">Za detalje narudžbe kontaktirat će vas naše osoblje.</p>
                   <div className="mt-6">
                     <Button className="w-full" onClick={() => setIsCheckingOut(true)}>
                       Kupi

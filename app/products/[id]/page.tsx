@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Check, Star } from "lucide-react"
+import { ArrowLeft, Check, Star, ShoppingBag } from "lucide-react"
 import { useState, use } from "react"
 
 import { Button } from "@/components/ui/button"
@@ -135,45 +135,42 @@ export default function ProductPage({ params }: ProductPageProps) {
 
               <p className="text-muted-foreground">{product.description}</p>
 
-              {/* Standard Dimensions Display */}
-              <div className="rounded-md border p-4">
-                <h3 className="mb-3 text-sm font-medium">Standardne Dimenzije</h3>
-                {(() => {
-                  const width = product?.dimensions?.find(d => d.name.toLowerCase().includes('širina'))?.value;
-                  const depth = product?.dimensions?.find(d => d.name.toLowerCase().includes('dubina'))?.value;
-                  const height = product?.dimensions?.find(d => d.name.toLowerCase().includes('visina'))?.value;
-                  if (width && depth && height) {
-                    return (
-                      <div className="text-sm font-medium mb-2">
-                        {`Širina: ${width} x Dubina: ${depth} x Visina: ${height}`}
-                      </div>
-                    );
-                  } else {
-                    return (
-                      <div className="text-sm text-muted-foreground mb-2">
-                        Dimenzije nisu dostupne.
-                      </div>
-                    );
-                  }
-                })()}
+              {/* Boja as text and Lion Boje link */}
+              {product.colors && product.colors.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium">Boja</h3>
+                  <div className="mb-2 text-base">{product.colors.map(c => c.name).join(", ")}</div>
+                  <a href="https://lion-fabrics.com/collections/all" target="_blank" rel="noopener noreferrer" className="text-accent-purple underline text-base">Kolekcija svih boja</a>
+                </div>
+              )}
 
-                {/* CustomDimensionsForm without onCustomizationChange */}
-                <CustomDimensionsForm
-                  productName={product?.name || ""}
-                  product={product || { id: 0, name: "", price: 0, description: "", category: "", categoryName: "", image: "", images: [], rating: 0, reviewCount: 0, dimensions: [] }}
-                />
-              </div>
+              {/* Materijal as text if available */}
+              {product.materials && product.materials.length > 0 && (
+                <div>
+                  <h3 className="mb-1 text-sm font-medium">Materijal</h3>
+                  <div className="mb-2 text-base">{product.materials.join(", ")}</div>
+                </div>
+              )}
 
-              {/* Pass customizations directly to AddToCartWithOptions */}
+              {/* Add to Cart */}
               <AddToCartWithOptions 
                 productId={product.id}
                 name={product.name}
                 price={product.price}
                 image={product.image}
-                colors={product.colors?.map(c => c.name) || []}
+                colors={[]}
                 materials={product.materials || []}
                 dimensions={product.dimensions?.map(d => d.value) || []}
+                buttonClassName="w-full h-16 rounded-xl bg-black text-white text-lg font-medium flex items-center justify-center shadow-md transition-all duration-200 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-black"
               />
+
+              {/* Prilagodi dimenzije (CustomDimensionsForm as accordion) with full card background */}
+              <div className="w-full mt-4 rounded-xl bg-white shadow-md p-0">
+                <CustomDimensionsForm
+                  productName={product?.name || ""}
+                  product={product || { id: 0, name: "", price: 0, description: "", category: "", categoryName: "", image: "", images: [], rating: 0, reviewCount: 0, dimensions: [] }}
+                />
+              </div>
 
               {/* Delivery Info */}
               <div className="space-y-3 rounded-lg border p-4">
@@ -226,6 +223,17 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                 );
               })()}
+              {/* Skica proizvoda (show up to 2 images) */}
+              {product.images && product.images.length > 0 && (
+                <div className="mt-4">
+                  <h4 className="mb-2 text-base font-medium">Skica proizvoda</h4>
+                  <div className="grid grid-cols-2 gap-4 max-w-md">
+                    {product.images.slice(0, 2).map((img, idx) => (
+                      <img key={idx} src={img} alt={`Skica ${idx + 1}`} className="rounded border bg-white" />
+                    ))}
+                  </div>
+                </div>
+              )}
               <div className="mt-6 rounded-md bg-stone-50 p-4">
                 <h4 className="mb-2 text-lg font-medium">Dostupne Prilagođene Dimenzije</h4>
                 <p className="mb-4">

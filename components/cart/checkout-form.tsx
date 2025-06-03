@@ -27,9 +27,25 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
     phone: "",
   })
 
+  const [needsDelivery, setNeedsDelivery] = useState(false)
+  const [deliveryKm, setDeliveryKm] = useState("")
+  const [acceptDelivery, setAcceptDelivery] = useState(false)
+  const deliveryCost = Number(deliveryKm) > 30 ? Math.round(Number(deliveryKm) * 1.5 * 100) / 100 : 0
+  const totalWithDelivery = total + deliveryCost
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
+
+    // Prevent submit if delivery is needed, km > 30, and not accepted
+    if (needsDelivery && Number(deliveryKm) > 30 && !acceptDelivery) {
+      toast({
+        title: "Morate prihvatiti cijenu dostave da nastavite.",
+        variant: "destructive",
+      })
+      setIsLoading(false)
+      return
+    }
 
     try {
       console.log('Starting order submission...');
@@ -70,6 +86,8 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
           `).join('\n')}
           
           Ukupna cijena: ${total} KM
+          Dostava: ${needsDelivery ? (Number(deliveryKm) > 30 ? `${deliveryCost} KM (${deliveryKm} km)` : 'Besplatna (<= 30km)') : 'Nije tražena'}
+          Ukupno sa dostavom: ${needsDelivery ? totalWithDelivery : total} KM
         `
       }
 
@@ -140,16 +158,60 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
                   </span>
                 )}
               </span>
-              <span>${(item.price * item.quantity).toLocaleString()}</span>
+              <span>{(item.price * item.quantity).toLocaleString()} KM</span>
             </div>
           ))}
           <div className="border-t pt-2 font-medium">
             <div className="flex justify-between">
               <span>Ukupno</span>
-              <span>${total.toLocaleString()}</span>
+              <span>{total.toLocaleString()} KM</span>
             </div>
+            {needsDelivery && (
+              <div className="mt-2 text-right">
+                {deliveryKm && Number(deliveryKm) > 0 ? (
+                  <>
+                    <div className="text-sm text-muted-foreground">Ukupno proizvodi: {total.toLocaleString()} KM</div>
+                    <div className="text-base font-semibold text-black">Ukupno sa dostavom: {totalWithDelivery.toLocaleString()} KM</div>
+                  </>
+                ) : null}
+              </div>
+            )}
           </div>
         </div>
+      </div>
+
+      {/* Delivery Option */}
+      <div className="space-y-2 border rounded-md p-4 bg-stone-50">
+        <label className="flex items-center gap-2 font-medium">
+          <input type="checkbox" checked={needsDelivery} onChange={e => setNeedsDelivery(e.target.checked)} />
+          Trebate li dostavu?
+        </label>
+        {needsDelivery && (
+          <div className="mt-2 space-y-2">
+            <label className="flex items-center gap-2">
+              Udaljenost do vaše adrese (km):
+              <input
+                type="number"
+                min="1"
+                className="w-20 rounded border px-2 py-1 text-sm"
+                value={deliveryKm}
+                onChange={e => setDeliveryKm(e.target.value)}
+              />
+            </label>
+            {deliveryKm && Number(deliveryKm) > 0 && Number(deliveryKm) <= 30 && (
+              <div className="text-green-600 font-medium">Dostava je besplatna.</div>
+            )}
+            {deliveryKm && Number(deliveryKm) > 30 && (
+              <>
+                <div className="text-base font-medium">Cijena dostave: {deliveryCost} KM</div>
+                <label className="flex items-center gap-2 mt-2">
+                  <input type="checkbox" checked={acceptDelivery} onChange={e => setAcceptDelivery(e.target.checked)} required />
+                  Prihvatam cijenu dostave i želim dostavu
+                </label>
+              </>
+            )}
+          </div>
+        )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">

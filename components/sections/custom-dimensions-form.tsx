@@ -140,13 +140,11 @@ export default function CustomDimensionsForm({
     <div className="mt-6">
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="custom-dimensions">
-          <AccordionTrigger className="text-sm font-medium">
-            <div className="flex items-center">
-              <Ruler className="mr-2 h-4 w-4" />
-              Prilagodi dimenzije {productName}
-            </div>
+          <AccordionTrigger className="h-16 px-6 text-lg font-medium flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200">
+            <Ruler className="h-5 w-5 mr-2" />
+            <span className="flex-1 text-left">Prilagodi dimenzije {productName}</span>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="bg-white p-6 rounded-b-xl">
             <div className="space-y-6">
               <p className="text-sm text-muted-foreground">
                 Prilagodite {productName.toLowerCase()} prema svojim potrebama i prostoru.

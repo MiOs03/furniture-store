@@ -32,15 +32,16 @@ import Footer from "@/components/layout/footer"
 import ProductCard from "@/components/sections/product-card"
 import { getAllProducts } from "@/lib/products"
 import { useCategory } from "@/lib/contexts/category-context"
+import { Product } from "@/lib/types"
 
 export default function ProductsPage() {
   const { activeCategory, setActiveCategory } = useCategory()
-  const allProducts = getAllProducts()
-  const [filteredProducts, setFilteredProducts] = useState(allProducts)
-  const [priceRange, setPriceRange] = useState([0, 5000])
+  const allProducts: Product[] = getAllProducts()
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts)
+  const [priceRange, setPriceRange] = useState<number[]>([0, 5000])
   const [selectedMaterials, setSelectedMaterials] = useState<string[]>([])
   const [selectedColors, setSelectedColors] = useState<string[]>([])
-  const [sortOption, setSortOption] = useState("featured")
+  const [sortOption, setSortOption] = useState<string>("featured")
 
   // Extract all unique materials and colors from products
   const allMaterials = Array.from(new Set(allProducts.flatMap((product) => product.materials || []).filter(Boolean)))
@@ -50,19 +51,19 @@ export default function ProductsPage() {
   )
 
   // Category mapping
-  const categoryMap = {
-    all: "Svi proizvode",
+  const categoryMap: Record<string, string> = {
+    "all": "Svi proizvode",
     "ugaona-garnitura": "Ugaone garniture",
     "krevet": "Kreveti",
     "stolica": "Stolice",
     "stol": "Stolovi",
     "pločasti-namještaj": "Pločasti namještaj",
     "living-room": "Dining",
-    dining: "Dining",
-    bedroom: "Kreveti",
-    office: "Kancelarijski namještaj",
-    outdoor: "Outdoor",
-    sale: "Akcija",
+    "dining": "Dining",
+    "bedroom": "Kreveti",
+    "office": "Kancelarijski namještaj",
+    "outdoor": "Outdoor",
+    "sale": "Akcija"
   }
 
   // Apply filters and sorting
@@ -144,7 +145,7 @@ export default function ProductsPage() {
                 <p className="text-muted-foreground">Pogledajte našu kolekciju proizvoda</p>
               </div>
               <div className="flex flex-col gap-2 sm:flex-row">
-                {/* Sort Dropdown */}
+                {/* Sort Dropdown with optional price range */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" className="w-full justify-between sm:w-auto">
@@ -157,108 +158,35 @@ export default function ProductsPage() {
                     <DropdownMenuLabel>Sortiraj po</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                      <DropdownMenuItem onClick={() => setSortOption("newest")}>
-                        Najnoviji
-                        {sortOption === "newest" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("featured")}>
-                        Najpopularniji
-                        {sortOption === "featured" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("price-low-high")}>
-                        Cena: Niska do visoka
-                        {sortOption === "price-low-high" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("price-high-low")}>
-                        Cena: Visoka do niska
-                        {sortOption === "price-high-low" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("name-a-z")}>
-                        Naziv: A do Z{sortOption === "name-a-z" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setSortOption("name-z-a")}>
-                        Naziv: Z do A{sortOption === "name-z-a" && <Check className="ml-auto h-4 w-4" />}
-                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setSortOption("newest")}>Najnoviji{sortOption === "newest" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setSortOption("featured")}>Najpopularniji{sortOption === "featured" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setSortOption("price-low-high")}>Cena: Niska do visoka{sortOption === "price-low-high" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setSortOption("price-high-low")}>Cena: Visoka do niska{sortOption === "price-high-low" && <Check className="ml-auto h-4 w-4" />}</DropdownMenuItem>
                     </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                {/* Filter Sheet */}
-                <Sheet>
-                  <SheetTrigger asChild>
-                    <Button variant="outline" className="w-full sm:w-auto">
-                      <Filter className="mr-2 h-4 w-4" />
-                      Filtriraj
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent className="overflow-y-auto sm:max-w-md">
-                    <SheetHeader>
-                      <SheetTitle>Filtriraj proizvode</SheetTitle>
-                      <SheetDescription>Filtrirajte proizvode prema vašim željama.</SheetDescription>
-                    </SheetHeader>
-                    <div className="mt-6 space-y-6">
-                      {/* Price Range Filter */}
-                      <div className="space-y-4">
-                        <h3 className="font-medium">Cena</h3>
-                        <div className="space-y-2">
-                          <Slider
-                            defaultValue={[0, 5000]}
-                            max={5000}
-                            step={100}
-                            value={priceRange}
-                            onValueChange={setPriceRange}
-                          />
-                          <div className="flex items-center justify-between">
-                            <span>${priceRange[0]}</span>
-                            <span>${priceRange[1]}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Materials Filter */}
-                      <div className="space-y-4">
-                        <h3 className="font-medium">Materijali</h3>
-                        <div className="grid grid-cols-2 gap-2">
-                          {allMaterials.map((material) => (
-                            <div key={material} className="flex items-center space-x-2">
-                              <Checkbox
-                                id={`material-${material}`}
-                                checked={selectedMaterials.includes(material)}
-                                onCheckedChange={() => toggleMaterial(material)}
-                              />
-                              <Label htmlFor={`material-${material}`}>{material}</Label>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Colors Filter */}
-                      <div className="space-y-4">
-                        <h3 className="font-medium">Boje</h3>
-                        <div className="grid grid-cols-2 gap-2">
-                          {allColors.map((color) => (
-                            <div key={color} className="flex items-center space-x-2">
-                              <Checkbox
-                                id={`color-${color}`}
-                                checked={selectedColors.includes(color)}
-                                onCheckedChange={() => toggleColor(color)}
-                              />
-                              <Label htmlFor={`color-${color}`}>{color}</Label>
-                            </div>
-                          ))}
-                        </div>
+                    <DropdownMenuSeparator />
+                    {/* Price Range inside sort dropdown */}
+                    <div className="px-4 py-2">
+                      <span className="block text-xs font-medium mb-1">Cijena (KM)</span>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="number"
+                          min="0"
+                          className="w-16 rounded border px-2 py-1 text-xs"
+                          value={priceRange[0]}
+                          onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
+                        />
+                        <span className="text-xs">-</span>
+                        <input
+                          type="number"
+                          min="0"
+                          className="w-16 rounded border px-2 py-1 text-xs"
+                          value={priceRange[1]}
+                          onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
+                        />
                       </div>
                     </div>
-                    <SheetFooter className="mt-6 flex-row justify-between">
-                      <Button variant="outline" onClick={resetFilters}>
-                        Resetuj filtre
-                      </Button>
-                      <SheetClose asChild>
-                        <Button>Primijeni filtre</Button>
-                      </SheetClose>
-                    </SheetFooter>
-                  </SheetContent>
-                </Sheet>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
 
@@ -272,6 +200,7 @@ export default function ProductsPage() {
                   <TabsTrigger value="stolica">Stolice</TabsTrigger>
                   <TabsTrigger value="stol">Stolovi</TabsTrigger>
                   <TabsTrigger value="pločasti-namještaj">Pločasti namještaj</TabsTrigger>
+                  <TabsTrigger value="tdf">TDF</TabsTrigger>
                   <TabsTrigger value="sale" className="text-red-500 hover:text-red-600">Akcija</TabsTrigger>
                 </TabsList>
               </div>
@@ -285,7 +214,7 @@ export default function ProductsPage() {
                   <span className="text-sm font-medium">Aktivni filtri:</span>
                   {priceRange[0] > 0 || priceRange[1] < 5000 ? (
                     <div className="flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs">
-                      ${priceRange[0]} - ${priceRange[1]}
+                      KM {priceRange[0]} - KM {priceRange[1]}
                       <button
                         onClick={() => setPriceRange([0, 5000])}
                         className="ml-1 rounded-full p-1 hover:bg-stone-200"
@@ -319,6 +248,26 @@ export default function ProductsPage() {
                   >
                     Očisti sve
                   </button>
+                </div>
+              )}
+
+              {/* Special section for 'Pločasti namještaj' */}
+              {activeCategory === "pločasti-namještaj" && (
+                <div className="my-8 rounded-md border bg-stone-50 p-6">
+                  <h2 className="mb-2 text-xl font-bold">Pločasti namještaj</h2>
+                  <div className="mb-4">
+                    <a href="/catalogs/plocasti-namjestaj.pdf" target="_blank" rel="noopener noreferrer" className="text-accent-purple underline">Pogledajte katalog (PDF)</a>
+                  </div>
+                  <div className="mb-4 space-y-1 text-base">
+                    <div>Prodaja gotovih proizvoda / Kataloška narudžba</div>
+                    <div>Brza isporuka</div>
+                    <div>Za informaciju o cijeni pošaljite nam fotografiju proizvoda ili naziv proizvoda.</div>
+                  </div>
+                  <div>
+                    <Button asChild className="text-base font-semibold">
+                      <a href="/contact">Pošaljite upit</a>
+                    </Button>
+                  </div>
                 </div>
               )}
 
