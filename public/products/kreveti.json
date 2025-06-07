@@ -1,0 +1,404 @@
+[
+  {
+    "id": "francuski-ležaj-venecia",
+    "naziv": "Francuski ležaj Venecia",
+    "opis": "Francuski ležaj Venecia - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 790.0,
+    "staraCijena": null,
+    "slike": [
+      "francuski-lezaj-venecija.png",
+      "francuski-lezaj-venecija-2.png",
+      "francuski-lezaj-venecija-3.png",
+      "francuski-lezaj-venecija-4.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": true,
+    "istaknut": true,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduka za odlaganje stvari.",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "francuski-ležaj-devoution",
+    "naziv": "Francuski ležaj Devoution",
+    "opis": "Francuski ležaj Devoution - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 700.0,
+    "staraCijena": null,
+    "slike": [
+      "francuski-lezaj-devoution.png",
+      "francuski-lezaj-devoution-2.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduka za odlaganje stvari.",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-cester",
+    "naziv": "Krevet Cester",
+    "opis": "Krevet Cester - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1650.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-cester.png",
+      "krevet-cester-2.png",
+      "krevet-cester-3.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduka za odlaganje stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "francuz-150",
+    "naziv": "Francuz 150",
+    "opis": "Francuz 150 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 611.0,
+    "staraCijena": null,
+    "slike": [
+      "francuz-150.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "150 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduka za odlaganje stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-slagani-lato",
+    "naziv": "Krevet slagani lato",
+    "opis": "Krevet slagani lato - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1340.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-slagani-lato.png",
+      "krevet-slagani-2.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "180 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-solo",
+    "naziv": "Krevet Solo",
+    "opis": "Krevet slagani lato - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 525.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-solo.png",
+      "krevet-solo-2.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "90 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "Bonell žičano jezgro i Hr spužva za dugotrajnost.",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-samac",
+    "naziv": "Krevet Samac",
+    "opis": "Krevet Samac - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 470.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-samac.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "90 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "Bonell žičano jezgro i Hr spužva za dugotrajnos",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-stela",
+    "naziv": "Krevet Stela",
+    "opis": "Krevet Stela - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 700.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "90 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "Bonell žičano jezgro i Hr spužva za dugotrajnost.",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-nora",
+    "naziv": "Krevet Nora",
+    "opis": "Krevet Nora - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 880.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-nora.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "90 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje ladicu za stvari. Mogućnost postavljanja dodatnog madraca.",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "francuski-ležaj-vojo",
+    "naziv": "Francuski ležaj Vojo",
+    "opis": "Francuski ležaj Vojo- savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1295.0,
+    "staraCijena": null,
+    "slike": [
+      "francuski-lezaj-vojo.png",
+      "francuski-lezaj-vojo.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-lato",
+    "naziv": "Krevet lato",
+    "opis": "Krevet lato - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1295.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-lato.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-kristy-lato",
+    "naziv": "Krevet Kristy lato",
+    "opis": "Krevet Kristy lato - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1250.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-kristy-lato.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-rombdugme",
+    "naziv": "Krevet romb/dugme",
+    "opis": "Krevet romb/dugme - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1250.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-romb/dugme.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "francuski-ležaj-slagani",
+    "naziv": "Francuski ležaj slagani",
+    "opis": "Francuski ležaj slagani - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1200.0,
+    "staraCijena": null,
+    "slike": [
+      "francuski-lezaj-slagani.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "160 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "bonell žičano jezgro + HR spužva za dugotrajnost.",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "krevet-london",
+    "naziv": "Krevet London",
+    "opis": "Krevet London - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 2000.0,
+    "staraCijena": null,
+    "slike": [
+      "krevet-london.png",
+      "krevet-london-2.png",
+      "krevet-london-3.png",
+      "krevet-london-4.png"
+    ],
+    "kategorije": [
+      "Kreveti"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [
+      { "naziv": "Širina", "vrijednost": "180 cm" },
+      { "naziv": "Dubina", "vrijednost": "200 cm" }
+    ],
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "/",
+    "prostorZaOdlaganje": "Posjeduje sanduk za stvari",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  }
+]

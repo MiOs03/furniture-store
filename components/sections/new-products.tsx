@@ -1,39 +1,14 @@
+"use client"
+
+import { useAllProducts } from "@/lib/products"
+import ProductCard from "./product-card"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import ProductCard from "./product-card"
-
 export default function NewProducts() {
-  // Sample new products
-  const newProducts = [
-    {
-      id: 9,
-      name: "Helsingborg Stol",
-      price: 799,
-      description: "Minimalistički stol sa drvenom osnovom i glatkim rubovima i prirodnim obradom.",
-      category: "living-room",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    {
-      id: 10,
-      name: "Kiruna Stol s lampom",
-      price: 349,
-      oldPrice: 449,
-      description: "Prilagodljivi stol sa lampom sa brončanim detaljima i tkanom šeširom.",
-      category: "lighting",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    {
-      id: 11,
-      name: "Luleå Stol",
-      price: 399,
-      description: "Stol sa skrivenim skladištenjem",
-      category: "living-room",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    
-  ]
+  const { products, loading, error } = useAllProducts()
+  const newProducts = products.filter((p) => p.jeNov)
 
   return (
     <section className="bg-stone-50 py-16 md:py-24">
@@ -50,12 +25,19 @@ export default function NewProducts() {
             </Link>
           </Button>
         </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {newProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="py-12 text-center">Učitavanje...</div>
+        ) : error ? (
+          <div className="py-12 text-center text-red-500">{error}</div>
+        ) : newProducts.length === 0 ? (
+          <div className="py-12 text-center text-muted-foreground">Nema novih proizvoda.</div>
+        ) : (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {newProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

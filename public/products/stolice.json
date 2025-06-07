@@ -1,0 +1,25 @@
+[
+  {
+    "id": "stolica-mona-romb",
+    "naziv": "Stolica Mona romb",
+    "opis": "Stolica Mona romb - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 0.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-mona-romb.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": [],
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "",
+    "punjenje": "",
+    "stranaGarniture": "",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  }
+]

@@ -9,13 +9,13 @@ import { useToast } from "@/components/ui/use-toast"
 
 interface AddToCartButtonProps {
   product: {
-    id: number
-    name: string
-    price: number
-    image: string
-    color?: string
-    material?: string
-    dimensions?: string
+    id: string | number
+    naziv: string
+    cijena: number
+    slika: string
+    boje?: { naziv: string; hex: string }[]
+    materijali?: string[]
+    dimenzije?: { naziv: string; vrijednost: string }[]
   }
   variant?: "default" | "secondary" | "outline" | "ghost"
   size?: "default" | "sm" | "lg"
@@ -34,20 +34,20 @@ export function AddToCartButton({
     setIsLoading(true)
     try {
       addToCart({
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image,
+        id: String(product.id),
+        name: product.naziv,
+        price: product.cijena,
+        image: product.slika,
         quantity: 1,
         customizations: {
-          color: product.color,
-          material: product.material,
-          dimensions: product.dimensions,
+          colors: product.boje,
+          materials: product.materijali,
+          dimensions: product.dimenzije,
         },
       })
       toast({
         title: "Proizvod dodan u korpu",
-        description: `${product.name} je uspješno dodan u vašu korpu.`,
+        description: `${product.naziv} je uspješno dodan u vašu korpu.`,
       })
     } catch (error) {
       toast({

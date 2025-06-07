@@ -20,8 +20,8 @@ export async function POST(request: NextRequest) {
 
     const { firstName, lastName, email: senderEmail, message } = body;
 
-    if (!firstName || !lastName || !senderEmail || !message) {
-      console.error('Missing required fields:', { firstName, lastName, senderEmail, message });
+    if (!firstName || !lastName || !message) {
+      console.error('Missing required fields:', { firstName, lastName, message });
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
@@ -38,12 +38,12 @@ export async function POST(request: NextRequest) {
 
     console.log('Sending email to:', companyEmail);
     console.log('From email:', fromEmail);
-    console.log('Reply to:', senderEmail);
+    console.log('Reply to:', senderEmail || companyEmail);
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: [companyEmail],
-      replyTo: senderEmail,
+      replyTo: senderEmail || companyEmail,
       subject: emailSubject,
       text: emailText,
     });

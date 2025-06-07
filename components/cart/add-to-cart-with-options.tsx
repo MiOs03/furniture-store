@@ -11,7 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface AddToCartWithOptionsProps {
-  productId: number
+  productId: string | number
   name: string
   price: number
   image: string
@@ -19,6 +19,7 @@ interface AddToCartWithOptionsProps {
   materials: string[]
   dimensions: string[]
   buttonClassName?: string
+  'aria-label'?: string
 }
 
 export default function AddToCartWithOptions({
@@ -39,7 +40,7 @@ export default function AddToCartWithOptions({
     setIsLoading(true)
     try {
       await addToCart({
-        id: productId,
+        id: String(productId),
         name,
         price,
         image,

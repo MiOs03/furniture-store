@@ -44,7 +44,7 @@ export default function PlocastiOrderRequestForm() {
     }
   }
 
-  const isFormValid = form.name.trim() && form.email.trim() && form.phone.trim() && form.address.trim() && form.message.trim();
+  const isFormValid = form.name.trim() && form.phone.trim() && form.address.trim() && form.message.trim();
 
   if (submitted) {
     return (
@@ -65,7 +65,7 @@ export default function PlocastiOrderRequestForm() {
         </div>
         <div>
           <label className="block mb-1 font-medium">Email</label>
-          <input name="email" type="email" required className="w-full border rounded px-3 py-2" value={form.email} onChange={handleChange} />
+          <input name="email" type="email" className="w-full border rounded px-3 py-2" value={form.email} onChange={handleChange} />
         </div>
         <div>
           <label className="block mb-1 font-medium">Telefon</label>

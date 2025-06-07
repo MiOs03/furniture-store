@@ -245,7 +245,6 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              required
             />
           </div>
           <div className="space-y-2">

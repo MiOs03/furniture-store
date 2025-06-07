@@ -17,6 +17,12 @@ function calculateDeliveryCost(km: string | number) {
   return Math.round(num * 1.5 * 100) / 100
 }
 
+function getValidImageSrc(src: string | undefined) {
+  if (!src || typeof src !== "string" || !src.trim()) return "/placeholder.svg";
+  if (!src.startsWith("/")) return `/images/products/${src}`;
+  return src;
+}
+
 export default function Cart() {
   const { items, removeItem, updateQuantity, total } = useCart()
   const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +31,7 @@ export default function Cart() {
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
-  const handleQuantityChange = (id: number, newQuantity: number) => {
+  const handleQuantityChange = (id: string | number, newQuantity: number) => {
     if (newQuantity < 1) return
     updateQuantity(id, newQuantity)
   }
@@ -75,7 +81,7 @@ export default function Cart() {
                       <div key={`${item.id}-${JSON.stringify(item.customizations)}`} className="flex space-x-4">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border">
                           <Image
-                            src={item.image || "/placeholder.svg"}
+                            src={getValidImageSrc(item.image)}
                             alt={item.name}
                             width={100}
                             height={100}

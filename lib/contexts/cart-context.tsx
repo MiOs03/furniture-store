@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react"
 
 interface CartItem {
-  id: number
+  id: string | number
   name: string
   price: number
   image: string
@@ -18,8 +18,8 @@ interface CartItem {
 interface CartContextType {
   items: CartItem[]
   addToCart: (item: CartItem) => void
-  removeItem: (id: number) => void
-  updateQuantity: (id: number, quantity: number) => void
+  removeItem: (id: string | number) => void
+  updateQuantity: (id: string | number, quantity: number) => void
   clearCart: () => void
   total: number
 }
@@ -71,13 +71,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
     })
   }
 
-  const removeItem = (id: number) => {
-    setItems((currentItems) => currentItems.filter((item) => item.id !== id))
+  const removeItem = (id: string | number) => {
+    setItems((currentItems) => currentItems.filter((item) => String(item.id) !== String(id)))
   }
 
-  const updateQuantity = (id: number, quantity: number) => {
+  const updateQuantity = (id: string | number, quantity: number) => {
     setItems((currentItems) =>
-      currentItems.map((item) => (item.id === id ? { ...item, quantity } : item))
+      currentItems.map((item) => (String(item.id) === String(id) ? { ...item, quantity } : item))
     )
   }
 

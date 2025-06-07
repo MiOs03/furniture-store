@@ -26,6 +26,7 @@ export default function ContactPage() {
     lastName: "",
     email: "",
     message: "",
+    phone: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -64,7 +65,7 @@ export default function ContactPage() {
         description: "Hvala vam na poruci. Odgovorit ćemo uskoro.",
       });
       setIsSubmitted(true);
-      setFormData({ firstName: "", lastName: "", email: "", message: "" }); // Clear form
+      setFormData({ firstName: "", lastName: "", email: "", message: "", phone: "" }); // Clear form
     } catch (error: any) {
       toast({
         title: "Greška",
@@ -76,7 +77,7 @@ export default function ContactPage() {
     }
   };
 
-  const isContactFormValid = formData.firstName.trim() && formData.lastName.trim() && formData.email.trim() && formData.message.trim();
+  const isContactFormValid = formData.firstName.trim() && formData.lastName.trim() && formData.phone.trim() && formData.message.trim();
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -129,6 +130,16 @@ export default function ContactPage() {
                           placeholder="m@primjer.com"
                           type="email"
                           value={formData.email}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Telefon</Label>
+                        <Input
+                          id="phone"
+                          placeholder="Unesite vaš broj telefona"
+                          type="tel"
+                          value={formData.phone}
                           onChange={handleChange}
                           required
                         />

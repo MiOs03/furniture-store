@@ -1,45 +1,14 @@
+"use client"
+
+import { useAllProducts } from "@/lib/products"
+import ProductCard from "./product-card"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import ProductCard from "./product-card"
-
 export default function FeaturedProducts() {
-  // Sample featured products
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "Oslo Lounge Chair",
-      price: 1299,
-      description: "Udobna garnitura sa drvenom osnovom i kaučnom tkaninom.",
-      category: "living-room",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    {
-      id: 2,
-      name: "Bergen Stol",
-      price: 1899,
-      description: "Prošireni stol sa drvenom osnovom i glatkim rubovima i prirodnim obradom.",
-      category: "dining",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    {
-      id: 3,
-      name: "Stockholm Krevet",
-      price: 2499,
-      description: "Krevet sa drvenom osnovom i LED osvjetljenjem.",
-      category: "bedroom",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-    {
-      id: 4,
-      name: "Fjord Stol",
-      price: 1199,
-      description: "Minimalistički stol sa upravljanjem kabelima i prilagodljivom visinom.",
-      category: "office",
-      image: "/placeholder.svg?height=600&width=600",
-    },
-  ]
+  const { products, loading, error } = useAllProducts()
+  const featuredProducts = products.filter((p) => p.istaknut)
 
   return (
     <section className="py-16 md:py-24">
@@ -55,12 +24,19 @@ export default function FeaturedProducts() {
             </Link>
           </Button>
         </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="py-12 text-center">Učitavanje...</div>
+        ) : error ? (
+          <div className="py-12 text-center text-red-500">{error}</div>
+        ) : featuredProducts.length === 0 ? (
+          <div className="py-12 text-center text-muted-foreground">Nema istaknutih proizvoda.</div>
+        ) : (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

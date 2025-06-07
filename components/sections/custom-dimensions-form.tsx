@@ -21,6 +21,9 @@ import {
 } from "@/components/ui/dialog"
 import { toast } from "@/components/ui/use-toast"
 import { Product } from "@/lib/types"
+import { useAllProducts } from '@/lib/products'
+import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
 interface CustomDimensionsFormProps {
   productName: string
@@ -197,21 +200,38 @@ ${extraFields}
   }
 
   // Validation logic for enabling/disabling send buttons
-  const isFormValid = (() => {
+  // Main form validation (for opening dialog)
+  const isMainFormValid = (() => {
     if (isStol) {
-      return selectedColor.trim() && dimensions.width && dimensions.depth && dimensions.height;
+      return dimensions.width && dimensions.depth && dimensions.height;
     }
     if (isStolica) {
-      return selectedColor.trim() && selectedMaterial;
+      return selectedMaterial;
     }
     if (isUgaonaOrTdf) {
-      return selectedColor.trim() && selectedMaterial && punjenje && dimensions.width && dimensions.depth && dimensions.height && opcije[0];
+      return selectedMaterial && punjenje && dimensions.width && dimensions.depth && dimensions.height && opcije[0];
     }
     if (isKrevet) {
-      return selectedColor.trim() && selectedMaterial && madracOpcija && krevetOpcija && dimensions.width && dimensions.depth && dimensions.height;
+      return selectedMaterial && madracOpcija && krevetOpcija && dimensions.width && dimensions.depth && dimensions.height;
     }
-    // Default: require color and material and dimensions
-    return selectedColor.trim() && selectedMaterial && dimensions.width && dimensions.depth && dimensions.height;
+    return selectedMaterial && dimensions.width && dimensions.depth && dimensions.height;
+  })();
+
+  // Dialog form validation (for submitting request)
+  const isDialogFormValid = (() => {
+    if (isStol) {
+      return dimensions.width && dimensions.depth && dimensions.height && contactInfo.name.trim() && contactInfo.phone.trim();
+    }
+    if (isStolica) {
+      return selectedMaterial && contactInfo.name.trim() && contactInfo.phone.trim();
+    }
+    if (isUgaonaOrTdf) {
+      return selectedMaterial && punjenje && dimensions.width && dimensions.depth && dimensions.height && opcije[0] && contactInfo.name.trim() && contactInfo.phone.trim();
+    }
+    if (isKrevet) {
+      return selectedMaterial && madracOpcija && krevetOpcija && dimensions.width && dimensions.depth && dimensions.height && contactInfo.name.trim() && contactInfo.phone.trim();
+    }
+    return selectedMaterial && dimensions.width && dimensions.depth && dimensions.height && contactInfo.name.trim() && contactInfo.phone.trim();
   })();
 
   return (
@@ -314,7 +334,7 @@ ${extraFields}
                   {/* Request Custom Quote Button */}
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                      <Button className="mt-2" disabled={!isFormValid}>Zatraži prilagođenu ponudu</Button>
+                      <Button className="mt-2" disabled={!isMainFormValid}>Zatraži prilagođenu ponudu</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px]">
                       <DialogHeader>
@@ -338,22 +358,22 @@ ${extraFields}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="email">Email adresa</Label>
+                              <Label htmlFor="email">Email</Label>
                               <Input
                                 id="email"
                                 name="email"
                                 type="email"
-                                required
+                                placeholder="Unesite vašu email adresu (opcionalno)"
                                 value={contactInfo.email}
                                 onChange={handleContactChange}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="phone">Telefon (neobavezno)</Label>
+                              <Label htmlFor="phone">Telefon (obavezno)</Label>
                               <Input id="phone" name="phone" value={contactInfo.phone} onChange={handleContactChange} />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="message">Dodatne informacije (neobavezno)</Label>
+                              <Label htmlFor="message">Dodatne informacije </Label>
                               <Textarea
                                 id="message"
                                 name="message"
@@ -392,7 +412,7 @@ ${extraFields}
                           </div>
 
                           <DialogFooter>
-                            <Button type="submit" disabled={!isFormValid}>Pošalji zahtjev</Button>
+                            <Button type="submit" disabled={!isDialogFormValid}>Pošalji zahtjev</Button>
                           </DialogFooter>
                         </form>
                       ) : (
@@ -479,7 +499,7 @@ ${extraFields}
                   {/* Request Custom Quote Button */}
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                      <Button className="mt-2" disabled={!isFormValid}>Zatraži prilagođenu ponudu</Button>
+                      <Button className="mt-2" disabled={!isMainFormValid}>Zatraži prilagođenu ponudu</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px]">
                       <DialogHeader>
@@ -503,22 +523,22 @@ ${extraFields}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="email">Email adresa</Label>
+                              <Label htmlFor="email">Email</Label>
                               <Input
                                 id="email"
                                 name="email"
                                 type="email"
-                                required
+                                placeholder="Unesite vašu email adresu (opcionalno)"
                                 value={contactInfo.email}
                                 onChange={handleContactChange}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="phone">Telefon (neobavezno)</Label>
+                              <Label htmlFor="phone">Telefon (obavezno)</Label>
                               <Input id="phone" name="phone" value={contactInfo.phone} onChange={handleContactChange} />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="message">Dodatne informacije (neobavezno)</Label>
+                              <Label htmlFor="message">Dodatne informacije</Label>
                               <Textarea
                                 id="message"
                                 name="message"
@@ -546,7 +566,7 @@ ${extraFields}
                           </div>
 
                           <DialogFooter>
-                            <Button type="submit" disabled={!isFormValid}>Pošalji zahtjev</Button>
+                            <Button type="submit" disabled={!isDialogFormValid}>Pošalji zahtjev</Button>
                           </DialogFooter>
                         </form>
                       ) : (
@@ -609,7 +629,7 @@ ${extraFields}
                   {/* Material Options */}
                   <div>
                     <h3 className="mb-3 text-sm font-medium">Materijal</h3>
-                    <RadioGroup value={selectedMaterial} onValueChange={handleMaterialChange}>
+                    <RadioGroup value={selectedMaterial} onValueChange={handleMaterialChange} required>
                       <div className="flex flex-wrap gap-2">
                         {availableMaterials.map((material) => (
                           <div key={material} className="flex items-center">
@@ -711,13 +731,17 @@ ${extraFields}
                         <RadioGroupItem value="oboje" id="opcija3" />
                         <Label htmlFor="opcija3" className="ml-2">Oboje</Label>
                       </div>
+                      <div>
+                        <RadioGroupItem value="fixno" id="opcija4" />
+                        <Label htmlFor="opcija4" className="ml-2">Fixno (bez sanduka/razvlačenja)</Label>
+                      </div>
                     </RadioGroup>
                   </div>
 
                   {/* Request Custom Quote Button */}
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                      <Button className="mt-2" disabled={!isFormValid}>Zatraži prilagođenu ponudu</Button>
+                      <Button className="mt-2" disabled={!isMainFormValid}>Zatraži prilagođenu ponudu</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px]">
                       <DialogHeader>
@@ -741,22 +765,22 @@ ${extraFields}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="email">Email adresa</Label>
+                              <Label htmlFor="email">Email</Label>
                               <Input
                                 id="email"
                                 name="email"
                                 type="email"
-                                required
+                                placeholder="Unesite vašu email adresu (opcionalno)"
                                 value={contactInfo.email}
                                 onChange={handleContactChange}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="phone">Telefon (neobavezno)</Label>
+                              <Label htmlFor="phone">Telefon (obavezno)</Label>
                               <Input id="phone" name="phone" value={contactInfo.phone} onChange={handleContactChange} />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="message">Dodatne informacije (neobavezno)</Label>
+                              <Label htmlFor="message">Dodatne informacije</Label>
                               <Textarea
                                 id="message"
                                 name="message"
@@ -817,7 +841,7 @@ ${extraFields}
                           </div>
 
                           <DialogFooter>
-                            <Button type="submit" disabled={!isFormValid}>Pošalji zahtjev</Button>
+                            <Button type="submit" disabled={!isDialogFormValid}>Pošalji zahtjev</Button>
                           </DialogFooter>
                         </form>
                       ) : (
@@ -843,6 +867,12 @@ ${extraFields}
                       <li>Prilagođena usluga od našeg tima dizajnera</li>
                     </ul>
                   </div>
+
+                  {/* Fixno (bez sanduka/razvlačenja) */}
+                  <div className="mb-2 text-base font-semibold text-accent-orange">Fixno (bez sanduka/razvlačenja)</div>
+
+                  {/* Dostava do 30 km od Banjaluke */}
+                  <div className="mb-2 text-sm text-muted-foreground">Dostava do 30 km od Banjaluke</div>
                 </>
               ) : isKrevet ? (
                 // CATEGORY: KREVETI
@@ -988,7 +1018,7 @@ ${extraFields}
                   {/* Request Custom Quote Button */}
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                      <Button className="mt-2" disabled={!isFormValid}>Zatraži prilagođenu ponudu</Button>
+                      <Button className="mt-2" disabled={!isMainFormValid}>Zatraži prilagođenu ponudu</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px]">
                       <DialogHeader>
@@ -1012,22 +1042,22 @@ ${extraFields}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="email">Email adresa</Label>
+                              <Label htmlFor="email">Email</Label>
                               <Input
                                 id="email"
                                 name="email"
                                 type="email"
-                                required
+                                placeholder="Unesite vašu email adresu (opcionalno)"
                                 value={contactInfo.email}
                                 onChange={handleContactChange}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="phone">Telefon (neobavezno)</Label>
+                              <Label htmlFor="phone">Telefon (obavezno)</Label>
                               <Input id="phone" name="phone" value={contactInfo.phone} onChange={handleContactChange} />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="message">Dodatne informacije (neobavezno)</Label>
+                              <Label htmlFor="message">Dodatne informacije</Label>
                               <Textarea
                                 id="message"
                                 name="message"
@@ -1084,7 +1114,7 @@ ${extraFields}
                           </div>
 
                           <DialogFooter>
-                            <Button type="submit" disabled={!isFormValid}>Pošalji zahtjev</Button>
+                            <Button type="submit" disabled={!isDialogFormValid}>Pošalji zahtjev</Button>
                           </DialogFooter>
                         </form>
                       ) : (
@@ -1221,7 +1251,7 @@ ${extraFields}
                   {/* Request Custom Quote Button */}
                   <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                     <DialogTrigger asChild>
-                      <Button className="mt-2" disabled={!isFormValid}>Zatraži prilagođenu ponudu</Button>
+                      <Button className="mt-2" disabled={!isMainFormValid}>Zatraži prilagođenu ponudu</Button>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[500px]">
                       <DialogHeader>
@@ -1245,22 +1275,22 @@ ${extraFields}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="email">Email adresa</Label>
+                              <Label htmlFor="email">Email</Label>
                               <Input
                                 id="email"
                                 name="email"
                                 type="email"
-                                required
+                                placeholder="Unesite vašu email adresu (opcionalno)"
                                 value={contactInfo.email}
                                 onChange={handleContactChange}
                               />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="phone">Telefon (neobavezno)</Label>
+                              <Label htmlFor="phone">Telefon (obavezno)</Label>
                               <Input id="phone" name="phone" value={contactInfo.phone} onChange={handleContactChange} />
                             </div>
                             <div className="space-y-2">
-                              <Label htmlFor="message">Dodatne informacije (neobavezno)</Label>
+                              <Label htmlFor="message">Dodatne informacije</Label>
                               <Textarea
                                 id="message"
                                 name="message"
@@ -1304,7 +1334,7 @@ ${extraFields}
                           </div>
 
                           <DialogFooter>
-                            <Button type="submit" disabled={!isFormValid}>Pošalji zahtjev</Button>
+                            <Button type="submit" disabled={!isDialogFormValid}>Pošalji zahtjev</Button>
                           </DialogFooter>
                         </form>
                       ) : (

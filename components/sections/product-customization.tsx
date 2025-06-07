@@ -10,16 +10,16 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 interface ProductCustomizationProps {
   product: {
-    colors?: { name: string; hex: string }[]
-    materials?: string[]
-    dimensions?: { name: string; value: string }[]
+    boje?: { naziv: string; hex: string }[]
+    materijali?: string[]
+    dimenzije?: { naziv: string; vrijednost: string }[]
     // Add other customization options as needed
   }
 }
 
 export default function ProductCustomization({ product }: ProductCustomizationProps) {
-  const [selectedColor, setSelectedColor] = useState(product.colors?.[0]?.name || "")
-  const [selectedMaterial, setSelectedMaterial] = useState(product.materials?.[0] || "")
+  const [selectedColor, setSelectedColor] = useState(product.boje?.[0]?.naziv || "")
+  const [selectedMaterial, setSelectedMaterial] = useState(product.materijali?.[0] || "")
   const [selectedSize, setSelectedSize] = useState("Standard")
 
   // Additional customization options
@@ -48,22 +48,22 @@ export default function ProductCustomization({ product }: ProductCustomizationPr
   return (
     <div className="space-y-6">
       {/* Color Options */}
-      {product.colors && product.colors.length > 0 && (
+      {product.boje && product.boje.length > 0 && (
         <div>
           <h3 className="mb-3 text-sm font-medium">Color</h3>
           <div className="flex space-x-2">
-            {product.colors.map((color) => (
+            {product.boje.map((color) => (
               <button
-                key={color.name}
+                key={color.naziv}
                 className={`h-8 w-8 rounded-full border ${
-                  selectedColor === color.name ? "ring-2 ring-black ring-offset-2" : ""
+                  selectedColor === color.naziv ? "ring-2 ring-black ring-offset-2" : ""
                 }`}
                 style={{ backgroundColor: color.hex }}
-                onClick={() => setSelectedColor(color.name)}
-                aria-label={color.name}
+                onClick={() => setSelectedColor(color.naziv)}
+                aria-label={color.naziv}
               >
-                {selectedColor === color.name && (
-                  <Check className={`h-4 w-4 ${color.name === "White" ? "text-black" : "text-white"}`} />
+                {selectedColor === color.naziv && (
+                  <Check className={`h-4 w-4 ${color.naziv === "White" ? "text-black" : "text-white"}`} />
                 )}
               </button>
             ))}
@@ -73,12 +73,12 @@ export default function ProductCustomization({ product }: ProductCustomizationPr
       )}
 
       {/* Material Options */}
-      {product.materials && product.materials.length > 0 && (
+      {product.materijali && product.materijali.length > 0 && (
         <div>
           <h3 className="mb-3 text-sm font-medium">Material</h3>
           <RadioGroup value={selectedMaterial} onValueChange={setSelectedMaterial}>
             <div className="flex flex-wrap gap-2">
-              {product.materials.map((material) => (
+              {product.materijali.map((material) => (
                 <div key={material} className="flex items-center">
                   <RadioGroupItem value={material} id={`material-${material}`} className="sr-only" />
                   <Label
