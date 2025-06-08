@@ -30,7 +30,7 @@ export default function AboutPage() {
               </div>
             </div>
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="/images/mainpage/483507252_1052502180245030_3882945459113241917_n.jpg"
               alt="Zanatlija koji radi na drvenom namještaju"
               width={600}
               height={800}
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-8 text-3xl font-light tracking-tight sm:text-4xl">Naša Misija</h2>
               <p className="mb-6 text-xl text-muted-foreground">
-              “U svakom komadu drveta vidimo mogućnost da stvorimo nečiji dom, nečiju svakodnevicu, nečiju priču.”              </p>
+              "U svakom komadu drveta vidimo mogućnost da stvorimo nečiji dom, nečiju svakodnevicu, nečiju priču."              </p>
               <p className="text-muted-foreground">
               U VSistemu, naša misija je da svaki komad namještaja bude više od proizvoda – da bude osjećaj doma, izraz identiteta i odraz kvaliteta. Ne pravimo serijske komade bez duše; mi stvaramo namještaj po mjeri, izrađen precizno, s razlogom i za konkretan prostor – vaš prostor.
               </p>

@@ -33,11 +33,11 @@ export default function AboutUsPreview() {
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/placeholder.svg?height=600&width=800"
-              alt="Our workshop and craftspeople"
-              width={800}
+              src="/images/mainpage/483507252_1052502180245030_3882945459113241917_n.jpg"
+              alt="Naša priča - VSistem radionica i tim"
+              width={600}
               height={600}
-              className="h-auto w-full rounded-lg object-cover"
+              className="h-[300px] w-[300px] md:h-[600px] md:w-[600px] rounded-lg object-cover mx-auto"
             />
           </div>
         </div>

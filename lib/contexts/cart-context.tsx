@@ -9,9 +9,9 @@ interface CartItem {
   image: string
   quantity: number
   customizations?: {
-    color?: string
-    material?: string
-    dimensions?: string
+    colors?: Array<{ naziv: string; hex: string }>
+    materials?: string[]
+    dimensions?: Array<{ naziv: string; vrijednost: string }>
   }
 }
 
@@ -61,10 +61,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const addToCart = (item: CartItem) => {
     setItems((currentItems) => {
-      const existingItem = currentItems.find((i) => i.id === item.id)
+      const existingItem = currentItems.find((i) => String(i.id) === String(item.id))
       if (existingItem) {
         return currentItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i
+          String(i.id) === String(item.id)
+            ? { ...i, quantity: i.quantity + item.quantity }
+            : i
         )
       }
       return [...currentItems, item]

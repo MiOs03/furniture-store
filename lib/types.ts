@@ -5,25 +5,22 @@ export interface Product {
   cijena: number
   staraCijena?: number
   opis: string
-  puniOpis: string
+  puniOpis?: string
   kategorije: string[]
   slika: string
-  slike: string[]
-  ocjena: number
-  brojRecenzija: number
-  karakteristike: string[]
-  dimenzije: { naziv: string; vrijednost: string }[]
-  boje: { naziv: string; hex: string }[]
-  materijali: string[]
-  uputstvaZaNjegu: string
-  recenzije: {
-    autor: string
-    ocjena: number
-    datum: string
-    sadrzaj: string
-  }[]
+  slike?: string[]
+  ocjena?: number
+  brojRecenzija?: number
+  karakteristike?: string[]
+  dimenzije?: Array<{ naziv: string; vrijednost: string }>
+  boje?: Array<{ naziv: string; hex: string }>
+  materijali?: string[]
+  uputstvaZaNjegu?: string
+  recenzije?: any[]
   jeNov?: boolean
   istaknut?: boolean
+  createdAt?: string
+  popularityScore?: number
 }
 
 export interface CustomizationType {

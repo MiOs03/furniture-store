@@ -3,14 +3,19 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ShoppingBag } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import Cart from "@/components/cart/cart"
+import { useCart } from "@/lib/contexts/cart-context"
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isCartOpen, setIsCartOpen] = useState(false)
   const pathname = usePathname()
+  const { items } = useCart()
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
   const isActive = (path: string) => pathname === path
 
@@ -47,11 +52,47 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex md:items-center md:gap-4">
-            <Cart />
+            <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="relative">
+                  <ShoppingBag className="h-5 w-5" />
+                  {totalItems > 0 && (
+                    <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white">
+                      {totalItems}
+                    </span>
+                  )}
+                  <span className="sr-only">Otvori korpu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="flex w-full flex-col sm:max-w-md">
+                <SheetHeader>
+                  <SheetTitle>Vaša korpa ({totalItems})</SheetTitle>
+                </SheetHeader>
+                <Cart onClose={() => setIsCartOpen(false)} />
+              </SheetContent>
+            </Sheet>
           </div>
 
           <div className="flex items-center gap-4 md:hidden">
-            <Cart />
+            <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="relative">
+                  <ShoppingBag className="h-5 w-5" />
+                  {totalItems > 0 && (
+                    <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white">
+                      {totalItems}
+                    </span>
+                  )}
+                  <span className="sr-only">Otvori korpu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="flex w-full flex-col sm:max-w-md">
+                <SheetHeader>
+                  <SheetTitle>Vaša korpa ({totalItems})</SheetTitle>
+                </SheetHeader>
+                <Cart onClose={() => setIsCartOpen(false)} />
+              </SheetContent>
+            </Sheet>
             <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(true)}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Otvori meni</span>

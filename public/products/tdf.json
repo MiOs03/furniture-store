@@ -3,34 +3,34 @@
     "id": "trosjed-ravna-linija",
     "naziv": "Trosjed Ravna linija",
     "opis": "Trosjed Ravna linija - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1050.0,
+    "cijena": 1050,
     "staraCijena": null,
     "slike": [
       "trosjed-ravna-linija.png",
-      "trosjed-ravna-linija-2.png"
+      "trosjed-ravna-linija-2.png",
+      "trosjed-ravna-linija-3"
     ],
     "kategorije": [
       "TDF"
     ],
     "novi": true,
-    "istaknut": true,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "230 cm" },
-      { "naziv": "Dubina", "vrijednost": "95 cm" }
-    ],
+    "istaknut": false,
+    "dimenzije": "230x95cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste ali i za Vas.",
     "prostorZaOdlaganje": "Ugrađen sanduk za odlaganje stvari.",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-11-06T21:56:29.801Z",
+    "popularityScore": 412
   },
   {
     "id": "garnitura-tdf-mia-2",
     "naziv": "Garnitura TDF Mia 2",
     "opis": "Garnitura TDF Mia 2 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1745.0,
+    "cijena": 1745,
     "staraCijena": null,
     "slike": [
       "garnitura-tdf-mia2.png",
@@ -41,25 +41,23 @@
       "TDF"
     ],
     "novi": false,
-    "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Trosjed", "vrijednost": "225x85 cm" },
-      { "naziv": "Dvosjed", "vrijednost": "154x85 cm" },
-      { "naziv": "Fotelja", "vrijednost": "94x85 cm" }
-    ],
+    "istaknut": true,
+    "dimenzije": "Trosjed - 225x85cmcm, dvosjed - 154x85cm, fotelja - 94x85cm",
     "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
     "funkcijaRazvlacenja": "Pretvara se u ležaj – idealno rješenje za goste",
     "prostorZaOdlaganje": "Ugrađena ladica za odlaganje stvari",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-06-12T00:39:55.469Z",
+    "popularityScore": 543
   },
   {
     "id": "garnitura-tdf-mia",
     "naziv": "Garnitura TDF Mia",
     "opis": "Garnitura TDF Mia - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1395.0,
+    "cijena": 1395,
     "staraCijena": null,
     "slike": [
       "garnitura-tdf-mia.png"
@@ -68,25 +66,23 @@
       "TDF"
     ],
     "novi": false,
-    "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Trosjed", "vrijednost": "225x85 cm" },
-      { "naziv": "Dvosjed", "vrijednost": "154x85 cm" },
-      { "naziv": "Fotelja", "vrijednost": "94x85 cm" }
-    ],
+    "istaknut": true,
+    "dimenzije": "Trosjed - 225x85cmcm, dvosjed - 154x85cm, fotelja - 94x85cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste ali i za Vas.",
     "prostorZaOdlaganje": "Ugrađen sanduk za odlaganje stvari.",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-03-06T23:08:41.751Z",
+    "popularityScore": 174
   },
   {
     "id": "garnitura-tdf-bueno",
     "naziv": "Garnitura TDF Bueno",
     "opis": "Garnitura TDF Bueno - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1835.0,
+    "cijena": 1835,
     "staraCijena": null,
     "slike": [
       "garnitura-tdf-bueon.png"
@@ -94,26 +90,24 @@
     "kategorije": [
       "TDF"
     ],
-    "novi": false,
+    "novi": true,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Trosjed", "vrijednost": "237x100 cm" },
-      { "naziv": "Dvosjed", "vrijednost": "152x100 cm" },
-      { "naziv": "Fotelja", "vrijednost": "100x100 cm" }
-    ],
+    "dimenzije": "Trosjed - 237x100cm, dvosjed - 152x100cm, fotelja - 100x100cm",
     "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
     "funkcijaRazvlacenja": "Pretvara se u ležaj – idealno rješenje za goste",
     "prostorZaOdlaganje": "Ugrađena ladica za odlaganje stvari",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-12-11T18:27:36.388Z",
+    "popularityScore": 391
   },
   {
     "id": "garnitura-tdf-andrea",
     "naziv": "Garnitura TDF Andrea",
     "opis": "Garnitura TDF Andrea - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1795.0,
+    "cijena": 1795,
     "staraCijena": null,
     "slike": [
       "garnitura-tdf-andrea.png"
@@ -123,24 +117,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Trosjed", "vrijednost": "249x85 cm" },
-      { "naziv": "Dvosjed", "vrijednost": "190x85 cm" },
-      { "naziv": "Fotelja", "vrijednost": "127x85 cm" }
-    ],
+    "dimenzije": "Trosjed - 249x85cm, dvosjed - 190x85cm, fotelja - 127x85cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste ali i za Vas.",
     "prostorZaOdlaganje": "Ugrađen sanduk za odlaganje stvari.",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-07-15T18:48:26.443Z",
+    "popularityScore": 444
   },
   {
     "id": "trosjed-barwood",
     "naziv": "Trosjed Barwood",
     "opis": "Trosjed Barwood - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 995.0,
+    "cijena": 995,
     "staraCijena": null,
     "slike": [
       "trosjed-barwood.png",
@@ -151,23 +143,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "216 cm" },
-      { "naziv": "Dubina", "vrijednost": "92 cm" }
-    ],
+    "dimenzije": "216x92cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-12-20T10:53:12.150Z",
+    "popularityScore": 834
   },
   {
     "id": "fotelja-barwood",
     "naziv": "Fotelja Barwood",
     "opis": "Fotelja Barwood - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 475.0,
+    "cijena": 475,
     "staraCijena": null,
     "slike": [
       "trosjed-barwood-2.png",
@@ -178,23 +169,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "93 cm" },
-      { "naziv": "Dubina", "vrijednost": "92 cm" }
-    ],
+    "dimenzije": "93x92cm",
     "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-04-03T23:11:24.612Z",
+    "popularityScore": 921
   },
   {
     "id": "fotelja-elegant",
     "naziv": "Fotelja Elegant",
     "opis": "Fotelja Elegant - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 545.0,
+    "cijena": 545,
     "staraCijena": null,
     "slike": [
       "fotelja-elegant.png",
@@ -206,23 +196,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "87 cm" },
-      { "naziv": "Dubina", "vrijednost": "80 cm" }
-    ],
+    "dimenzije": "87x80cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-10-15T06:37:24.121Z",
+    "popularityScore": 867
   },
   {
     "id": "djecija-sofa",
     "naziv": "Djecija Sofa",
     "opis": "Djecija Sofa - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 475.0,
+    "cijena": 475,
     "staraCijena": null,
     "slike": [
       "djecija-sofa.png",
@@ -233,23 +222,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "160 cm" },
-      { "naziv": "Dubina", "vrijednost": "86 cm" }
-    ],
+    "dimenzije": "160x86cm (kad se razvuče 205x86cm)",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "razvlačenje i sanduk za stvari",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-07-22T01:30:18.413Z",
+    "popularityScore": 571
   },
   {
     "id": "kauč-zeus",
     "naziv": "Kauč Zeus",
     "opis": "Kauč Zeus - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 585.0,
+    "cijena": 585,
     "staraCijena": null,
     "slike": [
       "kauc-zeus.png",
@@ -260,23 +248,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "225 cm" },
-      { "naziv": "Dubina", "vrijednost": "100 cm" }
-    ],
+    "dimenzije": "225x100cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "Bonell žičano jezgro i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-10-23T16:00:02.766Z",
+    "popularityScore": 507
   },
   {
     "id": "kauč-klik-klak-žič-jezgro",
     "naziv": "Kauč Klik klak žič. Jezgro",
     "opis": "Kauč Klik klak žič. jezgro - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 490.0,
+    "cijena": 490,
     "staraCijena": null,
     "slike": [
       "kauc-klik-klak.png"
@@ -286,22 +273,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Dužina", "vrijednost": "200 cm" }
-    ],
+    "dimenzije": "dužina 200cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "Bonell žičano jezgro i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-12-06T10:48:29.076Z",
+    "popularityScore": 167
   },
   {
     "id": "kauč-klik-klak-standard",
     "naziv": "Kauč Klik Klak standard",
     "opis": "Kauč Klik Klak standard- savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 330.0,
+    "cijena": 330,
     "staraCijena": null,
     "slike": [
       "kauc-klik-klak-standard.png"
@@ -311,22 +298,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Dužina", "vrijednost": "200 cm" }
-    ],
+    "dimenzije": "dužina 200cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "tvrdo sjedalo / HR spužva.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-09-25T01:24:13.613Z",
+    "popularityScore": 509
   },
   {
     "id": "dječija-fotelja-pavle",
     "naziv": "Dječija fotelja Pavle",
     "opis": "Dječija fotelja Pavle - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 140.0,
+    "cijena": 140,
     "staraCijena": null,
     "slike": [
       "djecija-fotelja-pavle.png",
@@ -337,23 +324,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "87 cm" },
-      { "naziv": "Dubina", "vrijednost": "80 cm" }
-    ],
+    "dimenzije": "87x80cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-10-19T22:59:33.451Z",
+    "popularityScore": 48
   },
   {
     "id": "trosjed-merylin",
     "naziv": "Trosjed Merylin",
     "opis": "Trosjed Merylin - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1285.0,
+    "cijena": 1285,
     "staraCijena": null,
     "slike": [
       "trosjed-merylin.png",
@@ -365,23 +351,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "245 cm" },
-      { "naziv": "Dubina", "vrijednost": "100 cm" }
-    ],
+    "dimenzije": "245x100cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "val opruge + gurne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-08-11T07:33:30.811Z",
+    "popularityScore": 947
   },
   {
     "id": "trosjed-praktik-1",
     "naziv": "Trosjed Praktik - 1",
     "opis": "Trosjed Praktik - 1 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 630.0,
+    "cijena": 630,
     "staraCijena": null,
     "slike": [
       "trosjed-praktik-630.png",
@@ -392,23 +377,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "197 cm" },
-      { "naziv": "Dubina", "vrijednost": "95 cm" }
-    ],
+    "dimenzije": "197x95cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "val opruge + gurne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-07-17T18:20:54.497Z",
+    "popularityScore": 703
   },
   {
     "id": "trosjed-praktik-2",
     "naziv": "Trosjed Praktik - 2",
     "opis": "Trosjed Praktik - 2 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 515.0,
+    "cijena": 515,
     "staraCijena": null,
     "slike": [
       "trosjed-praktik-515.png",
@@ -419,23 +403,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "197 cm" },
-      { "naziv": "Dubina", "vrijednost": "95 cm" }
-    ],
+    "dimenzije": "197x95cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "tvrdo sjedalo / HR spužva.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-07-28T02:45:19.193Z",
+    "popularityScore": 165
   },
   {
     "id": "trosjed-praktik-3",
     "naziv": "Trosjed Praktik - 3",
     "opis": "Trosjed Praktik - 3 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 730.0,
+    "cijena": 730,
     "staraCijena": null,
     "slike": [
       "trosjed-praktik-730.png",
@@ -446,23 +429,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "197 cm" },
-      { "naziv": "Dubina", "vrijednost": "95 cm" }
-    ],
+    "dimenzije": "197x95cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "Pretvara se u ležaj - idealno rješenje za goste.",
     "prostorZaOdlaganje": "Posjeduje sanduk za stvari.",
     "punjenje": "Bonell žičano jezgro + gurne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-05-03T03:37:22.324Z",
+    "popularityScore": 408
   },
   {
     "id": "fotelja-na-razvlačenje",
     "naziv": "Fotelja na razvlačenje",
     "opis": "Fotelja na razvlačenje - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Mia. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 500.0,
+    "cijena": 500,
     "staraCijena": null,
     "slike": [
       "fotelja-elegant.png",
@@ -474,23 +456,22 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "90 cm" },
-      { "naziv": "Dubina", "vrijednost": "100 cm" }
-    ],
+    "dimenzije": "90x100cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "tvrdo sjedalo / HR spužva.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-06-19T15:30:50.066Z",
+    "popularityScore": 407
   },
   {
     "id": "dvosjed-čester",
     "naziv": "Dvosjed čester",
     "opis": "Dvosjed čester - 3 - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1279.0,
+    "cijena": 1279,
     "staraCijena": null,
     "slike": [
       "dvosjed-cester.png",
@@ -501,16 +482,15 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [
-      { "naziv": "Širina", "vrijednost": "185 cm" },
-      { "naziv": "Dubina", "vrijednost": "100 cm" }
-    ],
+    "dimenzije": "185x100cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
     "funkcijaRazvlacenja": "/",
     "prostorZaOdlaganje": "/",
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-12-27T05:05:26.502Z",
+    "popularityScore": 679
   }
 ]

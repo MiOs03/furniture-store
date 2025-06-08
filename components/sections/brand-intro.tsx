@@ -40,14 +40,14 @@ export default function BrandIntro() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="grid gap-4">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/images/mainpage/485314386_3003544136474764_1817851735637426750_n.jpg"
                 alt="Zanatlija koji radi na drvenom namještaju"
                 width={300}
                 height={300}
                 className="h-auto w-full rounded-lg object-cover"
               />
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/images/mainpage/463766207_18280226821208182_156633243688455897_n.jpg"
                 alt="Uzorci drveta i dizajnerske skice"
                 width={300}
                 height={300}
@@ -56,7 +56,7 @@ export default function BrandIntro() {
             </div>
             <div className="grid content-center">
               <Image
-                src="/placeholder.svg?height=620&width=300"
+                src="/images/mainpage/467644749_18284181991208182_1855722424039659855_n.jpg"
                 alt="Gotov komad namještaja u uređenoj prostoriji"
                 width={300}
                 height={620}

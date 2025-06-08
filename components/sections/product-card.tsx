@@ -1,93 +1,82 @@
 "use client"
 
+import { Product } from "@/lib/products"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { AddToCartButton } from "@/components/cart/add-to-cart-button"
-import { useState } from "react"
+import { formatPrice } from "@/lib/utils"
+import { ShoppingCart } from "lucide-react"
+import { useCart } from "@/lib/contexts/cart-context"
 
 interface ProductCardProps {
-  product: {
-    id: string | number
-    naziv: string
-    cijena: number
-    staraCijena?: number
-    opis: string
-    kategorije: string[]
-    slika: string
-    slike?: string[]
-    ocjena?: number
-    brojRecenzija?: number
-    jeNov?: boolean
-    istaknut?: boolean
-    slug?: string
-  }
+  product: Product
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const [imgSrc, setImgSrc] = useState(product.slika || "/placeholder.svg")
-  const discount = product.staraCijena 
-    ? Math.round(((product.staraCijena - product.cijena) / product.staraCijena) * 100)
-    : 0
+  const { addToCart } = useCart()
 
-  let imageUrl = imgSrc.startsWith('/') ? imgSrc : `/images/products/${imgSrc}`;
-  if (!imgSrc) {
-    imageUrl = "/placeholder.svg";
+  // Ensure we have a valid image URL
+  const getValidImageUrl = (image: string | undefined) => {
+    if (!image) return "/placeholder.svg"
+    if (image.startsWith("http")) return image
+    if (image.startsWith("/")) return image
+    return `/images/products/${image}`
   }
 
-  // Convert product ID to number for AddToCartButton
-  const productForCart = {
-    ...product,
-    id: typeof product.id === 'string' ? parseInt(product.id, 10) : product.id
-  };
+  const imageUrl = getValidImageUrl(product.slika)
 
   return (
-    <Link 
-      href={`/products/${product.slug || String(product.id)}`}
-      className="block h-full"
-      aria-label={`View details for ${product.naziv}`}
-    >
-      <Card className="group h-full overflow-hidden rounded-lg border-none bg-surface transition-all duration-300 hover:shadow-lg">
-        <div className="relative aspect-square">
-          <img
+    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-lg">
+      <Link href={`/products/${product.slug}`} className="block">
+        <div className="relative aspect-square overflow-hidden bg-stone-50">
+          <Image
             src={imageUrl}
-            alt={product.naziv}
-            onError={() => setImgSrc("/placeholder.svg")}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            alt={`${product.naziv} - ${product.opis}`}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          {product.staraCijena && (
-            <span 
-              className="absolute right-2 top-2 rounded bg-accent px-2 py-1 text-xs font-medium text-white"
-              aria-label={`- ${discount} %`}
-            >
-              - {discount} %
-            </span>
-          )}
         </div>
-        <CardContent className="flex h-full flex-col justify-between p-4">
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-lg font-bold text-primary">{product.cijena.toLocaleString()} KM</span>
+        <CardContent className="p-4">
+          <h3 className="mb-2 text-lg font-medium transition-colors group-hover:text-primary">
+            {product.naziv}
+          </h3>
+          <p className="mb-4 text-sm text-muted-foreground line-clamp-2">
+            {product.opis}
+          </p>
+          <div className="flex items-center justify-between">
+            <div className="text-lg font-medium">
+              {formatPrice(product.cijena)}
               {product.staraCijena && (
-                <span className="text-sm text-muted-foreground line-through">
-                  {product.staraCijena.toLocaleString()} KM
+                <span className="ml-2 text-sm text-muted-foreground line-through">
+                  {formatPrice(product.staraCijena)}
                 </span>
               )}
             </div>
-            <h3 className="mb-1 text-lg font-medium line-clamp-1">{product.naziv}</h3>
-            <p className="mb-2 line-clamp-2 text-sm text-muted-foreground">{product.opis}</p>
-          </div>
-          <div className="flex items-center justify-between gap-2">
-            <div className="opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-              <AddToCartButton 
-                product={productForCart}
-                variant="secondary"
-                size="sm"
-              />
-            </div>
           </div>
         </CardContent>
-      </Card>
-    </Link>
+      </Link>
+      <CardFooter className="p-4 pt-0">
+        <Button
+          onClick={() => addToCart({
+            id: String(product.id),
+            name: product.naziv,
+            price: product.cijena,
+            image: imageUrl,
+            quantity: 1,
+            customizations: {
+              colors: product.boje,
+              materials: product.materijali,
+              dimensions: product.dimenzije,
+            },
+          })}
+          className="w-full transition-all duration-300 hover:scale-[1.02]"
+        >
+          <ShoppingCart className="mr-2 h-4 w-4" />
+          Dodaj u korpu
+        </Button>
+      </CardFooter>
+    </Card>
   )
 }

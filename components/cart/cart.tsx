@@ -3,12 +3,16 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { X, Minus, Plus, ShoppingBag } from "lucide-react"
+import { X, Minus, Plus } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { useCart } from "@/lib/contexts/cart-context"
 import CheckoutForm from "./checkout-form"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { formatPrice } from "@/lib/utils"
 
 // Helper for delivery cost
 function calculateDeliveryCost(km: string | number) {
@@ -23,13 +27,31 @@ function getValidImageSrc(src: string | undefined) {
   return src;
 }
 
-export default function Cart() {
+export default function Cart({ onClose }: { onClose?: () => void }) {
   const { items, removeItem, updateQuantity, total } = useCart()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isCheckingOut, setIsCheckingOut] = useState(false)
   const [deliveryKm, setDeliveryKm] = useState("")
+  const router = useRouter()
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
+
+  // Helper function to format customizations
+  const formatCustomizations = (customizations: any) => {
+    if (!customizations) return null
+
+    const parts = []
+
+    if (customizations.colors?.length) {
+      parts.push(`Boje: ${customizations.colors.map((c: any) => c.naziv).join(", ")}`)
+    }
+    if (customizations.materials?.length) {
+      parts.push(`Materijali: ${customizations.materials.join(", ")}`)
+    }
+    if (customizations.dimensions?.length) {
+      parts.push(`Dimenzije: ${customizations.dimensions.map((d: any) => `${d.naziv}: ${d.vrijednost}`).join(", ")}`)
+    }
+
+    return parts.length > 0 ? parts.join(" | ") : null
+  }
 
   const handleQuantityChange = (id: string | number, newQuantity: number) => {
     if (newQuantity < 1) return
@@ -38,142 +60,140 @@ export default function Cart() {
 
   const deliveryCost = calculateDeliveryCost(deliveryKm)
 
+  if (items.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center p-8 text-center">
+        <h2 className="mb-4 text-2xl font-semibold">Vaša korpa je prazna</h2>
+        <p className="mb-6 text-muted-foreground">
+          Dodajte proizvode u korpu da biste nastavili s kupovinom.
+        </p>
+        <Link href="/products">
+          <Button>Pregledaj proizvode</Button>
+        </Link>
+      </div>
+    )
+  }
+
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="relative">
-          <ShoppingBag className="h-5 w-5" />
-          {totalItems > 0 && (
-            <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-black text-xs text-white">
-              {totalItems}
-            </span>
-          )}
-          <span className="sr-only">Otvori korpu</span>
-        </Button>
-      </SheetTrigger>
-      <SheetContent className="flex w-full flex-col sm:max-w-md">
-        <SheetHeader>
-            <SheetTitle>Vaša korpa ({totalItems})</SheetTitle>
-        </SheetHeader>
-
-        {isCheckingOut ? (
-          <CheckoutForm onBack={() => setIsCheckingOut(false)} />
-        ) : (
-          <>
-            {items.length === 0 ? (
-              <div className="flex flex-1 flex-col items-center justify-center space-y-4">
-                <ShoppingBag className="h-16 w-16 text-muted-foreground" />
-                <div className="text-center">
-                  <h3 className="text-lg font-medium">Vaša korpa je prazna</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Izgleda da niste dodali nijedan proizvod u vašu korpu još.
-                  </p>
-                </div>
-                <Button asChild onClick={() => setIsOpen(false)}>
-                  <Link href="/products">Nastavi kupovati</Link>
-                </Button>
+    <div className="flex w-full flex-col sm:max-w-md">
+      <div className="space-y-4">
+        {items.map((item) => (
+          <Card key={String(item.id)} className="p-4">
+            <div className="flex gap-4">
+              <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-md">
+                <Image
+                  src={getValidImageSrc(item.image)}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
-            ) : (
-              <>
-                <div className="flex-1 overflow-y-auto py-6 min-h-0 max-h-[60vh] sm:max-h-[80vh]">
-                  <div className="space-y-6">
-                    {items.map((item) => (
-                      <div key={`${item.id}-${JSON.stringify(item.customizations)}`} className="flex space-x-4">
-                        <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border">
-                          <Image
-                            src={getValidImageSrc(item.image)}
-                            alt={item.name}
-                            width={100}
-                            height={100}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-1 flex-col">
-                          <div className="flex justify-between text-base font-medium">
-                            <h3>
-                              <Link
-                                href={`/products/${item.id}`}
-                                className="hover:underline"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {item.name}
-                              </Link>
-                            </h3>
-                            <p className="ml-4">KM {(item.price * item.quantity).toLocaleString()}</p>
-                          </div>
-
-                          {/* Customizations */}
-                          {item.customizations && (
-                            <div className="mt-1 text-sm text-muted-foreground">
-                              {item.customizations.color && <p>Boja: {item.customizations.color}</p>}
-                              {item.customizations.material && <p>Materijal: {item.customizations.material}</p>}
-                              {item.customizations.dimensions && <p>Dimenzije: {item.customizations.dimensions}</p>}
-                            </div>
-                          )}
-
-                          <div className="mt-auto flex items-center justify-between">
-                            <div className="flex items-center border rounded-md">
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                className="h-8 w-8 rounded-none rounded-l-md"
-                                onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
-                              >
-                                <Minus className="h-3 w-3" />
-                                <span className="sr-only">Smanji količinu</span>
-                              </Button>
-                              <span className="w-8 text-center text-sm">{item.quantity}</span>
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                className="h-8 w-8 rounded-none rounded-r-md"
-                                onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
-                              >
-                                <Plus className="h-3 w-3" />
-                                <span className="sr-only">Povećaj količinu</span>
-                              </Button>
-                            </div>
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              className="text-muted-foreground hover:text-foreground"
-                              onClick={() => removeItem(item.id)}
-                            >
-                              <X className="mr-1 h-4 w-4" />
-                              Remove
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+              <div className="flex flex-1 flex-col">
+                <div className="flex justify-between">
+                  <div>
+                    <h3 className="text-lg font-medium">
+                      <Link
+                        href={`/products/${item.id}`}
+                        className="hover:underline"
+                      >
+                        {item.name}
+                      </Link>
+                    </h3>
+                    {formatCustomizations(item.customizations) && (
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {formatCustomizations(item.customizations)}
+                      </p>
+                    )}
                   </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => removeItem(item.id)}
+                    className="h-8 w-8"
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
                 </div>
-
-                <div className="border-t pt-6 bg-white sticky bottom-0 left-0 right-0 z-10 sm:static sm:z-auto sm:bg-transparent">
-                  <div className="flex justify-between text-base font-medium">
-                    <p>Ukupno</p>
-                    <p>KM {total.toLocaleString()}</p>
-                  </div>
-                  <div className="mt-6">
-                    <Button className="w-full" onClick={() => setIsCheckingOut(true)}>
-                      Kupi
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => handleQuantityChange(item.id, Math.max(0, item.quantity - 1))}
+                    >
+                      -
+                    </Button>
+                    <Input
+                      type="number"
+                      min="1"
+                      value={item.quantity}
+                      onChange={(e) => {
+                        const value = parseInt(e.target.value)
+                        if (!isNaN(value) && value > 0) {
+                          updateQuantity(item.id, value)
+                        }
+                      }}
+                      className="h-8 w-16 text-center"
+                    />
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
+                    >
+                      +
                     </Button>
                   </div>
-                  <div className="mt-6 flex justify-center text-center text-sm text-muted-foreground">
-                    <p>
-                      or{" "}
-                      <Button variant="link" className="p-0 text-sm font-medium" onClick={() => setIsOpen(false)}>
-                        Nastavi kupovati
-                        <span aria-hidden="true"> &rarr;</span>
-                      </Button>
-                    </p>
+                  <div className="text-right">
+                    <p className="text-lg font-medium">{formatPrice(item.price * item.quantity)}</p>
+                    {item.quantity > 1 && (
+                      <p className="text-sm text-muted-foreground">
+                        {formatPrice(item.price)} po komadu
+                      </p>
+                    )}
                   </div>
                 </div>
-              </>
-            )}
-          </>
-        )}
-      </SheetContent>
-    </Sheet>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+      <div className="border-t pt-6 bg-white sticky bottom-0 left-0 right-0 z-10 sm:static sm:z-auto sm:bg-transparent">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-lg font-medium">Ukupno</p>
+            <p className="text-sm text-muted-foreground">
+              Dostava se računa na kraju
+            </p>
+          </div>
+          <p className="text-2xl font-bold">{formatPrice(total)}</p>
+        </div>
+        <div className="mt-6 flex gap-4">
+          <Button
+            variant="outline"
+            className="w-full flex-1"
+            onClick={() => {
+              if (onClose) onClose();
+              setTimeout(() => {
+                router.push("/products");
+              }, 200);
+            }}
+          >
+            Nastavi kupovinu
+          </Button>
+          <Button
+            className="w-full flex-1"
+            onClick={() => {
+              if (onClose) onClose();
+              router.push("/checkout");
+            }}
+          >
+            Naplata
+          </Button>
+        </div>
+      </div>
+    </div>
   )
 }

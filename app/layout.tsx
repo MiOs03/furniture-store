@@ -14,18 +14,18 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "VSistem | Namještaj po mjeri",
-  description: "Namještaj po mjeri",
+  title: "Namještaj po vašoj mjeri | Moderni namještaj",
+  description: "Kvalitetan namještaj po mjeri za vaš dom. Širok izbor modernog namještaja, kreveti, garniture, stolovi i više.",
   generator: 'v1.0.0',
   keywords: ['namještaj', 'namještaj po mjeri', 'namještaj za kuhinju', 'namještaj za dnevnu sobu', 'namještaj za spavacu sobu', 'namještaj za kancelariju', 'namještaj za kuhinju', 'namještaj za dnevnu sobu', 'namještaj za spavacu sobu', 'namještaj za kancelariju'],
   authors: [{ name: 'VSistem' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vsistem.ba',
+    url: 'https://v-sistem.com',
     title: 'VSistem | Namještaj po mjeri',
     description: 'Namještaj po mjeri',
-    siteName: 'VSistem',
+    siteName: 'v-sistem.com',
   },
   twitter: {
     card: 'summary_large_image',
@@ -47,8 +47,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="hr" className={inter.variable}>
+      <head>
+        <link rel="icon" href="/images/favicon/308993669_2281833768645808_4208482592494353954_n.jpg" type="image/jpeg" />
+      </head>
+      <body className="min-h-screen bg-white">
         <CategoryProvider>
           <CartProvider>{children}</CartProvider>
         </CategoryProvider>

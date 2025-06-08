@@ -3,8 +3,8 @@
     "id": "garnitura-ring",
     "naziv": "Garnitura Ring",
     "opis": "Garnitura Ring - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1105.0,
-    "staraCijena": 1300.0,
+    "cijena": 1105,
+    "staraCijena": null,
     "slike": [
       "garnitura-ring.png"
     ],
@@ -12,7 +12,7 @@
       "Garniture"
     ],
     "novi": true,
-    "istaknut": true,
+    "istaknut": false,
     "dimenzije": "277x232cm",
     "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
     "funkcijaRazvlacenja": "Pretvara se u ležaj – idealno rješenje za goste",
@@ -20,13 +20,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-01-04T09:24:26.273Z",
+    "popularityScore": 473
   },
   {
     "id": "garnitura-ravna-linija-dl",
     "naziv": "Garnitura Ravna linija d/l",
     "opis": "Garnitura Ravna linija d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1550.0,
+    "cijena": 1550,
     "staraCijena": null,
     "slike": [
       "garnitura-ravna-linija-dl.png"
@@ -34,7 +36,7 @@
     "kategorije": [
       "Garniture"
     ],
-    "novi": true,
+    "novi": false,
     "istaknut": true,
     "dimenzije": "300x190cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
@@ -43,13 +45,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-02-22T04:14:34.947Z",
+    "popularityScore": 989
   },
   {
     "id": "garnitura-nevena-dl",
     "naziv": "Garnitura Nevena d/l",
     "opis": "Garnitura Nevena d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Nevena. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1865.0,
+    "cijena": 1865,
     "staraCijena": null,
     "slike": [
       "garnitura-nevena-dl.png",
@@ -67,13 +71,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-02-28T09:26:31.247Z",
+    "popularityScore": 781
   },
   {
     "id": "garnitura-milica-dl",
     "naziv": "Garnitura Milica d/l",
     "opis": "Garnitura Milica d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milica. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1190.0,
+    "cijena": 1190,
     "staraCijena": null,
     "slike": [
       "garnitura-milica-dl.png",
@@ -91,13 +97,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-10-07T18:11:10.506Z",
+    "popularityScore": 443
   },
   {
     "id": "garnitura-milano",
     "naziv": "Garnitura Milano",
     "opis": "Garnitura Milano - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Milano. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2600.0,
+    "cijena": 2600,
     "staraCijena": null,
     "slike": [
       "garnitura-milano.png"
@@ -114,13 +122,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-03-02T14:53:57.215Z",
+    "popularityScore": 407
   },
   {
     "id": "garnitura-mia-dl",
     "naziv": "Garnitura Mia d/l",
     "opis": "Garnitura Mia d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 945.0,
+    "cijena": 945,
     "staraCijena": null,
     "slike": [
       "garnitura-mia-dl.png",
@@ -138,13 +148,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-06-03T02:14:55.947Z",
+    "popularityScore": 132
   },
   {
     "id": "garnitura-mia",
     "naziv": "Garnitura Mia",
     "opis": "Garnitura Mia - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1230.0,
+    "cijena": 1230,
     "staraCijena": null,
     "slike": [
       "garnitura-mia.png"
@@ -153,7 +165,7 @@
       "Garniture"
     ],
     "novi": false,
-    "istaknut": false,
+    "istaknut": true,
     "dimenzije": "263x222cm",
     "materijal": "mogućnost izbora preko 200 različitih tekstura i boja",
     "funkcijaRazvlacenja": "Pretvara se u ležaj – idealno rješenje za goste",
@@ -161,13 +173,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-10-03T14:25:05.727Z",
+    "popularityScore": 508
   },
   {
     "id": "garnitura-laky",
     "naziv": "Garnitura Laky",
     "opis": "Garnitura Laky- savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1405.0,
+    "cijena": 1405,
     "staraCijena": null,
     "slike": [
       "garnitura-laky.png"
@@ -184,13 +198,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-09-07T04:58:09.404Z",
+    "popularityScore": 472
   },
   {
     "id": "garnitura-laky-dl-dugme",
     "naziv": "Garnitura Laky d/l dugme",
     "opis": "Garnitura Laky d/l dugme - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1475.0,
+    "cijena": 1475,
     "staraCijena": null,
     "slike": [
       "garnitura-laky-dl-dugme.png",
@@ -200,7 +216,7 @@
     "kategorije": [
       "Garniture"
     ],
-    "novi": false,
+    "novi": true,
     "istaknut": false,
     "dimenzije": "286x184cm",
     "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
@@ -209,17 +225,20 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-07-24T22:36:38.194Z",
+    "popularityScore": 457
   },
   {
     "id": "garnitura-prima-dl",
     "naziv": "Garnitura Prima d/l",
     "opis": "Garnitura Prima d/ l- savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1340.0,
+    "cijena": 1340,
     "staraCijena": null,
     "slike": [
       "garnitura-prima-dl.png",
-      "garnitura-prima-dl-2.png"
+      "garnitura-prima-dl-2.png",
+      ""
     ],
     "kategorije": [
       "Garniture"
@@ -233,13 +252,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-01-06T00:21:03.888Z",
+    "popularityScore": 389
   },
   {
     "id": "garnitura-helena-dl",
     "naziv": "Garnitura Helena d/l",
     "opis": "Garnitura Helena d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1065.0,
+    "cijena": 1065,
     "staraCijena": null,
     "slike": [
       "garnitura-helena-dl.png"
@@ -256,13 +277,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-05-24T23:44:29.176Z",
+    "popularityScore": 472
   },
   {
     "id": "garnitura-helena",
     "naziv": "Garnitura Helena",
     "opis": "Garnitura Helena - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1285.0,
+    "cijena": 1285,
     "staraCijena": null,
     "slike": [
       "garnitura-helena.png",
@@ -280,13 +303,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-09-06T01:07:31.298Z",
+    "popularityScore": 29
   },
   {
     "id": "garnitura-fortuna",
     "naziv": "Garnitura Fortuna",
     "opis": "Garnitura Fortuna - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 980.0,
+    "cijena": 980,
     "staraCijena": null,
     "slike": [
       "garnitura-fortuna.png",
@@ -304,13 +329,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-03-24T20:07:13.140Z",
+    "popularityScore": 408
   },
   {
     "id": "garnitura-ema-dl",
     "naziv": "Garnitura Ema d/l",
     "opis": "Garnitura Ema d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1655.0,
+    "cijena": 1655,
     "staraCijena": null,
     "slike": [
       "garnitura-ema-dl.png",
@@ -329,18 +356,21 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-04-02T02:36:04.008Z",
+    "popularityScore": 619
   },
   {
     "id": "garnitura-agata",
     "naziv": "Garnitura Agata",
     "opis": "Garnitura Agata - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1800.0,
+    "cijena": 1800,
     "staraCijena": null,
     "slike": [
       "garnitura-agata.png",
       "garnitura-agata-2.png",
-      "garnitura-agata-3.png"
+      "garnitura-agata-3.png",
+      ""
     ],
     "kategorije": [
       "Garniture"
@@ -354,13 +384,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-12-06T15:49:25.567Z",
+    "popularityScore": 319
   },
   {
     "id": "garnitura-alex-dl",
     "naziv": "Garnitura Alex d/l",
     "opis": "Garnitura Alex d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2350.0,
+    "cijena": 2350,
     "staraCijena": null,
     "slike": [
       "garnitura-alex-dl.png",
@@ -378,13 +410,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-07-09T18:30:48.808Z",
+    "popularityScore": 425
   },
   {
     "id": "garnitura-andrea-dl",
     "naziv": "Garnitura Andrea d/l",
     "opis": "Garnitura Andrea d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1395.0,
+    "cijena": 1395,
     "staraCijena": null,
     "slike": [
       "garnitura-andrea-dl.png",
@@ -403,17 +437,20 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-07-23T03:50:22.878Z",
+    "popularityScore": 635
   },
   {
     "id": "garnitura-dali",
     "naziv": "Garnitura Dali",
     "opis": "Garnitura Dali - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1270.0,
+    "cijena": 1270,
     "staraCijena": null,
     "slike": [
       "garnitura-dali.png",
-      "garnitura-dali-2.png"
+      "garnitura-dali-2.png",
+      ""
     ],
     "kategorije": [
       "Garniture"
@@ -427,13 +464,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-06-03T04:55:00.884Z",
+    "popularityScore": 854
   },
   {
     "id": "garnitura-wiena-dl",
     "naziv": "Garnitura Wiena d/l",
     "opis": "Garnitura Wiena d/l   - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1385.0,
+    "cijena": 1385,
     "staraCijena": null,
     "slike": [
       "garnitura-wiena-dl.png",
@@ -454,13 +493,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-06-10T20:47:47.649Z",
+    "popularityScore": 417
   },
   {
     "id": "garnitura-wiena-mala-dl",
     "naziv": "Garnitura Wiena mala d/l",
     "opis": "Garnitura Wiena mala d/l   - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1105.0,
+    "cijena": 1105,
     "staraCijena": null,
     "slike": [
       "garnitura-wiena-mala-d/l.png",
@@ -478,13 +519,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-03-22T07:24:18.184Z",
+    "popularityScore": 921
   },
   {
     "id": "garnitura-laky-dl",
     "naziv": "Garnitura Laky d/l",
     "opis": "Garnitura Laky d/l  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1235.0,
+    "cijena": 1235,
     "staraCijena": null,
     "slike": [
       "garnitura-laky-dl.png",
@@ -504,13 +547,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-08-29T13:31:38.274Z",
+    "popularityScore": 584
   },
   {
     "id": "garnitura-mila-dl",
     "naziv": "Garnitura Mila d/l",
     "opis": "Garnitura Mila d/l - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2000.0,
+    "cijena": 2000,
     "staraCijena": null,
     "slike": [
       "garnitura-mila-d/l.png",
@@ -529,13 +574,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2025-03-05T11:10:08.651Z",
+    "popularityScore": 344
   },
   {
     "id": "garnitura-milano-dl",
     "naziv": "Garnitura Milano d/l",
     "opis": "Garnitura Milano d/l - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2600.0,
+    "cijena": 2600,
     "staraCijena": null,
     "slike": [
       "garnitura-milano-dl.png",
@@ -555,13 +602,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-02-01T01:50:56.283Z",
+    "popularityScore": 894
   },
   {
     "id": "garnitura-prima",
     "naziv": "Garnitura Prima",
     "opis": "Garnitura Prima - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2500.0,
+    "cijena": 2500,
     "staraCijena": null,
     "slike": [
       "garnitura-prima.png",
@@ -581,13 +630,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-01-11T22:45:34.434Z",
+    "popularityScore": 289
   },
   {
     "id": "garnitura-nabucco-dl",
     "naziv": "Garnitura Nabucco d/l",
     "opis": "Garnitura Nabucco d/l   - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2250.0,
+    "cijena": 2250,
     "staraCijena": null,
     "slike": [
       "garnitura-nabucco-d/l.png",
@@ -605,13 +656,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-06-03T11:06:42.952Z",
+    "popularityScore": 388
   },
   {
     "id": "garnitura-nova",
     "naziv": "Garnitura Nova",
     "opis": "Garnitura Nova - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1600.0,
+    "cijena": 1600,
     "staraCijena": null,
     "slike": [
       "garnitura-nova.png"
@@ -628,13 +681,15 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-02-26T14:16:44.190Z",
+    "popularityScore": 336
   },
   {
     "id": "garnitura-comfor",
     "naziv": "Garnitura Comfor",
     "opis": "Garnitura Comfor  - savršen spoj udobnosti i stila. Unesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ring. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 2250.0,
+    "cijena": 2250,
     "staraCijena": null,
     "slike": [
       "garnitura-comfor.png"
@@ -651,17 +706,20 @@
     "punjenje": "val opruge + gurtne i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Birate prilikom narudžbe (lijeva ili desna)",
     "dostava": "Banja Luka do 3. sprata gratis ako ima lift",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-09-01T03:32:27.419Z",
+    "popularityScore": 99
   },
   {
     "id": "garnitura-ravna-linija-dl-2",
     "naziv": "Garnitura Ravna linija d/l  2",
     "opis": "Garnitura Ravna linija d/l  2  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1620.0,
+    "cijena": 1620,
     "staraCijena": null,
     "slike": [
       "garnitura-ravna-linija-d/l-2.png",
-      "garnitura-ravna-linija-d/l-3.png"
+      "garnitura-ravna-linija-d/l-3.png",
+      ""
     ],
     "kategorije": [
       "Garniture"
@@ -675,16 +733,19 @@
     "punjenje": "Bonell žičano jezgro  i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2023-12-03T02:28:48.055Z",
+    "popularityScore": 923
   },
   {
     "id": "garnitura-mini",
     "naziv": "Garnitura Mini",
     "opis": "Garnitura Mini  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
-    "cijena": 1250.0,
+    "cijena": 1250,
     "staraCijena": null,
     "slike": [
-      "garnitura-mini.png"
+      "garnitura-mini.png",
+      ""
     ],
     "kategorije": [
       "Garniture"
@@ -698,6 +759,34 @@
     "punjenje": "Val opruge + gurtne  i Hr spužva za dugotrajnost.",
     "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
-    "napomena": "Ostalo prema dogovoru"
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2022-12-05T13:42:20.945Z",
+    "popularityScore": 127
+  },
+  {
+    "id": "garnitura-prima-dugme",
+    "naziv": "Garnitura Prima dugme",
+    "opis": "Garnitura Prima dugme  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz trosjed Ravne linije. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 2500,
+    "staraCijena": null,
+    "slike": [
+      "garnitura-prima-dugme.png",
+      ""
+    ],
+    "kategorije": [
+      "Garniture"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "286x246cm",
+    "materijal": "mogućnost izbora preko 200 različih tekstura i boja.",
+    "funkcijaRazvlacenja": "Pretvara se u ležaj – idealno rješenje za goste",
+    "prostorZaOdlaganje": "Posjeduje ladicu za stvari.",
+    "punjenje": "Val opruge + gurtne  i Hr spužva za dugotrajnost.",
+    "stranaGarniture": "Prilikom narudžbe birate stranu garniture (lijeva ili desna)",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru",
+    "createdAt": "2024-04-03T21:11:47.501Z",
+    "popularityScore": 437
   }
 ]

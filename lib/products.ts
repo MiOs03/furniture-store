@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export interface Product {
   id: string | number
@@ -9,25 +9,22 @@ export interface Product {
   cijena: number
   staraCijena?: number
   opis: string
-  puniOpis: string
+  puniOpis?: string
   kategorije: string[]
   slika: string
-  slike: string[]
-  ocjena: number
-  brojRecenzija: number
-  karakteristike: string[]
-  dimenzije: { naziv: string; vrijednost: string }[]
-  boje: { naziv: string; hex: string }[]
-  materijali: string[]
-  uputstvaZaNjegu: string
-  recenzije: {
-    autor: string
-    ocjena: number
-    datum: string
-    sadrzaj: string
-  }[]
+  slike?: string[]
+  ocjena?: number
+  brojRecenzija?: number
+  karakteristike?: string[]
+  dimenzije?: Array<{ naziv: string; vrijednost: string }>
+  boje?: Array<{ naziv: string; hex: string }>
+  materijali?: string[]
+  uputstvaZaNjegu?: string
+  recenzije?: any[]
   jeNov?: boolean
   istaknut?: boolean
+  createdAt?: string
+  popularityScore?: number
 }
 
 // Sample product data
@@ -356,7 +353,7 @@ const products: Product[] = [
         ocjena: 5,
         datum: "March 30, 2025",
         sadrzaj:
-          "Ovaj krevet je potpuno transformirao našu cijelu spavaću sobu! Integrirani noćni stolovi spašavaju mnogo prostora, i LED osvjetljenje stvara savršenu atmosferu za čitanje noću. Izvrsno zadovoljni sa ovom kupnjom.",
+          "Ovaj krevet je potpuno transformirao našu cijelu spavaću sobu! Integrirani noćni stolovi spašavaju mnogo prostora, i LED osvjetljenje stvara savršenu atmosferu za čitanje noću. Izvrsno zadovoljni sa ovom kupovinom.",
       },
       {
         autor: "Jovan.",
@@ -446,7 +443,7 @@ const products: Product[] = [
         ocjena: 5,
         datum: "February 28, 2025",
         sadrzaj:
-          "Vrijedan svake marke! Ova ugaona garnitura je potpuno transformirala naš životni prostor i postala svima najdraži mjesto. Tkanina je održava lep i čak i sa dječjima i psima. Nije moguće bolje zadovoljstvo sa ovom kupnjom.",
+          "Vrijedan svake marke! Ova ugaona garnitura je potpuno transformirala naš životni prostor i postala svima najdraži mjesto. Tkanina je održava lep i čak i sa dječjima i psima. Nije moguće bolje zadovoljstvo sa ovom kupovinom.",
       },
     ],
   },
@@ -665,7 +662,7 @@ const products: Product[] = [
         autor: "Sofija N.",
         ocjena: 5,
         datum: "March 20, 2025",
-        sadrzaj: "Savršena veličina i skriveni prostor je super koristan! Soft-close mehanizam je lijep dodir. Veoma zadovoljan sa ovom kupnjom."
+        sadrzaj: "Savršena veličina i skriveni prostor je super koristan! Soft-close mehanizam je lijep dodir. Veoma zadovoljan sa ovom kupovinom."
       },
       {
         autor: "Jovan.",
@@ -707,6 +704,9 @@ function slugify(text: string): string {
     .replace(/(^-|-$)+/g, '');
 }
 
+// Helper to normalize category strings for comparison
+const normalize = (str: string) => str?.toLowerCase().normalize("NFD").replace(/[ -]/g, c => c.normalize("NFD")).replace(/\p{Diacritic}/gu, "").replace(/\s+/g, "-");
+
 function normalizeProductData(product: any): Product {
   return {
     id: product.id,
@@ -739,7 +739,9 @@ function normalizeProductData(product: any): Product {
     uputstvaZaNjegu: product.uputstvaZaNjegu || "",
     recenzije: product.recenzije || [],
     jeNov: product.novi || product.jeNov || false,
-    istaknut: product.istaknut || false
+    istaknut: product.istaknut || false,
+    createdAt: product.createdAt,
+    popularityScore: product.popularityScore
   };
 }
 

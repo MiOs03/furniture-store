@@ -13,12 +13,299 @@
     ],
     "novi": false,
     "istaknut": false,
-    "dimenzije": [],
+    "dimenzije": "/",
     "materijal": "",
     "funkcijaRazvlacenja": "",
-    "prostorZaOdlaganje": "",
-    "punjenje": "",
-    "stranaGarniture": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-dea",
+    "naziv": "Stolica Dea",
+    "opis": "Stolica Dea - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1600.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-dea.png",
+      "stolica-dea-2.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-dona",
+    "naziv": "Stolica Dona",
+    "opis": "Stolica Dona - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 850.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-dona.png",
+      "stolica-dona-2.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-elizabeta",
+    "naziv": "Stolica Elizabeta",
+    "opis": "Stolica Elizabeta - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1300.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-elizabeta.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-una",
+    "naziv": "Stolica Una",
+    "opis": "Stolica Una - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 900.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-una.png",
+      "stolica-una-2.png",
+      "stolica-una-3.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-iva",
+    "naziv": "Stolica Iva",
+    "opis": "Stolica Iva - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 900.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-iva.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-lana",
+    "naziv": "Stolica Lana",
+    "opis": "Stolica Lana - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 900.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-lana.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-mona-glat",
+    "naziv": "Stolica Mona glat",
+    "opis": "Stolica Mona glat - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1600.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-mona-glat.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-lara",
+    "naziv": "Stolica Lara",
+    "opis": "Stolica Lara  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 900.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-lara.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-mona-oval",
+    "naziv": "Stolica Mona oval",
+    "opis": "Stolica Mona oval  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1600.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-mona-oval.png"
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-barskapolubarska-mona-oval",
+    "naziv": "Stolica barska/polubarska Mona oval",
+    "opis": "Stolica barska/polubarska Mona oval - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 2200.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-mona-oval-barska.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-mona-romb",
+    "naziv": "Stolica Mona romb",
+    "opis": "Stolica Mona romb  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1600.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-mona-romb.png",
+      "stolica-mona-romb-2.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
+    "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
+    "napomena": "Ostalo prema dogovoru"
+  },
+  {
+    "id": "stolica-monika",
+    "naziv": "Stolica Monika",
+    "opis": "Stolica Monika  - savršen spoj udobnosti i stila.\n\nUnesite dašak elegancije i pretvorite dnevni boravak u zonu komfora uz garnituru Ravna linija. Savršenim spojem modernog dizajna, udobnosti i praktičnosti dobijate garnituru idealnu za sve prostore.",
+    "cijena": 1250.0,
+    "staraCijena": null,
+    "slike": [
+      "stolica-monika.png",
+      ""
+    ],
+    "kategorije": [
+      "Stolice"
+    ],
+    "novi": false,
+    "istaknut": false,
+    "dimenzije": "/",
+    "materijal": "",
+    "funkcijaRazvlacenja": "",
+    "prostorZaOdlaganje": "/",
+    "punjenje": "/",
+    "stranaGarniture": "/",
     "dostava": "Dostava i montaža Banjaluka do 3 sprata gratis (ako ima lift i viši sprat). Ostalo prema dogovoru.",
     "napomena": "Ostalo prema dogovoru"
   }
