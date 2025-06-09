@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, Suspense } from "react"
 import { Filter, ChevronDown, X, Check, ArrowUpDown } from "lucide-react"
 import { useSearchParams, useRouter } from "next/navigation"
 
@@ -54,6 +54,30 @@ const categoryMap: Record<string, string> = {
   "office": "Kancelarijski namještaj",
   "outdoor": "Outdoor",
   "sale": "Akcija"
+}
+
+// Create a new component for pagination
+function Pagination({ totalPages, currentPage, onPageChange }: { 
+  totalPages: number, 
+  currentPage: number, 
+  onPageChange: (page: number) => void 
+}) {
+  const searchParams = useSearchParams()
+  const router = useRouter()
+
+  return (
+    <div className="flex justify-center gap-2 mt-8">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <Button
+          key={page}
+          variant={page === currentPage ? "default" : "outline"}
+          onClick={() => onPageChange(page)}
+        >
+          {page}
+        </Button>
+      ))}
+    </div>
+  )
 }
 
 export default function ProductsPage() {
@@ -124,11 +148,9 @@ export default function ProductsPage() {
     return result
   }, [products, activeCategory, priceRange, selectedMaterials, selectedColors, sortOption])
 
-  // Pagination logic (moved after filteredProducts)
-  const searchParams = useSearchParams()
-  const router = useRouter()
+  // Pagination logic
   const PRODUCTS_PER_PAGE = 12
-  const currentPage = Math.max(1, parseInt(searchParams.get("page") || "1", 10))
+  const [currentPage, setCurrentPage] = useState(1)
   const totalProducts = filteredProducts.length
   const totalPages = Math.ceil(totalProducts / PRODUCTS_PER_PAGE)
   const paginatedProducts = useMemo(() => {
@@ -136,8 +158,9 @@ export default function ProductsPage() {
     const end = start + PRODUCTS_PER_PAGE
     return filteredProducts.slice(start, end)
   }, [filteredProducts, currentPage])
+
   const goToPage = (page: number) => {
-    router.push(`/products?page=${page}`)
+    setCurrentPage(page)
   }
 
   // Extract all unique materials and colors from products
@@ -462,33 +485,13 @@ export default function ProductsPage() {
                       return <ProductCard key={`${product.id}-${product.kategorije?.[0] || 'uncategorized'}-${index}`} product={{ ...product, slika, id: String(product.id) }} />;
                     })}
                   </div>
-                  {/* Pagination Controls */}
-                  <div className="flex justify-center items-center gap-2 mt-8">
-                    <button
-                      className="px-3 py-1 rounded border disabled:opacity-50"
-                      onClick={() => goToPage(currentPage - 1)}
-                      disabled={currentPage === 1}
-                    >
-                      Prethodna
-                    </button>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        className={`px-3 py-1 rounded border ${page === currentPage ? "bg-black text-white" : ""}`}
-                        onClick={() => goToPage(page)}
-                        disabled={page === currentPage}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                    <button
-                      className="px-3 py-1 rounded border disabled:opacity-50"
-                      onClick={() => goToPage(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                    >
-                      Sledeća
-                    </button>
-                  </div>
+                  <Suspense fallback={<div>Loading pagination...</div>}>
+                    <Pagination 
+                      totalPages={totalPages} 
+                      currentPage={currentPage} 
+                      onPageChange={goToPage} 
+                    />
+                  </Suspense>
                 </>
               ) : (
                 activeCategory !== "pločasti-namještaj" && (
@@ -525,33 +528,13 @@ export default function ProductsPage() {
                         }
                         return <ProductCard key={`${product.id}-${product.kategorije?.[0] || 'uncategorized'}-${index}`} product={{ ...product, slika, id: String(product.id) }} />;
                       })}
-                      {/* Pagination Controls */}
-                      <div className="col-span-full flex justify-center items-center gap-2 mt-8">
-                        <button
-                          className="px-3 py-1 rounded border disabled:opacity-50"
-                          onClick={() => goToPage(currentPage - 1)}
-                          disabled={currentPage === 1}
-                        >
-                          Prethodna
-                        </button>
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                          <button
-                            key={page}
-                            className={`px-3 py-1 rounded border ${page === currentPage ? "bg-black text-white" : ""}`}
-                            onClick={() => goToPage(page)}
-                            disabled={page === currentPage}
-                          >
-                            {page}
-                          </button>
-                        ))}
-                        <button
-                          className="px-3 py-1 rounded border disabled:opacity-50"
-                          onClick={() => goToPage(currentPage + 1)}
-                          disabled={currentPage === totalPages}
-                        >
-                          Sledeća
-                        </button>
-                      </div>
+                      <Suspense fallback={<div>Loading pagination...</div>}>
+                        <Pagination 
+                          totalPages={totalPages} 
+                          currentPage={currentPage} 
+                          onPageChange={goToPage} 
+                        />
+                      </Suspense>
                     </>
                   ) : (
                     activeCategory !== "pločasti-namještaj" && (
