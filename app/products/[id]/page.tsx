@@ -7,13 +7,12 @@ import Info from "@/components/info"
 import ProductList from "@/components/product-list"
 import { Toaster } from "@/components/ui/sonner"
 
-interface PageProps {
-  params: {
-    id: string
-  }
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function ProductPage({ params }: PageProps) {
+export default async function ProductPage({ params }: Props) {
   const product = await getProduct(params.id)
 
   if (!product) {
