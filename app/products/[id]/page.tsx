@@ -1,5 +1,3 @@
-"use client"
-
 import { Suspense } from "react"
 import { notFound } from "next/navigation"
 import { getProduct, getProducts } from "@/actions/get-products"
@@ -9,7 +7,13 @@ import Info from "@/components/info"
 import ProductList from "@/components/product-list"
 import { Toaster } from "@/components/ui/sonner"
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string
+  }
+}
+
+export default async function ProductPage({ params }: PageProps) {
   const product = await getProduct(params.id)
 
   if (!product) {
